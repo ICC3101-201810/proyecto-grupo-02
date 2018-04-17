@@ -21,16 +21,6 @@ namespace My_Notes
             return base.nombre;
         }
 
-        protected override bool VerificarContraseña()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override bool VerificarNombre()
-        {
-            throw new NotImplementedException();
-        }
-
         public bool CrearApunte ()
         {
             return true;

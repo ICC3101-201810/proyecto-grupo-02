@@ -31,7 +31,8 @@ namespace My_Notes
         public bool VerificarNombre(string nombre, List<Alumno> listaAlumno, List<Profesor> listaProfesor)
         {
             List<Alumno> verificandoNombreAl = (listaAlumno.Where(nom => nom.GetNombre() == nombre)).ToList();
-            if(verificandoNombreAl.Count() > 0)
+            List<Profesor> verificandoNombrePr = (listaProfesor.Where(nom => nom.GetNombre() == nombre)).ToList();
+            if (verificandoNombreAl.Count() > 0 && verificandoNombrePr.Count() > 0)
             {
                 return false;
             }
@@ -41,14 +42,23 @@ namespace My_Notes
             }
         }
 
-        public void AgregarAlumno(string nombre, string contrasena)
+        public bool AgregarAlumno(string nombre, string contrasena, List<Alumno> als, List<Profesor> profs)
         {
-            while ()
+            while (VerificarNombre(nombre, als, profs) != true)
+            {
+                Console.WriteLine("Nombre ya existe.\nIngrese otro:");
+                nombre = Console.ReadLine();
+                VerificarNombre(nombre, als, profs);
+            }
+                
             while(VerificarContrasena(contrasena) != true)
             {
-
+                Console.WriteLine("Contrasena invalida.\nIngrese otra:");
+                contrasena = Console.ReadLine();
+                VerificarContrasena(contrasena);
             }
-            Alumno alumno = new Alumno(nombre, contrasena)
+            Alumno alumno = new Alumno(nombre, contrasena);
+            return true;
         }
 
         public bool EditarAlumno (string nombre, string contrasena)

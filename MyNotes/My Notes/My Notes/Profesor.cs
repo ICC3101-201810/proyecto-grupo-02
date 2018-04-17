@@ -16,18 +16,11 @@ namespace My_Notes
         {
 
         }
-
-
-
-        protected override bool VerificarNombre()
+        public string GetNombre()
         {
-            throw new NotImplementedException();
+            return base.nombre;
         }
 
-        protected override bool VerificarContraseña()
-        {
-            throw new NotImplementedException();
-        }
 
         public void SubirMaterial()
         {
@@ -36,6 +29,14 @@ namespace My_Notes
 
         public bool HacerAyudante ()
         {
+            return true;
+            //aun no implementada
+        }
+
+        public bool CrearMaterial ()
+        {
+
+            //Console.WriteLine("Material creado");
             return true;
             //aun no implementada
         }

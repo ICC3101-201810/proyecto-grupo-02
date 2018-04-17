@@ -8,6 +8,6 @@ namespace My_Notes
 {
     interface IVerivicandoNombre
     {
-        bool VerificarNombre(string nombre);
+        bool VerificarNombre(string nombre, List<Alumno> al, List<Profesor> pro);
     }
 }

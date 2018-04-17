@@ -16,6 +16,15 @@ namespace My_Notes
         string capitulo;
         DateTime fecha;
 
+        public Apuntes (TipoApunte tipoApunte, string ElNombre, string ElCapitulo, string ElContenido)
+        {
+            nombre = ElNombre;
+            tipo = tipoApunte;
+            capitulo = ElCapitulo;
+            contenido = ElContenido;
+            fecha = DateTime.Now;
+        }
+
 
 
     }

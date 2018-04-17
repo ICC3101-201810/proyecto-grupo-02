@@ -16,6 +16,10 @@ namespace My_Notes
         {
 
         }
+        public string GetNombre()
+        {
+            return base.nombre;
+        }
 
         protected override bool VerificarContraseña()
         {

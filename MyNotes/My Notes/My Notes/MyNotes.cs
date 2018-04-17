@@ -24,5 +24,13 @@ namespace My_Notes
         {
             ListaProfesores.Add(profesor);
         }
+        public List<Alumno> GetListaAlumnos()
+        {
+            return ListaAlumnos;
+        }
+        public List<Profesor> GetListaProfesores()
+        {
+            return ListaProfesores;
+        }
     }
 }

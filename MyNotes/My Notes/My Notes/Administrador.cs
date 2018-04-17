@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
-    class Administrador : Usuario , IVerificandoContrasena
+    class Administrador : Usuario , IVerificandoContrasena, IVerivicandoNombre
     {
         bool administrador = true;
 
@@ -22,12 +22,23 @@ namespace My_Notes
                 Console.WriteLine("La contrasena debe tener mas de 3 caracteres");
                 return false;
             }
-            return false;
+            else
+            {
+                return true;
+            }
         }
 
-        protected override bool VerificarNombre()
+        public bool VerificarNombre(string nombre, List<Alumno> listaAlumno, List<Profesor> listaProfesor)
         {
-            throw new NotImplementedException();
+            List<Alumno> verificandoNombreAl = (listaAlumno.Where(nom => nom.GetNombre() == nombre)).ToList();
+            if(verificandoNombreAl.Count() > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public void AgregarAlumno(string nombre, string contrasena)

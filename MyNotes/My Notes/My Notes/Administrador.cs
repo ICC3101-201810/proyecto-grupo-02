@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
-    class Administrador : Usuario
+    class Administrador : Usuario , IVerificandoContrasena
     {
         bool administrador = true;
 
-        protected Administrador(string nombre, string contrasena) : base(nombre, contrasena)
+        public Administrador(string nombre, string contrasena, bool miAdministrador) : base(nombre, contrasena)
         {
-
+            administrador = miAdministrador;
         }
 
-        protected override bool VerificarContraseña()
+        public bool VerificarContrasena(string constrasena)
         {
-            throw new NotImplementedException();
+            if (contrasena.Length < 3)
+            {
+                Console.WriteLine("La contrasena debe tener mas de 3 caracteres");
+                return false;
+            }
+            return false;
         }
 
         protected override bool VerificarNombre()
@@ -25,9 +30,14 @@ namespace My_Notes
             throw new NotImplementedException();
         }
 
-        public bool AgregarAlumno(string nombre, string contrasena)
+        public void AgregarAlumno(string nombre, string contrasena)
         {
-            return true;
+            while ()
+            while(VerificarContrasena(contrasena) != true)
+            {
+
+            }
+            Alumno alumno = new Alumno(nombre, contrasena)
         }
 
         public bool EditarAlumno (string nombre, string contrasena)

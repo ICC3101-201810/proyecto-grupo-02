@@ -16,10 +16,6 @@ namespace My_Notes
             this.nombre = nombre;
             this.contrasena = contrasena;
         }
-
-
-        abstract protected bool VerificarNombre();
-        abstract protected bool VerificarContraseña();
         
     }
 }

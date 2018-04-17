@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
-    interface IVerivicarNombre
+    interface IVerificandoContrasena
     {
-        bool Verificar(string nombre);
-
-        //no usar mientras, sirve de ejemplo
+        bool VerificarContrasena(string constrasena);
     }
 }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
-    class Program
+    interface IVerivicandoNombre
     {
-        static void Main(string[] args)
-        {
-            Console.ReadLine();
-        }
+        bool VerificarNombre(string nombre);
     }
 }

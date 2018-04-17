@@ -39,5 +39,13 @@ namespace My_Notes
             return true;
             //aun no implementada
         }
+
+        public bool CrearMaterial ()
+        {
+
+            //Console.WriteLine("Material creado");
+            return true;
+            //aun no implementada
+        }
     }
 }

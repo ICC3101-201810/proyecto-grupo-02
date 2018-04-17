@@ -19,12 +19,12 @@ namespace My_Notes
 
 
 
-        protected override bool VerificarNombre()
+        public override bool VerificarNombre(string nombre)
         {
             throw new NotImplementedException();
         }
 
-        protected override bool VerificarContraseña()
+        public override bool VerificarContrasena(string constrasena)
         {
             throw new NotImplementedException();
         }
@@ -47,5 +47,7 @@ namespace My_Notes
             return true;
             //aun no implementada
         }
+
+
     }
 }

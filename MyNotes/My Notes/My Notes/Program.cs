@@ -10,6 +10,7 @@ namespace My_Notes
     {
         static void Main(string[] args)
         {
+            //Hi
             Console.ReadLine();
         }
     }

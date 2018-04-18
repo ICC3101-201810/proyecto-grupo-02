@@ -8,18 +8,21 @@ namespace My_Notes
 {
     public class Seccion
     {
-        int ID;
-        List<Alumno> alumnos;
-        Profesor profesor;
-        int vacante;
+        int IDSeccion;
+        List<Alumno> alumnos = new List<Alumno>();
+        List<Profesor> profesores = new List<Profesor>();
+        int vacantes;
 
-        public Seccion(int id, List<Alumno> Alumnos,
-           Profesor Profesor, int Vacante )
+        public Seccion(int IDSeccion, int vacantes)
         {
-            ID = id;
-            alumnos = Alumnos;
-            profesor = Profesor;
-            vacante = Vacante;
+            this.IDSeccion = IDSeccion;
+            this.vacantes = vacantes;
+            //ver como se une con Profesor
+        }
+
+        public int GetIDSeccion ()
+        {
+            return IDSeccion;
         }
     }
 }

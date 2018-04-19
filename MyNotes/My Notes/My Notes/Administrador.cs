@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace My_Notes
+namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes para no acceder siempre a las listas
 {
-    class Administrador : Usuario , IVerificandoContrasena, IVerivicandoNombre
+    class Administrador : Usuario, IVerificandoContrasena, IVerificandoNombre
     {
         bool administrador = true;
 
@@ -50,8 +50,8 @@ namespace My_Notes
                 nombre = Console.ReadLine();
                 VerificarNombre(nombre, als, profs);
             }
-                
-            while(VerificarContrasena(contrasena) != true)
+
+            while (VerificarContrasena(contrasena) != true)
             {
                 Console.WriteLine("Contrasena invalida.\nIngrese otra:");
                 contrasena = Console.ReadLine();
@@ -61,67 +61,84 @@ namespace My_Notes
             return true;
         }
 
-        public bool EditarAlumno (string nombre, string contrasena)
+        public bool EditarAlumno(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
+        {
+            if (VerificarNombre(nombre, als, profs))
+            {
+                List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
+                if (als.Count() < 2)
+                {
+                    Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
+                    return false;
+                }
+                else
+                {
+                    als[0].SetNombre(nombreNuevo);
+                    Console.WriteLine("Se edito correctamente al alumno.");
+                    return true;
+                }
+
+            }
+            return true;
+        }
+
+        public List<Alumno> EliminarAlumno(string nombre, List<Alumno> als)
+        {
+            List<Alumno> ListaAlumnosNueva = (als.Where(nom => nom.GetNombre() != nombre)).ToList();
+            return ListaAlumnosNueva;
+        }
+
+        public bool CrearRamo(int NRC)
         {
             return true;
         }
 
-        public bool EliminarAlumno (string nombre, string contrasena)
-        {
-            return true;
-        }
-        
-        public bool CrearRamo (int NRC)
+        public bool EditarRamo(int NRC)
         {
             return true;
         }
 
-        public bool EditarRamo (int NRC)
+        public bool EliminarRamo(int NRC)
         {
             return true;
         }
 
-        public bool EliminarRamo (int NRC)
+        public void CrearFechas()
+        {
+
+        }
+
+        public bool EditarFechas()
         {
             return true;
         }
 
-        public void CrearFechas ()
-        {
-
-        }
-
-        public bool EditarFechas ()
+        public bool EliminarFechas()
         {
             return true;
         }
 
-        public bool EliminarFechas ()
-        {
-            return true;
-        }
-
-        public void HacerAyudante ()
+        public void HacerAyudante()
         {
 
         }
 
-        public void EliminarAyudante ()
+        public void EliminarAyudante()
         {
 
         }
 
-        public void CrearAyudante ()
+        public void CrearAyudante()
         {
 
         }
 
-        public void EditarMaterial ()
+        public void EditarMaterial()
         {
 
         }
 
-        public void EliminarMaterial ()
+        public void EliminarMaterial()
         {
 
         }

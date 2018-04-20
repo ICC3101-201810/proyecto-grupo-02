@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace My_Notes
 {
     class MyNotes
-    {//DOS LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores y alumnos.
+    {//TRES LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores, admins y alumnos.
         List<Alumno> ListaAlumnos;
         List<Profesor> ListaProfesores;
         List<Administrador> ListaAdministradores;

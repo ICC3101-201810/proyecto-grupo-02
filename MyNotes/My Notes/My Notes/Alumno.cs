@@ -26,7 +26,7 @@ namespace My_Notes
         }
         public void SetNombre(string nombreNuevo)
         {
-            nombre = nombreNuevo;
+            nombre = nombreNuevo.ToUpper();
         }
 
         public bool CrearApunte ()

@@ -11,36 +11,34 @@ namespace My_Notes
         static void Main(string[] args)
         {
             MyNotes myNotes = new MyNotes();
-            Administrador administrador = new Administrador("Admin", "123", true);
+            Administrador administrador = new Administrador("admin", "123", true);
             myNotes.AgregarAdmin(administrador);
-            Console.WriteLine("\t\t\t\tBIENVENIDO A MY NOTES!\nDesea:\n1.-Iniciar Secion.\n2.- Crear Usuario.");
-            Console.WriteLine("Ingrese el numero correspondiente a la opcion que desea.");
-            string eleccion1 = Console.ReadLine();
-            if (eleccion1 == "1")
+            Console.WriteLine("\t\t\t\tBIENVENIDO A MY NOTES!\n");
+            Console.WriteLine("Nombre de Usuario: ");
+            string NombreUsuario = Console.ReadLine();
+            Console.WriteLine("Contrasena: ");
+            string ContrasenaUsuario = Console.ReadLine();
+            bool passright = false;
+            while (passright != true)
             {
-                bool passright = false;
-                while (passright != true)
+                
+                if (myNotes.ConfirmarContrasena(NombreUsuario, ContrasenaUsuario))
                 {
+                    Console.WriteLine("Bienvenido a MyNotes {0}.", NombreUsuario);
+                    passright = true;
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Contrasena invalida.\nIntente nuevamente.");
                     Console.WriteLine("Nombre de Usuario: ");
-                    string NombreUsuario = Console.ReadLine();
+                    NombreUsuario = Console.ReadLine();
                     Console.WriteLine("Contrasena: ");
-                    string ContrasenaUsuario = Console.ReadLine();
-                    if (myNotes.ConfirmarContrasena(NombreUsuario, ContrasenaUsuario))
-                    {
-                        Console.WriteLine("Bienvenido a MyNotes {0}", NombreUsuario);
-                        passright = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Contrasena invalida.\nIntente nuevamente.");
-                    }
+                    ContrasenaUsuario = Console.ReadLine();
                 }
 
             }
-            else if (eleccion1 == "2")
-            {
-
-            }
+            //agragr if getlistaadmin con fond
             Console.ReadLine();
         }
     }

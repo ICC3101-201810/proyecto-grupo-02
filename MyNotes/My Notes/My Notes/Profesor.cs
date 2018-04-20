@@ -22,7 +22,10 @@ namespace My_Notes
             return base.nombre;
         }
 
-
+        public string GetContrasena()
+        {
+            return base.contrasena;
+        }
 
         public void SubirMaterial()
         {

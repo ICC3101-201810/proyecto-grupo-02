@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +15,12 @@ namespace My_Notes
             MyNotes myNotes = new MyNotes();
             Administrador administrador = new Administrador("admin", "123", true);
             myNotes.AgregarAdmin(administrador);
+            //CREACION DE PROFES Y ALUMNOS PARA PROBAR CODIGO! BORRAR DESPUES
+            Alumno alumno = new Alumno("pepe", "456");
+            myNotes.AgregarAlumnos(alumno);
+            Profesor profesor = new Profesor("tata", "789");
+            myNotes.AgregarProfesor(profesor);
+            //---------------------------------------------------------------
             Console.WriteLine("\t\t\t\tBIENVENIDO A MY NOTES!\n");
             Console.WriteLine("Nombre de Usuario: ");
             string NombreUsuario = Console.ReadLine();
@@ -24,7 +32,7 @@ namespace My_Notes
                 
                 if (myNotes.ConfirmarContrasena(NombreUsuario, ContrasenaUsuario))
                 {
-                    Console.WriteLine("Bienvenido a MyNotes {0}.", NombreUsuario);
+                    Console.WriteLine("Bienvenido a MyNotes {0}.", NombreUsuario.ToUpper());
                     passright = true;
                     
                 }
@@ -38,8 +46,90 @@ namespace My_Notes
                 }
 
             }
-            //agragr if getlistaadmin con fond
+            if (((myNotes.GetListaAdmin().Find(nom => nom.GetNombre() == NombreUsuario) != null)))
+            {
+                Console.WriteLine("If comprobando que es un admin");
+            }
+            else if (((myNotes.GetListaAlumnos().Find(nom => nom.GetNombre() == NombreUsuario) != null)))
+            {
+                Console.WriteLine("es un alumno");
+            }
+            else if (((myNotes.GetListaProfesores().Find(nom => nom.GetNombre() == NombreUsuario) != null)))
+            {
+                Console.WriteLine("es un profesor");
+            }
+            else
+            {
+
+            }
             Console.ReadLine();
+
+            /*
+            //Serializar inicia
+            Console.WriteLine("¿quieres serializar? (s/n) \n");
+            string respuesta = Console.ReadLine().ToLower();
+            if ( respuesta == "s")
+            {
+                Console.WriteLine("asdasdasd");
+                switch (Console.ReadLine())
+                {
+                    case "s":
+
+                    try
+                    {
+                        using (Stream stream = File.Open("data.bin", FileMode.Create))
+                           {
+                                BinaryFormatter bin = new BinaryFormatter();
+                                bin.Serialize(stream, myNotes);
+                            }
+                    }
+                        catch (IOException)
+                        {
+                        }
+                        break;
+
+                    case "r":
+                        try
+                        {
+                            using (Stream stream = File.Open("data.bin", FileMode.Open))
+                            {
+                                BinaryFormatter bin = new BinaryFormatter();
+
+                                var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
+                                foreach (MyNotes asd in notasPrograma)
+                                {
+                                    //desde aca ya tendremos todos los datos de vuelta
+                                    // todas las listas ¿reducible?
+
+                                    foreach (Alumno alumno in myNotes.GetListaAlumnos())
+                                    {
+                                        myNotes.AgregarAlumnos(alumno);
+                                    }
+                                    foreach (Profesor profesor in myNotes.GetListaProfesores())
+                                    {
+                                        myNotes.AgregarProfesor(profesor);
+                                    }
+                                    foreach (Administrador aadministrador in myNotes.GetListaAdmin())
+                                    {
+                                        myNotes.AgregarAdmin(aadministrador);
+                                    }
+                                    
+                                }
+
+
+                            }
+                        }
+                        catch (IOException)
+                        {
+                        }
+                        break;
+
+
+                }
+                //termina serializacion
+            }
+            */
+
         }
     }
 }

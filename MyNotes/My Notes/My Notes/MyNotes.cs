@@ -38,6 +38,10 @@ namespace My_Notes
         {
             return ListaProfesores;
         }
+        public List<Administrador> GetListaAdmin()
+        {
+            return ListaAdministradores;
+        }
         public bool ConfirmarContrasena (string nombre, string pass)
         {
             Alumno Alumno = (ListaAlumnos.Find(nom => nom.GetNombre() == nombre));
@@ -63,9 +67,9 @@ namespace My_Notes
                 }
                 else { return false; }
             }
-            else if (profesor == null && administrador == null)
+            else if (Alumno == null && administrador == null)
             {
-                if (Alumno.GetContrasena() == pass)
+                if (profesor.GetContrasena() == pass)
                 {
                     return true;
                 }

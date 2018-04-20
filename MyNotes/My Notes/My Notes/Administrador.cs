@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes para no acceder siempre a las listas
 {
-    class Administrador : Usuario, IVerificandoContrasena, IVerificandoNombre
+    class Administrador : Usuario
     {
         bool administrador = true;
 
@@ -14,7 +14,19 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
         {
             administrador = miAdministrador;
         }
-
+        public bool VerificarNombre(string nombre, List<Alumno> listaAlumnos, List<Profesor> listaProfesores)
+        {
+            List<Alumno> verificandoNombreAl = (listaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();
+            List<Profesor> verificandoNombrePr = (listaProfesores.Where(nom => nom.GetNombre() == nombre)).ToList();
+            if (verificandoNombreAl.Count() > 0 && verificandoNombrePr.Count() > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         public bool VerificarContrasena(string constrasena)
         {
             if (contrasena.Length < 3)
@@ -27,21 +39,6 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
                 return true;
             }
         }
-
-        public bool VerificarNombre(string nombre, List<Alumno> listaAlumno, List<Profesor> listaProfesor)
-        {
-            List<Alumno> verificandoNombreAl = (listaAlumno.Where(nom => nom.GetNombre() == nombre)).ToList();
-            List<Profesor> verificandoNombrePr = (listaProfesor.Where(nom => nom.GetNombre() == nombre)).ToList();
-            if (verificandoNombreAl.Count() > 0 && verificandoNombrePr.Count() > 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         public bool AgregarAlumno(string nombre, string contrasena, List<Alumno> als, List<Profesor> profs)
         {
             while (VerificarNombre(nombre, als, profs) != true)
@@ -82,57 +79,61 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
             return true;
         }
 
-        public List<Alumno> EliminarAlumno(string nombre, List<Alumno> als)
+        public bool EliminarAlumno(string nombre, List<Alumno> als)
         {
-            List<Alumno> ListaAlumnosNueva = (als.Where(nom => nom.GetNombre() != nombre)).ToList();
-            return ListaAlumnosNueva;
-        }
-
-        public bool CrearRamo(int NRC)
-        {
+            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
+            als.Remove(AlumnoX);
             return true;
         }
 
-        public bool EditarRamo(int NRC)
+        public bool CrearRamo(string nombre, string nrc)
         {
+            Ramo ramo = new Ramo(nrc, nombre);
             return true;
         }
 
-        public bool EliminarRamo(int NRC)
+        public bool EditarNombreRamo(Ramo ramo, string nombreNuevo)
         {
+            ramo.SetNombre(nombreNuevo);
             return true;
         }
 
-        public void CrearFechas()
+        public bool EliminarRamo(string NRC, List<Ramo> ramos)
         {
-
-        }
-
-        public bool EditarFechas()
-        {
+            Ramo ramoX = (ramos.Find(nom => nom.GetNRC() == NRC));
+            ramos.Remove(ramoX);
             return true;
         }
 
-        public bool EliminarFechas()
+        public void CrearFechas(Ramo ramo, DateTime fecha)
         {
+            ramo.AgregarFechas(fecha);
+        }
+
+        public bool EditarFechas(Ramo ramo, DateTime fecha, DateTime fechaNueva)
+        {
+            DateTime fechaE = (ramo.GetFechas().Find(nom => nom == fecha));
+            ramo.GetFechas().Remove(fechaE);
+            ramo.AgregarFechas(fechaNueva);
             return true;
         }
 
-        public void HacerAyudante()
+        public bool EliminarFechas(Ramo ramo, DateTime fecha)
         {
-
+            DateTime fechaE = (ramo.GetFechas().Find(nom => nom == fecha));
+            ramo.GetFechas().Remove(fechaE);
+            return true;
         }
 
-        public void EliminarAyudante()
+        public void HacerAyudante(Alumno alumno)
         {
-
+            alumno.SetHacerAyudante(alumno); //estara bueno?
         }
 
-        public void CrearAyudante()
+        public void EliminarAyudante(Alumno alumno)
         {
-
+            alumno.SetDesHacerAyudante(alumno);
         }
-
         public void EditarMaterial()
         {
 

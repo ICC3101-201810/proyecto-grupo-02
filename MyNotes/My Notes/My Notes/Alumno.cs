@@ -20,6 +20,10 @@ namespace My_Notes
         {
             return base.nombre;
         }
+        public void SetNombre(string nombreNuevo)
+        {
+            nombre = nombreNuevo;
+        }
 
         public bool CrearApunte ()
         {
@@ -38,6 +42,17 @@ namespace My_Notes
             return true;
             //aun no impementada
         }
-
+        public void SetHacerAyudante(Alumno alumno)
+        {
+            alumno.ayudante = true;
+        }
+        public void SetDesHacerAyudante(Alumno alumno)
+        {
+            alumno.ayudante = false;
+        }
+        public bool GetPermisoAyudante()
+        {
+            return ayudante;
+        }
     }
 }

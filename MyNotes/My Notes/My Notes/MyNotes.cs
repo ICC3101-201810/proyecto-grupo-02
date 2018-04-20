@@ -10,11 +10,13 @@ namespace My_Notes
     {//DOS LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores y alumnos.
         List<Alumno> ListaAlumnos;
         List<Profesor> ListaProfesores;
+        List<Administrador> ListaAdministradores;
 
         public MyNotes()
         {
             ListaAlumnos = new List<Alumno>();
             ListaProfesores = new List<Profesor>();
+            ListaAdministradores = new List<Administrador>();
         }
         public void AgregarAlumnos(Alumno alumno)
         {
@@ -32,5 +34,7 @@ namespace My_Notes
         {
             return ListaProfesores;
         }
+        
+        
     }
 }

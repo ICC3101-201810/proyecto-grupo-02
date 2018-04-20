@@ -31,5 +31,26 @@ namespace My_Notes
             }
             return false;
         }
+        public bool AgregarFechas(DateTime date)
+        {
+            Fechas.Add(date);
+            return true;
+        }
+        public List<Seccion> GetSecciones()
+        {
+            return secciones;
+        }
+        public List<DateTime> GetFechas()
+        {
+            return Fechas;
+        }
+        public void SetNombre(string nombrenuevo)
+        {
+            Nombre = nombrenuevo;
+        }
+        public string GetNRC()
+        {
+            return NRC;
+        }
     }
 }

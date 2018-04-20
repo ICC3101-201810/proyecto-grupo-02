@@ -10,6 +10,7 @@ namespace My_Notes
     {
         int IDSeccion;
         List<Alumno> alumnos = new List<Alumno>();
+        List<Alumno> ayudantes = new List<Alumno>();
         List<Profesor> profesores = new List<Profesor>();
         int vacantes;
 

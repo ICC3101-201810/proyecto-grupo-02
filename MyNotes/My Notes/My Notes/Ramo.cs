@@ -29,7 +29,11 @@ namespace My_Notes
                 Console.WriteLine("Seccion " +seccion.GetIDSeccion().ToString() + " Agregada al Ramo "+ Nombre + " satisfactoriamente" );
                 return true;
             }
+            
             return false;
         }
+
     }
 }
+
+

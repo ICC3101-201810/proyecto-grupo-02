@@ -98,13 +98,25 @@ namespace My_Notes
                                             myNotes.AgregarProfesor(profesor);
                                         }
                                     }
+                                    Console.WriteLine(proyecto.GetListaAdmin().GetEnumerator());
+                                    Console.WriteLine(proyecto.GetListaAlumnos().GetEnumerator());
+                                    Console.WriteLine(proyecto.GetListaAdmin().Count());
+                                    Console.ReadLine();
                                     if (!(proyecto.GetListaAdmin().Count() == 0))
                                     {
-                                        List<Administrador> s = myNotes.GetListaAdmin();
-                                        foreach (Administrador aadministrador in s)
+                                        try
                                         {
-                                            myNotes.AgregarAdmin(aadministrador);
+                                            foreach (Administrador aadministrador in myNotes.GetListaAdmin())
+                                            {
+                                                myNotes.AgregarAdmin(aadministrador);
+                                            }
                                         }
+                                        catch(Exception )
+                                        {
+
+                                        }
+                                        
+
                                     }
                                 }
 

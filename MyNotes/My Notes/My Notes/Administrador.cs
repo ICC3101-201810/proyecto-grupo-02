@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes para no acceder siempre a las listas
 {
+    [Serializable()]
     class Administrador : Usuario
     {
         bool administrador = true;

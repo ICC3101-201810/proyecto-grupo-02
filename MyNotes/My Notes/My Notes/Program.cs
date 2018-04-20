@@ -51,7 +51,7 @@ namespace My_Notes
             string respuesta = Console.ReadLine().ToLower();
             if ( respuesta == "s")
             {
-                Console.WriteLine("asdasdasd");
+                Console.WriteLine("\ns= serializar, r =read\n");
                 switch (Console.ReadLine())
                 {
                     case "s":
@@ -60,8 +60,11 @@ namespace My_Notes
                     {
                         using (Stream stream = File.Open("data.bin", FileMode.Create))
                            {
+                                var AGuardar = new List<MyNotes>();
+                                AGuardar.Add(myNotes);
+
                                 BinaryFormatter bin = new BinaryFormatter();
-                                bin.Serialize(stream, myNotes);
+                                bin.Serialize(stream, AGuardar);
                             }
                     }
                         catch (IOException)
@@ -77,24 +80,32 @@ namespace My_Notes
                                 BinaryFormatter bin = new BinaryFormatter();
 
                                 var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
-                                foreach (MyNotes asd in notasPrograma)
+                                foreach (MyNotes proyecto in notasPrograma)
                                 {
                                     //desde aca ya tendremos todos los datos de vuelta
                                     // todas las listas ¿reducible?
-
-                                    foreach (Alumno alumno in myNotes.GetListaAlumnos())
+                                    if (!(proyecto.GetListaAlumnos().Count() == 0))
                                     {
-                                        myNotes.AgregarAlumnos(alumno);
+                                        foreach (Alumno alumno in myNotes.GetListaAlumnos())
+                                        {
+                                            myNotes.AgregarAlumnos(alumno);
+                                        }
                                     }
-                                    foreach (Profesor profesor in myNotes.GetListaProfesores())
+                                    if (!(proyecto.GetListaProfesores().Count() == 0))
                                     {
-                                        myNotes.AgregarProfesor(profesor);
+                                        foreach (Profesor profesor in myNotes.GetListaProfesores())
+                                        {
+                                            myNotes.AgregarProfesor(profesor);
+                                        }
                                     }
-                                    foreach (Administrador aadministrador in myNotes.GetListaAdmin())
+                                    if (!(proyecto.GetListaAdmin().Count() == 0))
                                     {
-                                        myNotes.AgregarAdmin(aadministrador);
+                                        List<Administrador> s = myNotes.GetListaAdmin();
+                                        foreach (Administrador aadministrador in s)
+                                        {
+                                            myNotes.AgregarAdmin(aadministrador);
+                                        }
                                     }
-                                    
                                 }
 
 

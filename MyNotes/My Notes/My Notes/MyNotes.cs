@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace My_Notes
 {
+    [Serializable()]
     class MyNotes
     {//DOS LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores y alumnos.
         List<Alumno> ListaAlumnos;

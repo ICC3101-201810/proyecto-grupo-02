@@ -45,8 +45,6 @@
     <Compile Include="Administrador.cs" />
     <Compile Include="Alumno.cs" />
     <Compile Include="Apuntes.cs" />
-    <Compile Include="IVerificandoContrasena.cs" />
-    <Compile Include="IVerivicandoNombre.cs" />
     <Compile Include="MyNotes.cs" />
     <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />

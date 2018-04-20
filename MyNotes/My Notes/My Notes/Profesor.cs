@@ -16,25 +16,26 @@ namespace My_Notes
         {
 
         }
-<<<<<<< HEAD
+
         public string GetNombre()
-=======
+        {
+
+        }
 
 
 
         public override bool VerificarNombre(string nombre)
->>>>>>> c4ff693c55267f1bb8c82e54d54bc8bca111c551
+
         {
             return base.nombre;
         }
 
-<<<<<<< HEAD
-=======
+
         public override bool VerificarContrasena(string constrasena)
         {
             throw new NotImplementedException();
         }
->>>>>>> c4ff693c55267f1bb8c82e54d54bc8bca111c551
+
 
         public void SubirMaterial()
         {
@@ -54,10 +55,6 @@ namespace My_Notes
             return true;
             //aun no implementada
         }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> c4ff693c55267f1bb8c82e54d54bc8bca111c551
     }
 }

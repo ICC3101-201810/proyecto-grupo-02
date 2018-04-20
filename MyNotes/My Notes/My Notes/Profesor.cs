@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
+    [Serializable()]
     class Profesor : Usuario
     {
         bool administrador = false;

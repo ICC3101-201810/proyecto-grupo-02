@@ -19,22 +19,9 @@ namespace My_Notes
 
         public string GetNombre()
         {
-
-        }
-
-
-
-        public override bool VerificarNombre(string nombre)
-
-        {
             return base.nombre;
         }
 
-
-        public override bool VerificarContrasena(string constrasena)
-        {
-            throw new NotImplementedException();
-        }
 
 
         public void SubirMaterial()

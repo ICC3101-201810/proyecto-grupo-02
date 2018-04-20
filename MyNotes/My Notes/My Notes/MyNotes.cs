@@ -18,6 +18,10 @@ namespace My_Notes
             ListaProfesores = new List<Profesor>();
             ListaAdministradores = new List<Administrador>();
         }
+        public void AgregarAdmin(Administrador administrador)
+        {
+            ListaAdministradores.Add(administrador);
+        }
         public void AgregarAlumnos(Alumno alumno)
         {
             ListaAlumnos.Add(alumno);
@@ -33,6 +37,41 @@ namespace My_Notes
         public List<Profesor> GetListaProfesores()
         {
             return ListaProfesores;
+        }
+        public bool ConfirmarContrasena (string nombre, string pass)
+        {
+            Alumno Alumno = (ListaAlumnos.Find(nom => nom.GetNombre() == nombre));
+            Profesor profesor = (ListaProfesores.Find(nom => nom.GetNombre() == nombre));
+            Administrador administrador = (ListaAdministradores.Find(nom => nom.GetNombre() == nombre));
+            if (Alumno == null && profesor == null && administrador == null)
+            {
+                return false;
+            }
+            else if (Alumno == null && profesor == null)
+            {
+                if(administrador.GetContrasena() == pass)
+                {
+                    return true;
+                }
+                else { return false; }
+            }
+            else if (administrador == null && profesor == null)
+            {
+                if (Alumno.GetContrasena() == pass)
+                {
+                    return true;
+                }
+                else { return false; }
+            }
+            else if (profesor == null && administrador == null)
+            {
+                if (Alumno.GetContrasena() == pass)
+                {
+                    return true;
+                }
+                else { return false; }
+            }
+            else { return false; }
         }
         
         

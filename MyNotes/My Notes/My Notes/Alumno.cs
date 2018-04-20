@@ -20,6 +20,10 @@ namespace My_Notes
         {
             return base.nombre;
         }
+        public string GetContrasena()
+        {
+            return base.contrasena;
+        }
         public void SetNombre(string nombreNuevo)
         {
             nombre = nombreNuevo;

@@ -14,6 +14,14 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
         {
             administrador = miAdministrador;
         }
+        public string GetNombre()
+        {
+            return base.nombre;
+        }
+        public string GetContrasena()
+        {
+            return base.contrasena;
+        }
         public bool VerificarNombre(string nombre, List<Alumno> listaAlumnos, List<Profesor> listaProfesores)
         {
             List<Alumno> verificandoNombreAl = (listaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,6 +44,73 @@ namespace My_Notes
 
             }
             Console.ReadLine();
+
+
+            //Serializar inicia
+            Console.WriteLine("¿quieres serializar? (s/n) \n");
+            string respuesta = Console.ReadLine().ToLower();
+            if ( respuesta == "s")
+            {
+                Console.WriteLine("asdasdasd");
+                switch (Console.ReadLine())
+                {
+                    case "s":
+
+                    try
+                    {
+                        using (Stream stream = File.Open("data.bin", FileMode.Create))
+                           {
+                                BinaryFormatter bin = new BinaryFormatter();
+                                bin.Serialize(stream, myNotes);
+                            }
+                    }
+                        catch (IOException)
+                        {
+                        }
+                        break;
+
+                    case "r":
+                        try
+                        {
+                            using (Stream stream = File.Open("data.bin", FileMode.Open))
+                            {
+                                BinaryFormatter bin = new BinaryFormatter();
+
+                                var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
+                                foreach (MyNotes asd in notasPrograma)
+                                {
+                                    //desde aca ya tendremos todos los datos de vuelta
+                                    // todas las listas ¿reducible?
+
+                                    foreach (Alumno alumno in myNotes.GetListaAlumnos())
+                                    {
+                                        myNotes.AgregarAlumnos(alumno);
+                                    }
+                                    foreach (Profesor profesor in myNotes.GetListaProfesores())
+                                    {
+                                        myNotes.AgregarProfesor(profesor);
+                                    }
+                                    foreach (Administrador aadministrador in myNotes.GetListaAdmin())
+                                    {
+                                        myNotes.AgregarAdmin(aadministrador);
+                                    }
+                                    
+                                }
+
+
+                            }
+                        }
+                        catch (IOException)
+                        {
+                        }
+                        break;
+
+
+                }
+                //termina serializacion
+            }
+
+
         }
     }
 }

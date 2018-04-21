@@ -233,18 +233,18 @@ namespace My_Notes
                                 var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
                                 foreach (MyNotes proyecto in notasPrograma)
                                 {
-                                    //desde aca ya tendremos todos los datos de vuelta
+                                    // desde aca ya tendremos todos los datos de vuelta
                                     // todas las listas ¿reducible?
                                     if (!(proyecto.GetListaAlumnos().Count() == 0))
                                     {
-                                        foreach (Alumno alumno in myNotes.GetListaAlumnos())
+                                        foreach (Alumno alumno in proyecto.GetListaAlumnos())
                                         {
                                             myNotes.AgregarAlumnos(alumno);
                                         }
                                     }
                                     if (!(proyecto.GetListaProfesores().Count() == 0))
                                     {
-                                        foreach (Profesor profesor in myNotes.GetListaProfesores())
+                                        foreach (Profesor profesor in proyecto.GetListaProfesores())
                                         {
                                             myNotes.AgregarProfesor(profesor);
                                         }
@@ -255,19 +255,11 @@ namespace My_Notes
                                     Console.ReadLine();
                                     if (!(proyecto.GetListaAdmin().Count() == 0))
                                     {
-                                        try
-                                        {
-                                            foreach (Administrador aadministrador in myNotes.GetListaAdmin())
+                                        foreach (Administrador aadministrador in proyecto.GetListaAdmin())
                                             {
                                                 myNotes.AgregarAdmin(aadministrador);
                                             }
-                                        }
-                                        catch(Exception )
-                                        {
-
-                                        }
                                         
-
                                     }
                                 }
 

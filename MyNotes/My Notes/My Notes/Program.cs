@@ -13,14 +13,65 @@ namespace My_Notes
         static void Main(string[] args)
         {
             MyNotes myNotes = new MyNotes();
+
+            // inicia porceso de recuperar datos anteriores
+
+            try
+            {
+                using (Stream stream = File.Open("data.bin", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
+                    foreach (MyNotes proyecto in notasPrograma)
+                    {
+                        // desde aca ya tendremos todos los datos de vuelta
+                        // todas las listas ¿reducible?
+                        if (!(proyecto.GetListaAlumnos().Count() == 0))
+                        {
+                            foreach (Alumno alumnoo in proyecto.GetListaAlumnos())
+                            {
+
+                                myNotes.AgregarAlumnos(alumnoo);
+                            }
+                        }
+                        if (!(proyecto.GetListaProfesores().Count() == 0))
+                        {
+                            foreach (Profesor profesorr in proyecto.GetListaProfesores())
+                            {
+                                myNotes.AgregarProfesor(profesorr);
+                            }
+                        }
+
+                        if (!(proyecto.GetListaAdmin().Count() == 0))
+                        {
+                            foreach (Administrador aadministrador in proyecto.GetListaAdmin())
+                            {
+                                if (aadministrador.GetNombre() == "admin")
+                                {
+                                    continue;
+                                }
+                                myNotes.AgregarAdmin(aadministrador);
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (IOException)
+            {
+
+            }
+            // datos agregados a intancia actual
             Administrador administrador = new Administrador("admin", "123", true);
             myNotes.AgregarAdmin(administrador);
-            Semestre semestre = new Semestre("2018-10");
+            
+            //Semestre semestre = new Semestre("2018-10");
             //CREACION DE PROFES Y ALUMNOS PARA PROBAR CODIGO! BORRAR DESPUES
-            Alumno alumno = new Alumno("pepe", "456");
-            myNotes.AgregarAlumnos(alumno);
-            Profesor profesor = new Profesor("tata", "789");
-            myNotes.AgregarProfesor(profesor);
+            //Alumno alumno = new Alumno("pepe", "456");
+            //myNotes.AgregarAlumnos(alumno);
+            //Profesor profesor = new Profesor("tata", "789");
+            //myNotes.AgregarProfesor(profesor);
             //---------------------------------------------------------------
             Console.WriteLine("\t\t\t\tBIENVENIDO A MY NOTES!\n");
             Console.WriteLine("Nombre de Usuario: ");
@@ -241,86 +292,16 @@ namespace My_Notes
             }
             Console.ReadLine();
 
-            
-            //Serializar inicia
-            Console.WriteLine("¿quieres serializar? (s/n) \n");
-            string respuesta = Console.ReadLine().ToLower();
-            if ( respuesta == "s")
+            // serializacion para guardado de datos 
+            using (Stream stream = File.Open("data.bin", FileMode.Create))
             {
-                Console.WriteLine("\ns= serializar, r =read\n");
-                switch (Console.ReadLine())
-                {
-                    case "s":
+                var AGuardar = new List<MyNotes>();
+                AGuardar.Add(myNotes);
 
-                    try
-                    {
-                        using (Stream stream = File.Open("data.bin", FileMode.Create))
-                           {
-                                var AGuardar = new List<MyNotes>();
-                                AGuardar.Add(myNotes);
-
-                                BinaryFormatter bin = new BinaryFormatter();
-                                bin.Serialize(stream, AGuardar);
-                            }
-                    }
-                        catch (IOException)
-                        {
-                        }
-                        break;
-
-                    case "r":
-                        try
-                        {
-                            using (Stream stream = File.Open("data.bin", FileMode.Open))
-                            {
-                                BinaryFormatter bin = new BinaryFormatter();
-
-                                var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
-                                foreach (MyNotes proyecto in notasPrograma)
-                                {
-                                    // desde aca ya tendremos todos los datos de vuelta
-                                    // todas las listas ¿reducible?
-                                    if (!(proyecto.GetListaAlumnos().Count() == 0))
-                                    {
-                                        foreach (Alumno alumno in proyecto.GetListaAlumnos())
-                                        {
-                                            myNotes.AgregarAlumnos(alumno);
-                                        }
-                                    }
-                                    if (!(proyecto.GetListaProfesores().Count() == 0))
-                                    {
-                                        foreach (Profesor profesor in proyecto.GetListaProfesores())
-                                        {
-                                            myNotes.AgregarProfesor(profesor);
-                                        }
-                                    }
-                                    Console.WriteLine(proyecto.GetListaAdmin().GetEnumerator());
-                                    Console.WriteLine(proyecto.GetListaAlumnos().GetEnumerator());
-                                    Console.WriteLine(proyecto.GetListaAdmin().Count());
-                                    Console.ReadLine();
-                                    if (!(proyecto.GetListaAdmin().Count() == 0))
-                                    {
-                                        foreach (Administrador aadministrador in proyecto.GetListaAdmin())
-                                            {
-                                                myNotes.AgregarAdmin(aadministrador);
-                                            }
-                                        
-                                    }
-                                }
-
-
-                            }
-                        }
-                        catch (IOException)
-                        {
-                        }
-                        break;
-
-
-                }
-                //termina serializacion
+                BinaryFormatter bin = new BinaryFormatter();
+                bin.Serialize(stream, AGuardar);
             }
-            
+            //datos guardados 
 
         }
     }

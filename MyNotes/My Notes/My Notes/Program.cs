@@ -13,7 +13,8 @@ namespace My_Notes
         static void Main(string[] args)
         {
             MyNotes myNotes = new MyNotes();
-
+            
+            /*
             // serializacion para guardado de datos 
             using (Stream stream = File.Open("data.bin", FileMode.Create))
             {
@@ -25,9 +26,9 @@ namespace My_Notes
                 stream.Close();
             }
             //datos guardados 
-
+            */
             // inicia porceso de recuperar datos anteriores
-
+            
             try
             {
                 using (Stream stream = File.Open("data.bin", FileMode.Open))
@@ -75,15 +76,16 @@ namespace My_Notes
 
             }
             // datos agregados a intancia actual
+            
             Administrador administrador = new Administrador("admin", "123", true);
             myNotes.AgregarAdmin(administrador);
             
             Semestre semestre = new Semestre("2018-10");
             //CREACION DE PROFES Y ALUMNOS PARA PROBAR CODIGO! BORRAR DESPUES
-            //Alumno alumno = new Alumno("pepe", "456");
-            //myNotes.AgregarAlumnos(alumno);
-            //Profesor profesor = new Profesor("tata", "789");
-            //myNotes.AgregarProfesor(profesor);
+            Alumno alumno = new Alumno("pepe", "456");
+            myNotes.AgregarAlumnos(alumno);
+            Profesor profesor = new Profesor("tata", "789");
+            myNotes.AgregarProfesor(profesor);
             //---------------------------------------------------------------
             Console.WriteLine("\t\t\t\tBIENVENIDO A MY NOTES!\n");
             Console.WriteLine("Nombre de Usuario: ");

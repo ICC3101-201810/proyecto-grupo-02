@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace My_Notes
 {
     [Serializable()]
-    class Profesor : Usuario
+    public class Profesor : Usuario
     {
         bool administrador = false;
         List<string> informaicon;

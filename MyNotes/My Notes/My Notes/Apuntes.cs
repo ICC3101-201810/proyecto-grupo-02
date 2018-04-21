@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
+    [Serializable()]
     enum TipoApunte{ clase, pauta, ejercicio }
     class Apuntes
     {

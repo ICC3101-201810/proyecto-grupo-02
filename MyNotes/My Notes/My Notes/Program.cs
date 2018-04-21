@@ -14,6 +14,18 @@ namespace My_Notes
         {
             MyNotes myNotes = new MyNotes();
 
+            // serializacion para guardado de datos 
+            using (Stream stream = File.Open("data.bin", FileMode.Create))
+            {
+                var AGuardar = new List<MyNotes>();
+                AGuardar.Add(myNotes);
+
+                BinaryFormatter bin = new BinaryFormatter();
+                bin.Serialize(stream, AGuardar);
+                stream.Close();
+            }
+            //datos guardados 
+
             // inicia porceso de recuperar datos anteriores
 
             try
@@ -66,7 +78,7 @@ namespace My_Notes
             Administrador administrador = new Administrador("admin", "123", true);
             myNotes.AgregarAdmin(administrador);
             
-            //Semestre semestre = new Semestre("2018-10");
+            Semestre semestre = new Semestre("2018-10");
             //CREACION DE PROFES Y ALUMNOS PARA PROBAR CODIGO! BORRAR DESPUES
             //Alumno alumno = new Alumno("pepe", "456");
             //myNotes.AgregarAlumnos(alumno);
@@ -146,7 +158,7 @@ namespace My_Notes
                     {
                         Console.WriteLine("ID para el semestre:");
                         string nombre = Console.ReadLine();
-                        Semestre semestre = new Semestre(nombre);
+                        Semestre semestre1 = new Semestre(nombre);
                     }
                     else if (opc2 == "5")
                     {
@@ -300,6 +312,7 @@ namespace My_Notes
 
                 BinaryFormatter bin = new BinaryFormatter();
                 bin.Serialize(stream, AGuardar);
+                stream.Close();
             }
             //datos guardados 
 

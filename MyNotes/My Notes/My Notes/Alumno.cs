@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace My_Notes
 {
     [Serializable()]
-    class Alumno : Usuario
+    public class Alumno : Usuario
     {
         bool administrador = false;
         List<Apuntes>  apuntes = new List<Apuntes>();
@@ -34,7 +34,7 @@ namespace My_Notes
         {
             return true;
             //aun no implementada
-            // necesita tener clase ramo
+            //necesita tener clase ramo
         }
 
         public void AgregarRecordatorio()

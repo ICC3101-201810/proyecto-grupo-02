@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace My_Notes
 {
-    [Serializable()]
-    class MyNotes
+    [Serializable]
+    public class MyNotes
     {//TRES LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores, admins y alumnos.
         List<Alumno> ListaAlumnos;
         List<Profesor> ListaProfesores;

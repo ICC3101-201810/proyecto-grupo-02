@@ -56,6 +56,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
         {
             while (VerificarNombre(nombre, als, profs) != true)
             {
+                Console.Beep();
                 Console.WriteLine("Nombre ya existe.\nIngrese otro:");
                 nombre = Console.ReadLine();
                 VerificarNombre(nombre, als, profs);
@@ -63,6 +64,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
 
             while (VerificarContrasena(contrasena) != true)
             {
+                Console.Beep();
                 Console.WriteLine("Contrasena invalida.\nIngrese otra:");
                 contrasena = Console.ReadLine();
                 VerificarContrasena(contrasena);
@@ -77,6 +79,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
                 List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
                 if (alumnoEditado.Count() < 2)
                 {
+                    Console.Beep();
                     Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
                     return false;
                 }
@@ -97,6 +100,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
                 List<Profesor> profeEditado = (profs.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
                 if (profeEditado.Count() < 2)
                 {
+                    Console.Beep();
                     Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
                     return false;
                 }

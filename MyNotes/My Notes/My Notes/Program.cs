@@ -304,7 +304,9 @@ namespace My_Notes
             {
 
             }
+            Console.WriteLine("Apriete enter para salir, sus cambios serán guardados");
             Console.ReadLine();
+            Console.Beep();
 
             // serializacion para guardado de datos 
             using (Stream stream = File.Open("data.bin", FileMode.Create))
@@ -317,6 +319,7 @@ namespace My_Notes
                 stream.Close();
             }
             //datos guardados 
+
 
         }
     }

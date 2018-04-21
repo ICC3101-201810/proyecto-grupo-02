@@ -36,6 +36,7 @@ namespace My_Notes
             }
             else
             {
+                Console.Beep();
                 Console.WriteLine("Ramo ya se encuentra en el Semestre" + this.ID);
                 return false;
             }

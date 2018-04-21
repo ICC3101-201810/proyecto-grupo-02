@@ -11,10 +11,10 @@ namespace My_Notes
         string ID;
         List<Ramo> ramos;
 
-        public Semestre(string id, List<Ramo> ramosPorSemestre)
+        public Semestre(string id)
         {
             ID = id;
-            ramos = ramosPorSemestre;
+            //ramos = ramosPorSemestre;
         }
 
         public bool AgregarRamo (Ramo ramo)

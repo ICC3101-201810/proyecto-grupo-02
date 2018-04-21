@@ -8,20 +8,20 @@ namespace My_Notes
 {
     public class Seccion
     {
-        int IDSeccion;
+        string IDSeccion;
         List<Alumno> alumnos = new List<Alumno>();
         List<Alumno> ayudantes = new List<Alumno>();
         List<Profesor> profesores = new List<Profesor>();
         int vacantes;
 
-        public Seccion(int IDSeccion, int vacantes)
+        public Seccion(string IDSeccion, int vacantes)
         {
             this.IDSeccion = IDSeccion;
             this.vacantes = vacantes;
             //ver como se une con Profesor
         }
 
-        public int GetIDSeccion ()
+        public string GetIDSeccion ()
         {
             return IDSeccion;
         }

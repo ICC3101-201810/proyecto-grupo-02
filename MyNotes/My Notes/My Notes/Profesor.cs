@@ -22,6 +22,10 @@ namespace My_Notes
         {
             return base.nombre;
         }
+        public void SetNombre(string nombreNuevo)
+        {
+            nombre = nombreNuevo.ToUpper();
+        }
 
         public string GetContrasena()
         {

@@ -19,6 +19,10 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
         {
             return base.nombre;
         }
+        public void SetNombre(string nombreNuevo)
+        {
+            nombre = nombreNuevo.ToUpper();
+        }
         public string GetContrasena()
         {
             return base.contrasena;
@@ -66,20 +70,19 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
             Alumno alumno = new Alumno(nombre, contrasena);
             return true;
         }
-
         public bool EditarAlumno(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
         {
             if (VerificarNombre(nombre, als, profs))
             {
                 List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
-                if (als.Count() < 2)
+                if (alumnoEditado.Count() < 2)
                 {
                     Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
                     return false;
                 }
                 else
                 {
-                    als[0].SetNombre(nombreNuevo);
+                    alumnoEditado[0].SetNombre(nombreNuevo);
                     Console.WriteLine("Se edito correctamente al alumno.");
                     return true;
                 }
@@ -87,38 +90,64 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
             }
             return true;
         }
+        public bool EditarProfesor(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
+        {
+            if (VerificarNombre(nombre, als, profs))
+            {
+                List<Profesor> profeEditado = (profs.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
+                if (profeEditado.Count() < 2)
+                {
+                    Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
+                    return false;
+                }
+                else
+                {
+                    profeEditado[0].SetNombre(nombreNuevo);
+                    Console.WriteLine("Se edito correctamente al alumno.");
+                    return true;
+                }
 
+            }
+            return true;
+        }
         public bool EliminarAlumno(string nombre, List<Alumno> als)
         {
             Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
             als.Remove(AlumnoX);
             return true;
         }
-
+        public bool EliminarAdmin(string nombre, List<Administrador> ads)
+        {
+            Administrador AdminX = (ads.Find(nom => nom.GetNombre() == nombre));
+            ads.Remove(AdminX);
+            return true;
+        }
+        public bool EliminarProfesor(string nombre, List<Profesor> profs)
+        {
+            Profesor profesorX = (profs.Find(nom => nom.GetNombre() == nombre));
+            profs.Remove(profesorX);
+            return true;
+        }
         public bool CrearRamo(string nombre, string nrc)
         {
             Ramo ramo = new Ramo(nrc, nombre);
             return true;
         }
-
         public bool EditarNombreRamo(Ramo ramo, string nombreNuevo)
         {
             ramo.SetNombre(nombreNuevo);
             return true;
         }
-
         public bool EliminarRamo(string NRC, List<Ramo> ramos)
         {
             Ramo ramoX = (ramos.Find(nom => nom.GetNRC() == NRC));
             ramos.Remove(ramoX);
             return true;
         }
-
         public void CrearFechas(Ramo ramo, DateTime fecha)
         {
             ramo.AgregarFechas(fecha);
         }
-
         public bool EditarFechas(Ramo ramo, DateTime fecha, DateTime fechaNueva)
         {
             DateTime fechaE = (ramo.GetFechas().Find(nom => nom == fecha));
@@ -126,28 +155,26 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
             ramo.AgregarFechas(fechaNueva);
             return true;
         }
-
         public bool EliminarFechas(Ramo ramo, DateTime fecha)
         {
             DateTime fechaE = (ramo.GetFechas().Find(nom => nom == fecha));
             ramo.GetFechas().Remove(fechaE);
             return true;
         }
-
-        public void HacerAyudante(Alumno alumno)
+        public void HacerAyudante(string nombre, List<Alumno> als)
         {
-            alumno.SetHacerAyudante(alumno); //estara bueno?
+            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
+            AlumnoX.SetHacerAyudante(AlumnoX);//estara bueno?
         }
-
-        public void EliminarAyudante(Alumno alumno)
+        public void EliminarAyudante(string nombre, List<Alumno> als)
         {
-            alumno.SetDesHacerAyudante(alumno);
+            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
+            AlumnoX.SetDesHacerAyudante(AlumnoX);
         }
         public void EditarMaterial()
         {
 
         }
-
         public void EliminarMaterial()
         {
 

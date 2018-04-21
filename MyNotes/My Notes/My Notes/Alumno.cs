@@ -10,7 +10,7 @@ namespace My_Notes
     class Alumno : Usuario
     {
         bool administrador = false;
-        List<Apuntes>  apuntes;
+        List<Apuntes>  apuntes = new List<Apuntes>();
         bool ayudante = false;
 
         public Alumno(string nombre, string contrasena) : base (nombre, contrasena)

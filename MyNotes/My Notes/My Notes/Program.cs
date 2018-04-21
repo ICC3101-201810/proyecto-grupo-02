@@ -15,6 +15,7 @@ namespace My_Notes
             MyNotes myNotes = new MyNotes();
             Administrador administrador = new Administrador("admin", "123", true);
             myNotes.AgregarAdmin(administrador);
+            Semestre semestre = new Semestre("2018-10");
             //CREACION DE PROFES Y ALUMNOS PARA PROBAR CODIGO! BORRAR DESPUES
             Alumno alumno = new Alumno("pepe", "456");
             myNotes.AgregarAlumnos(alumno);
@@ -38,6 +39,7 @@ namespace My_Notes
                 }
                 else
                 {
+                    Console.Beep();
                     Console.WriteLine("Contrasena invalida.\nIntente nuevamente.");
                     Console.WriteLine("Nombre de Usuario: ");
                     NombreUsuario = Console.ReadLine();
@@ -122,43 +124,86 @@ namespace My_Notes
                     Console.WriteLine("2.- Darle permiso de ayudante a un alumno");
                     Console.WriteLine("3.- Quitarle permiso de ayudante a un alumno");
                     Console.WriteLine("4.- Editar Profesor");
-                    Console.WriteLine("5.- Editar Administrador");
-                    Console.WriteLine("6.- Editar Semestre");
-                    Console.WriteLine("7.- Editar Ramo");
-                    Console.WriteLine("8.- Editar Seccion");
+                    Console.WriteLine("5.- Editar Semestre");
+                    Console.WriteLine("6.- Editar Ramo");
+                    Console.WriteLine("7.- Editar Seccion");
                     string opc2 = Console.ReadLine();
                     if (opc2 == "1")
                     {
-                        Console.WriteLine("Nombre de usuario para el alumno:");
+                        Console.WriteLine("Nombre del alumno para editar:");
                         string nombre = Console.ReadLine();
-                        Console.WriteLine("Contrasena para el alumno:");
-                        string contrasena = Console.ReadLine();
-                        Alumno alumno1 = new Alumno(nombre, contrasena);
-                        myNotes.AgregarAlumnos(alumno1);
+                        Console.WriteLine("Nombre nuevo del alumno:");
+                        string nombreNuevo = Console.ReadLine();
+                        administrador.EditarAlumno(nombre,nombreNuevo,myNotes.GetListaAlumnos(),myNotes.GetListaProfesores());
                     }
                     else if (opc2 == "2")
                     {
-                        Console.WriteLine("Nombre de usuario para el profesor:");
+                        Console.WriteLine("Nombre del alumno que sera ayudante:");
                         string nombre = Console.ReadLine();
-                        Console.WriteLine("Contrasena para el profesor:");
-                        string contrasena = Console.ReadLine();
-                        Profesor profesor1 = new Profesor(nombre, contrasena);
-                        myNotes.AgregarProfesor(profesor1);
+                        administrador.HacerAyudante(nombre, myNotes.GetListaAlumnos());
                     }
                     else if (opc2 == "3")
                     {
-                        Console.WriteLine("Nombre de usuario para el administrador:");
+                        Console.WriteLine("Nombre del alumno que dejara de ser ayudante:");
                         string nombre = Console.ReadLine();
-                        Console.WriteLine("Contrasena para el admostrador:");
-                        string contrasena = Console.ReadLine();
-                        Administrador admin1 = new Administrador(nombre, contrasena, true);
-                        myNotes.AgregarAdmin(admin1);
+                        administrador.EliminarAyudante(nombre, myNotes.GetListaAlumnos());
+                    }
+                    else if (opc2 == "4")
+                    {
+                        Console.WriteLine("Nombre del profesor para editar:");
+                        string nombre = Console.ReadLine();
+                        Console.WriteLine("Nombre nuevo del profesor:");
+                        string nombreNuevo = Console.ReadLine();
+                        administrador.EditarProfesor(nombre, nombreNuevo, myNotes.GetListaAlumnos(), myNotes.GetListaProfesores());
+                    }
+                    else if (opc2 == "5")
+                    {
+                        
+                    }
+                    else if (opc2 == "6")
+                    {
+                        Console.WriteLine("Nombre del ramo para editar:");
+                        
+                    }
+                    else if (opc2 == "7")
+                    {
+
+                    }
+                    else { }
+                }
+                else if (opc1 == "3")
+                {
+                    Console.WriteLine("Que desea Eliminar?");
+                    Console.WriteLine("1.- Eliminar Alumno");
+                    Console.WriteLine("2.- Eliminar Profesor");
+                    Console.WriteLine("3.- Eliminar Administrador");
+                    Console.WriteLine("4.- Eliminar Semestre");
+                    Console.WriteLine("5.- Eliminar Ramo");
+                    Console.WriteLine("6.- Eliminar Seccion");
+                    string opc2 = Console.ReadLine();
+                    if (opc2 == "1")
+                    {
+                        Console.WriteLine("Nombre del alumno a eliminar:");
+                        string nombre = Console.ReadLine();
+                        administrador.EliminarAlumno(nombre, myNotes.GetListaAlumnos());
+                    }
+                    else if (opc2 == "2")
+                    {
+                        Console.WriteLine("Nombre del profesor a eliminar:");
+                        string nombre = Console.ReadLine();
+                        administrador.EliminarProfesor(nombre, myNotes.GetListaProfesores());
+                    }
+                    else if (opc2 == "3")
+                    {
+                        Console.WriteLine("Nombre del administrador a eliminar:");
+                        string nombre = Console.ReadLine();
+                        administrador.EliminarAdmin(nombre, myNotes.GetListaAdmin());
                     }
                     else if (opc2 == "4")
                     {
                         Console.WriteLine("ID para el semestre:");
                         string nombre = Console.ReadLine();
-                        Semestre semestre = new Semestre(nombre);
+                        Semestre semestre1 = new Semestre(nombre);
                     }
                     else if (opc2 == "5")
                     {
@@ -196,7 +241,7 @@ namespace My_Notes
             }
             Console.ReadLine();
 
-            /*
+            
             //Serializar inicia
             Console.WriteLine("¿quieres serializar? (s/n) \n");
             string respuesta = Console.ReadLine().ToLower();
@@ -275,7 +320,7 @@ namespace My_Notes
                 }
                 //termina serializacion
             }
-            */
+            
 
         }
     }

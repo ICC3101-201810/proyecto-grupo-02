@@ -9,12 +9,20 @@ namespace My_Notes
     public class Semestre
     {
         string ID;
-        List<Ramo> ramos;
+        List<Ramo> ramos = new List<Ramo>();
 
         public Semestre(string id)
         {
             ID = id;
             //ramos = ramosPorSemestre;
+        }
+        public void SetID(string NewID)
+        {
+            ID = NewID;
+        }
+        public List<Ramo> GetListaRamos()
+        {
+            return ramos;
         }
 
         public bool AgregarRamo (Ramo ramo)
@@ -31,6 +39,7 @@ namespace My_Notes
                 return false;
             }
         }
+
 
         
 

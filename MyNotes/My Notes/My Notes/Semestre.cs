@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace My_Notes
 {
     [Serializable()]
-    public class Semestre
+    class Semestre
     {
         string ID;
         List<Ramo> ramos = new List<Ramo>();

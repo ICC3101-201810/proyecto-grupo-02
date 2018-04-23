@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace My_Notes
 {
     [Serializable()]
-    public abstract class Usuario
+    abstract class Usuario
     {
         protected string nombre;
         protected string contrasena;

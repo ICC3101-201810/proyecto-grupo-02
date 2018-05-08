@@ -52,6 +52,7 @@
     <Compile Include="Ramo.cs" />
     <Compile Include="Seccion.cs" />
     <Compile Include="Semestre.cs" />
+    <Compile Include="serial.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>

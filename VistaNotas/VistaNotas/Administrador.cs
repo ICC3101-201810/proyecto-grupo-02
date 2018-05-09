@@ -27,9 +27,9 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
         {
             return base.contrasena;
         }
-        public bool VerificarNombre(string nombre, List<linkLabel1> listaAlumnos, List<Profesor> listaProfesores)
+        public bool VerificarNombre(string nombre, List<Alumno> listaAlumnos, List<Profesor> listaProfesores)
         {
-            List<linkLabel1> verificandoNombreAl = (listaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();
+            List<Alumno> verificandoNombreAl = (listaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();
             List<Profesor> verificandoNombrePr = (listaProfesores.Where(nom => nom.GetNombre() == nombre)).ToList();
             if (verificandoNombreAl.Count() > 0 && verificandoNombrePr.Count() > 0)
             {
@@ -52,7 +52,7 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
                 return true;
             }
         }
-        public bool AgregarAlumno(string nombre, string contrasena, List<linkLabel1> als, List<Profesor> profs)
+        public bool AgregarAlumno(string nombre, string contrasena, List<Alumno> als, List<Profesor> profs)
         {
             while (VerificarNombre(nombre, als, profs) != true)
             {
@@ -69,14 +69,14 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
                 contrasena = Console.ReadLine();
                 VerificarContrasena(contrasena);
             }
-            linkLabel1 alumno = new linkLabel1(nombre, contrasena);
+            Alumno alumno = new Alumno(nombre, contrasena);
             return true;
         }
-        public bool EditarAlumno(string nombre, string nombreNuevo, List<linkLabel1> als, List<Profesor> profs)
+        public bool EditarAlumno(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
         {
             if (VerificarNombre(nombre, als, profs))
             {
-                List<linkLabel1> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
+                List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
                 if (alumnoEditado.Count() > 1)
                 {
                     Console.Beep();
@@ -94,7 +94,7 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
             }
             return true;
         }
-        public bool EditarProfesor(string nombre, string nombreNuevo, List<linkLabel1> als, List<Profesor> profs)
+        public bool EditarProfesor(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
         {
             if (VerificarNombre(nombre, als, profs))
             {
@@ -115,9 +115,9 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
             }
             return true;
         }
-        public bool EliminarAlumno(string nombre, List<linkLabel1> als)
+        public bool EliminarAlumno(string nombre, List<Alumno> als)
         {
-            linkLabel1 AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
+            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
             als.Remove(AlumnoX);
             return true;
         }
@@ -166,14 +166,14 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
             ramo.GetFechas().Remove(fechaE);
             return true;
         }
-        public void HacerAyudante(string nombre, List<linkLabel1> als)
+        public void HacerAyudante(string nombre, List<Alumno> als)
         {
-            linkLabel1 AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
+            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
             AlumnoX.SetHacerAyudante(AlumnoX);//estara bueno?
         }
-        public void EliminarAyudante(string nombre, List<linkLabel1> als)
+        public void EliminarAyudante(string nombre, List<Alumno> als)
         {
-            linkLabel1 AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
+            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
             AlumnoX.SetDesHacerAyudante(AlumnoX);
         }
         public void EditarMaterial()

@@ -45,8 +45,8 @@ namespace VistaNotas
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
-                    List<linkLabel1> alumnos = (List<linkLabel1>)bin.Deserialize(stream);
-                    foreach (linkLabel1 alumno in alumnos)
+                    List<Alumno> alumnos = (List<Alumno>)bin.Deserialize(stream);
+                    foreach (Alumno alumno in alumnos)
                     {
                         MyNotes.AgregarAlumnos(alumno);
                     }
@@ -80,7 +80,7 @@ namespace VistaNotas
             }
             using (Stream stream = File.Open("DataAlumno.bin", FileMode.Create))
             {
-                List<linkLabel1> ListaAlumnos = MyNotes.GetListaAlumnos();
+                List<Alumno> ListaAlumnos = MyNotes.GetListaAlumnos();
 
                 BinaryFormatter bin = new BinaryFormatter();
                 bin.Serialize(stream, ListaAlumnos);

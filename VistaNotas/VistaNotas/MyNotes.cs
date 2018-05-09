@@ -11,7 +11,7 @@ namespace VistaNotas
     [Serializable]
     static class MyNotes
     {//TRES LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores, admins y alumnos.
-        static List<linkLabel1> ListaAlumnos = new List<linkLabel1>();
+        static List<Alumno> ListaAlumnos = new List<Alumno>();
         static List<Profesor> ListaProfesores = new List<Profesor>();
         static List<Administrador> ListaAdministradores = new List<Administrador>();
         static List<Usuario> UsuarioActual = new List<Usuario>(); //usuario que este en uso actualmente 
@@ -26,7 +26,7 @@ namespace VistaNotas
         {
             ListaAdministradores.Add(administrador);
         }
-        public static  void AgregarAlumnos(linkLabel1 alumno)
+        public static  void AgregarAlumnos(Alumno alumno)
         {
             ListaAlumnos.Add(alumno);
         }
@@ -34,7 +34,7 @@ namespace VistaNotas
         {
             ListaProfesores.Add(profesor);
         }
-        public static List<linkLabel1> GetListaAlumnos()
+        public static List<Alumno> GetListaAlumnos()
         {
             return ListaAlumnos;
         }
@@ -103,7 +103,7 @@ namespace VistaNotas
         }
         public static bool ConfirmarContrasena(string nombre, string pass)
         {
-            linkLabel1 Alumno = (ListaAlumnos.Find(nom => nom.GetNombre() == nombre));
+            Alumno Alumno = (ListaAlumnos.Find(nom => nom.GetNombre() == nombre));
             Profesor profesor = (ListaProfesores.Find(nom => nom.GetNombre() == nombre));
             Administrador administrador = (ListaAdministradores.Find(nom => nom.GetNombre() == nombre));
             if (Alumno == null && profesor == null && administrador == null)

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace VistaNotas
 {
     [Serializable()]
-    class linkLabel1 : Usuario
+    class Alumno : Usuario
     {
         bool administrador = false;
         List<Apuntes>  apuntes = new List<Apuntes>();
         bool ayudante = false;
 
-        public linkLabel1(string nombre, string contrasena) : base (nombre, contrasena)
+        public Alumno(string nombre, string contrasena) : base (nombre, contrasena)
         {
 
         }
@@ -47,11 +47,11 @@ namespace VistaNotas
             return true;
             //aun no impementada
         }
-        public void SetHacerAyudante(linkLabel1 alumno)
+        public void SetHacerAyudante(Alumno alumno)
         {
             alumno.ayudante = true;
         }
-        public void SetDesHacerAyudante(linkLabel1 alumno)
+        public void SetDesHacerAyudante(Alumno alumno)
         {
             alumno.ayudante = false;
         }

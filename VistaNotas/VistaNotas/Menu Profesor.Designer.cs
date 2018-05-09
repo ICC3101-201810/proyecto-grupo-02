@@ -1,6 +1,6 @@
 ﻿namespace VistaNotas
 {
-    partial class Form2
+    partial class Menu_Profesor
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.label1.Size = new System.Drawing.Size(418, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "BIENVENI3 AL PROGRAMA !!!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 

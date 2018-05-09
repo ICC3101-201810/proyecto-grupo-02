@@ -110,5 +110,11 @@ namespace VistaNotas
         {
 
         }
+
+        private void SalirPrograma_Click(object sender, EventArgs e)
+        {
+            serial.Guardar();
+            this.Close();
+        }
     }
 }

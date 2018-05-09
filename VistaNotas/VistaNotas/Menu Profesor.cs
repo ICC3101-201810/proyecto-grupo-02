@@ -24,12 +24,17 @@ namespace VistaNotas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            serial.Guardar();
+            MessageBox.Show("\tSus cambios han sido guardados.\n\tSe he cerrado secion", "Guardado");
+            this.Hide();
+            Entrada entrada = new Entrada();
+            entrada.ShowDialog();
+            this.Close();
         }
     }
 }

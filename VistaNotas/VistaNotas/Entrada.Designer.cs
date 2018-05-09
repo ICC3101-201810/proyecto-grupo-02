@@ -1,6 +1,6 @@
 ﻿namespace VistaNotas
 {
-    partial class Form1
+    partial class Entrada
     {
         /// <summary>
         /// Variable del diseñador necesaria.

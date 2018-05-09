@@ -15,10 +15,12 @@ namespace VistaNotas
         [STAThread]
         static void Main()
         {
-            MyNotes myNotes = new MyNotes();
+            serial.Cargar();
+            Administrador administrador = new Administrador("admin", "123", true);
+            MyNotes.AgregarAdmin(administrador);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Entrada());
         }
     }
 }

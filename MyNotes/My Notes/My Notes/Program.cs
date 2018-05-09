@@ -58,7 +58,7 @@ namespace My_Notes
 
                     if (myNotes.ConfirmarContrasena(NombreUsuario, ContrasenaUsuario))
                     {
-                        Console.WriteLine("Bienvenido a MyNotes {0}.", NombreUsuario.ToUpper());
+                        Console.WriteLine("Bienvenido a MyNotes {0} as.", NombreUsuario.ToUpper());
                         passright = true;
 
                     }

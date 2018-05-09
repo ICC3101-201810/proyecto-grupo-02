@@ -17,5 +17,9 @@ namespace VistaNotas
             this.nombre = nombre;
             this.contrasena = contrasena;
         }
+        public string GetNombree()
+        {
+            return nombre;
+        }
     }
 }

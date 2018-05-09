@@ -30,10 +30,10 @@
         {
             this.Bienvenida = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Alumnos = new System.Windows.Forms.LinkLabel();
-            this.Profesores = new System.Windows.Forms.LinkLabel();
-            this.Ramos = new System.Windows.Forms.LinkLabel();
-            this.Semestre = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Bienvenida
@@ -58,19 +58,19 @@
             this.label1.Text = "¿Qué desea administrar?";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // Alumnos
+            // linkLabel1
             // 
-            this.Alumnos.AutoSize = true;
-            this.Alumnos.Location = new System.Drawing.Point(87, 148);
-            this.Alumnos.Name = "Alumnos";
-            this.Alumnos.Size = new System.Drawing.Size(71, 20);
-            this.Alumnos.TabIndex = 2;
-            this.Alumnos.TabStop = true;
-            this.Alumnos.Text = "Alumnos";
-            this.Alumnos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(87, 148);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(71, 20);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Alumnos";
             // 
-            // Profesores
+            // linkLabel2
             // 
+<<<<<<< HEAD
             this.Profesores.AutoSize = true;
             this.Profesores.Location = new System.Drawing.Point(87, 168);
             this.Profesores.Name = "Profesores";
@@ -79,20 +79,30 @@
             this.Profesores.TabStop = true;
             this.Profesores.Text = "Profesores";
             this.Profesores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Profesores_LinkClicked);
+=======
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(87, 168);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(86, 20);
+            this.linkLabel2.TabIndex = 3;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Profesores";
+>>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
             // 
-            // Ramos
+            // linkLabel3
             // 
-            this.Ramos.AutoSize = true;
-            this.Ramos.Location = new System.Drawing.Point(87, 188);
-            this.Ramos.Name = "Ramos";
-            this.Ramos.Size = new System.Drawing.Size(60, 20);
-            this.Ramos.TabIndex = 4;
-            this.Ramos.TabStop = true;
-            this.Ramos.Text = "Ramos";
-            this.Ramos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(87, 188);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(60, 20);
+            this.linkLabel3.TabIndex = 4;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Ramos";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // Semestre
+            // linkLabel4
             // 
+<<<<<<< HEAD
             this.Semestre.AutoSize = true;
             this.Semestre.Location = new System.Drawing.Point(87, 208);
             this.Semestre.Name = "Semestre";
@@ -101,16 +111,25 @@
             this.Semestre.TabStop = true;
             this.Semestre.Text = "Semestre";
             this.Semestre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Semestre_LinkClicked);
+=======
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(87, 208);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(78, 20);
+            this.linkLabel4.TabIndex = 5;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "Semestre";
+>>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
             // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Semestre);
-            this.Controls.Add(this.Ramos);
-            this.Controls.Add(this.Profesores);
-            this.Controls.Add(this.Alumnos);
+            this.Controls.Add(this.linkLabel4);
+            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bienvenida);
             this.Name = "Menu_Administrador";
@@ -125,9 +144,9 @@
 
         private System.Windows.Forms.Label Bienvenida;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel Alumnos;
-        private System.Windows.Forms.LinkLabel Profesores;
-        private System.Windows.Forms.LinkLabel Ramos;
-        private System.Windows.Forms.LinkLabel Semestre;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel4;
     }
 }

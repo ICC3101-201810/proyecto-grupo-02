@@ -10,67 +10,80 @@ namespace VistaNotas
 {
     static class serial
     {
-        public static void Cargar (MyNotes myNotes)
+        public static void Cargar ()
         {
             try
             {
-                using (Stream stream = File.Open("data.bin", FileMode.Open))
+
+                using (Stream stream = File.Open("DataAdmin.bin", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    List<Administrador> administradores = (List<Administrador>)bin.Deserialize(stream);
+
+                    foreach (Administrador aadministrador in administradores)
+                    {
+                        if (aadministrador.GetNombre() == "admin")
+                        {
+                            continue;
+                        }
+                        MyNotes.AgregarAdmin(aadministrador);
+                    }
+                }
+
+                using (Stream stream = File.Open("DataProfesores.bin", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    List<Profesor> profesores = (List<Profesor>)bin.Deserialize(stream);
+                    foreach (Profesor profesorr in profesores)
+                    {
+                        MyNotes.AgregarProfesor(profesorr);
+                    }
+
+
+                }
+                using (Stream stream = File.Open("DataAlumno.bin", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
-                    var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
-                    foreach (MyNotes proyecto in notasPrograma)
+                    List<Alumno> alumnos = (List<Alumno>)bin.Deserialize(stream);
+                    foreach (Alumno alumno in alumnos)
                     {
-                        // desde aca ya tendremos todos los datos de vuelta
-                        // todas las listas ¿reducible?
-                        if (!(proyecto.GetListaAlumnos().Count() == 0))
-                        {
-                            foreach (Alumno alumnoo in proyecto.GetListaAlumnos())
-                            {
-
-                                myNotes.AgregarAlumnos(alumnoo);
-                            }
-                        }
-                        if (!(proyecto.GetListaProfesores().Count() == 0))
-                        {
-                            foreach (Profesor profesorr in proyecto.GetListaProfesores())
-                            {
-                                myNotes.AgregarProfesor(profesorr);
-                            }
-                        }
-
-                        if (!(proyecto.GetListaAdmin().Count() == 0))
-                        {
-                            foreach (Administrador aadministrador in proyecto.GetListaAdmin())
-                            {
-                                if (aadministrador.GetNombre() == "admin")
-                                {
-                                    continue;
-                                }
-                                myNotes.AgregarAdmin(aadministrador);
-                            }
-
-                        }
+                        MyNotes.AgregarAlumnos(alumno);
                     }
                 }
             }
-            catch (IOException)
+            catch (Exception)
             {
 
             }
             // datos agregados a intancia actual
         }
 
-        public static void Guardar(MyNotes myNotes)
+        public static void Guardar()
         {
             // serializacion para guardado de datos 
-            using (Stream stream = File.Open("data.bin", FileMode.Create))
+            using (Stream stream = File.Open("DataAdmin.bin", FileMode.Create))
             {
-                var AGuardar = new List<MyNotes>();
-                AGuardar.Add(myNotes);
+                List<Administrador> ListaAdministradores = MyNotes.GetListaAdmin();
 
                 BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, AGuardar);
+                bin.Serialize(stream, ListaAdministradores);
+                stream.Close();
+            }
+            using (Stream stream = File.Open("DataProfesores.bin", FileMode.Create))
+            {
+                List<Profesor> ListaProfesores = MyNotes.GetListaProfesores();
+
+                BinaryFormatter bin = new BinaryFormatter();
+                bin.Serialize(stream, ListaProfesores);
+                stream.Close();
+            }
+            using (Stream stream = File.Open("DataAlumno.bin", FileMode.Create))
+            {
+                List<Alumno> ListaAlumnos = MyNotes.GetListaAlumnos();
+
+                BinaryFormatter bin = new BinaryFormatter();
+                bin.Serialize(stream, ListaAlumnos);
                 stream.Close();
             }
             //datos guardados 

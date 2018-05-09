@@ -9,43 +9,43 @@ using System.Threading.Tasks;
 namespace VistaNotas
 {
     [Serializable]
-    class MyNotes
+    static class MyNotes
     {//TRES LISTAS porque no podemos hacer lista de Usuarios y meterle porfesores, admins y alumnos.
-        List<Alumno> ListaAlumnos;
-        List<Profesor> ListaProfesores;
-        List<Administrador> ListaAdministradores;
+        static List<Alumno> ListaAlumnos = new List<Alumno>();
+        static List<Profesor> ListaProfesores = new List<Profesor>();
+        static List<Administrador> ListaAdministradores = new List<Administrador>();
 
-        public MyNotes()
+        /*
+        public  MyNotes()
         {
-            ListaAlumnos = new List<Alumno>();
-            ListaProfesores = new List<Profesor>();
-            ListaAdministradores = new List<Administrador>();
+            serial.Cargar(this);
         }
-        public void AgregarAdmin(Administrador administrador)
+        */
+        public static  void AgregarAdmin(Administrador administrador)
         {
             ListaAdministradores.Add(administrador);
         }
-        public void AgregarAlumnos(Alumno alumno)
+        public static  void AgregarAlumnos(Alumno alumno)
         {
             ListaAlumnos.Add(alumno);
         }
-        public void AgregarProfesor(Profesor profesor)
+        public static void AgregarProfesor(Profesor profesor)
         {
             ListaProfesores.Add(profesor);
         }
-        public List<Alumno> GetListaAlumnos()
+        public static List<Alumno> GetListaAlumnos()
         {
             return ListaAlumnos;
         }
-        public List<Profesor> GetListaProfesores()
+        public static List<Profesor> GetListaProfesores()
         {
             return ListaProfesores;
         }
-        public List<Administrador> GetListaAdmin()
+        public static List<Administrador> GetListaAdmin()
         {
             return ListaAdministradores;
         }
-        public bool ConfirmarContrasena(string nombre, string pass)
+        public static bool ConfirmarContrasena(string nombre, string pass)
         {
             Alumno Alumno = (ListaAlumnos.Find(nom => nom.GetNombre() == nombre));
             Profesor profesor = (ListaProfesores.Find(nom => nom.GetNombre() == nombre));

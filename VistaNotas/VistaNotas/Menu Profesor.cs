@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VistaNotas
 {
-    public partial class Form2 : Form
+    public partial class Menu_Profesor : Form
     {
-        public Form2()
+        public Menu_Profesor()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace VistaNotas
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

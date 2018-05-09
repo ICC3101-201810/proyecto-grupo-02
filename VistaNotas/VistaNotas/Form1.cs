@@ -21,7 +21,7 @@ namespace VistaNotas
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 f2 = new Form2();
+            Menu_Profesor f2 = new Menu_Profesor();
             f2.ShowDialog();
             this.Close();
         }

@@ -54,11 +54,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Menu Profesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Menu Profesor.Designer.cs">
+      <DependentUpon>Menu Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Administrador.Designer.cs">
+      <DependentUpon>Menu Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Alumno.Designer.cs">
+      <DependentUpon>Menu Alumno.cs</DependentUpon>
     </Compile>
     <Compile Include="MyNotes.cs" />
     <Compile Include="Profesor.cs" />
@@ -72,8 +84,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Menu Alumno.resx">
+      <DependentUpon>Menu Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Profesor.resx">
+      <DependentUpon>Menu Profesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

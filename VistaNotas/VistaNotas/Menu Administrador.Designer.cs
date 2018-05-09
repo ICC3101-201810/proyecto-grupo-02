@@ -34,6 +34,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bienvenida
@@ -67,19 +68,10 @@
             this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Alumnos";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // linkLabel2
             // 
-<<<<<<< HEAD
-            this.Profesores.AutoSize = true;
-            this.Profesores.Location = new System.Drawing.Point(87, 168);
-            this.Profesores.Name = "Profesores";
-            this.Profesores.Size = new System.Drawing.Size(86, 20);
-            this.Profesores.TabIndex = 3;
-            this.Profesores.TabStop = true;
-            this.Profesores.Text = "Profesores";
-            this.Profesores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Profesores_LinkClicked);
-=======
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(87, 168);
             this.linkLabel2.Name = "linkLabel2";
@@ -87,7 +79,7 @@
             this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Profesores";
->>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Profesores_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -102,16 +94,6 @@
             // 
             // linkLabel4
             // 
-<<<<<<< HEAD
-            this.Semestre.AutoSize = true;
-            this.Semestre.Location = new System.Drawing.Point(87, 208);
-            this.Semestre.Name = "Semestre";
-            this.Semestre.Size = new System.Drawing.Size(78, 20);
-            this.Semestre.TabIndex = 5;
-            this.Semestre.TabStop = true;
-            this.Semestre.Text = "Semestre";
-            this.Semestre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Semestre_LinkClicked);
-=======
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Location = new System.Drawing.Point(87, 208);
             this.linkLabel4.Name = "linkLabel4";
@@ -119,19 +101,32 @@
             this.linkLabel4.TabIndex = 5;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Semestre";
->>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Semestre_LinkClicked);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Location = new System.Drawing.Point(78, 271);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Atrás";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bienvenida);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Menu_Administrador";
             this.Text = "Menu_Administrador";
             this.Load += new System.EventHandler(this.Menu_Administrador_Load);
@@ -148,5 +143,6 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Button button1;
     }
 }

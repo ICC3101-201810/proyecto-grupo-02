@@ -51,7 +51,7 @@ namespace VistaNotas
                         this.Close();
                     }
                 }
-                foreach (Alumno alumn in MyNotes.GetListaAlumnos())
+                foreach (linkLabel1 alumn in MyNotes.GetListaAlumnos())
                 {
                     if (NombreUsuario == alumn.GetNombre())
                     {

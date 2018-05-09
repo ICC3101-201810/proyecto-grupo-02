@@ -10,8 +10,8 @@ namespace VistaNotas
     class Seccion
     {
         string IDSeccion;
-        List<Alumno> alumnos = new List<Alumno>();
-        List<Alumno> ayudantes = new List<Alumno>();
+        List<linkLabel1> alumnos = new List<linkLabel1>();
+        List<linkLabel1> ayudantes = new List<linkLabel1>();
         List<Profesor> profesores = new List<Profesor>();
         int vacantes;
 

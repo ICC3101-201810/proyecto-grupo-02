@@ -18,7 +18,7 @@ namespace VistaNotas
             serial.Cargar();
             Administrador administrador = new Administrador("admin", "123", true);
             MyNotes.AgregarAdmin(administrador);
-            Alumno alumno = new Alumno("alumno", "123");
+            linkLabel1 alumno = new linkLabel1("alumno", "123");
             MyNotes.AgregarAlumnos(alumno);
             Profesor profe = new Profesor("tata", "123");
             MyNotes.AgregarProfesor(profe);

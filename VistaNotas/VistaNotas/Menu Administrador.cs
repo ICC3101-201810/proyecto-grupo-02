@@ -34,41 +34,48 @@ namespace VistaNotas
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Alumnos.Visible = false;
-            Profesores.Visible = false;
-            Ramos.Visible = false;
-            Semestre.Visible = false;
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
             label1.Text = "Administrar Ramos";
         }
-<<<<<<< HEAD
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Alumnos.Visible = false;
-            Profesores.Visible = false;
-            Ramos.Visible = false;
-            Semestre.Visible = false;
-            label1.Text = "Administrar Alumnos";
-        }
 
         private void Profesores_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Alumnos.Visible = false;
-            Profesores.Visible = false;
-            Ramos.Visible = false;
-            Semestre.Visible = false;
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
             label1.Text = "Administrar Profesores";
         }
 
         private void Semestre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Alumnos.Visible = false;
-            Profesores.Visible = false;
-            Ramos.Visible = false;
-            Semestre.Visible = false;
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
             label1.Text = "Administrar Semestres";
         }
-=======
->>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            linkLabel1.Visible = true;
+            linkLabel2.Visible = true;
+            linkLabel3.Visible = true;
+            linkLabel4.Visible = true;
+            label1.Text = "¿Qué desea administrar?";
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
+            label1.Text = "Administrar Alumnos";
+        }
     }
 }

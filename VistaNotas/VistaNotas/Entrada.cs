@@ -111,16 +111,10 @@ namespace VistaNotas
 
         }
 
-<<<<<<< HEAD
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-=======
         private void SalirPrograma_Click(object sender, EventArgs e)
         {
             serial.Guardar();
             this.Close();
->>>>>>> d99cd06d437f8741f48015d88d544e4999755491
         }
     }
 }

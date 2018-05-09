@@ -36,14 +36,5 @@ namespace VistaNotas
         {
 
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Alumnos.Visible = false;
-            Profesores.Visible = false;
-            Ramos.Visible = false;
-            Semestre.Visible = false;
-            label1.Text = "Administrar Alumnos";
-        }
     }
 }

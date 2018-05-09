@@ -78,6 +78,7 @@
             this.Profesores.TabIndex = 3;
             this.Profesores.TabStop = true;
             this.Profesores.Text = "Profesores";
+            this.Profesores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Profesores_LinkClicked);
             // 
             // Ramos
             // 
@@ -99,6 +100,7 @@
             this.Semestre.TabIndex = 5;
             this.Semestre.TabStop = true;
             this.Semestre.Text = "Semestre";
+            this.Semestre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Semestre_LinkClicked);
             // 
             // Menu_Administrador
             // 

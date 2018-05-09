@@ -13,7 +13,7 @@ namespace My_Notes
         static void Main(string[] args)
         {
             MyNotes myNotes = new MyNotes();
-            
+
             /*
             // serializacion para guardado de datos 
             using (Stream stream = File.Open("data.bin", FileMode.Create))
@@ -28,53 +28,9 @@ namespace My_Notes
             //datos guardados 
             */
             // inicia porceso de recuperar datos anteriores
-            
-            try
-            {
-                using (Stream stream = File.Open("data.bin", FileMode.Open))
-                {
-                    BinaryFormatter bin = new BinaryFormatter();
 
-                    var notasPrograma = (List<MyNotes>)bin.Deserialize(stream);
-                    foreach (MyNotes proyecto in notasPrograma)
-                    {
-                        // desde aca ya tendremos todos los datos de vuelta
-                        // todas las listas ¿reducible?
-                        if (!(proyecto.GetListaAlumnos().Count() == 0))
-                        {
-                            foreach (Alumno alumnoo in proyecto.GetListaAlumnos())
-                            {
+            serial.Cargar(myNotes);
 
-                                myNotes.AgregarAlumnos(alumnoo);
-                            }
-                        }
-                        if (!(proyecto.GetListaProfesores().Count() == 0))
-                        {
-                            foreach (Profesor profesorr in proyecto.GetListaProfesores())
-                            {
-                                myNotes.AgregarProfesor(profesorr);
-                            }
-                        }
-
-                        if (!(proyecto.GetListaAdmin().Count() == 0))
-                        {
-                            foreach (Administrador aadministrador in proyecto.GetListaAdmin())
-                            {
-                                if (aadministrador.GetNombre() == "admin")
-                                {
-                                    continue;
-                                }
-                                myNotes.AgregarAdmin(aadministrador);
-                            }
-
-                        }
-                    }
-                }
-            }
-            catch (IOException)
-            {
-
-            }
             // datos agregados a intancia actual
             
             Administrador administrador = new Administrador("admin", "123", true);
@@ -308,17 +264,7 @@ namespace My_Notes
             Console.ReadLine();
             Console.Beep();
 
-            // serializacion para guardado de datos 
-            using (Stream stream = File.Open("data.bin", FileMode.Create))
-            {
-                var AGuardar = new List<MyNotes>();
-                AGuardar.Add(myNotes);
-
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, AGuardar);
-                stream.Close();
-            }
-            //datos guardados 
+            serial.Guardar(myNotes);
 
 
         }

@@ -77,7 +77,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
             if (VerificarNombre(nombre, als, profs))
             {
                 List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
-                if (alumnoEditado.Count() < 2)
+                if (alumnoEditado.Count() > 1)
                 {
                     Console.Beep();
                     Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
@@ -85,6 +85,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
                 }
                 else
                 {
+                    Console.WriteLine(alumnoEditado);
                     alumnoEditado[0].SetNombre(nombreNuevo);
                     Console.WriteLine("Se edito correctamente al alumno.");
                     return true;

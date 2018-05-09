@@ -70,6 +70,16 @@
             // 
             // linkLabel2
             // 
+<<<<<<< HEAD
+            this.Profesores.AutoSize = true;
+            this.Profesores.Location = new System.Drawing.Point(87, 168);
+            this.Profesores.Name = "Profesores";
+            this.Profesores.Size = new System.Drawing.Size(86, 20);
+            this.Profesores.TabIndex = 3;
+            this.Profesores.TabStop = true;
+            this.Profesores.Text = "Profesores";
+            this.Profesores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Profesores_LinkClicked);
+=======
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(87, 168);
             this.linkLabel2.Name = "linkLabel2";
@@ -77,6 +87,7 @@
             this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Profesores";
+>>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
             // 
             // linkLabel3
             // 
@@ -91,6 +102,16 @@
             // 
             // linkLabel4
             // 
+<<<<<<< HEAD
+            this.Semestre.AutoSize = true;
+            this.Semestre.Location = new System.Drawing.Point(87, 208);
+            this.Semestre.Name = "Semestre";
+            this.Semestre.Size = new System.Drawing.Size(78, 20);
+            this.Semestre.TabIndex = 5;
+            this.Semestre.TabStop = true;
+            this.Semestre.Text = "Semestre";
+            this.Semestre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Semestre_LinkClicked);
+=======
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Location = new System.Drawing.Point(87, 208);
             this.linkLabel4.Name = "linkLabel4";
@@ -98,6 +119,7 @@
             this.linkLabel4.TabIndex = 5;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Semestre";
+>>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
             // 
             // Menu_Administrador
             // 

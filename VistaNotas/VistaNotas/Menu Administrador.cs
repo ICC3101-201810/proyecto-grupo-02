@@ -34,7 +34,41 @@ namespace VistaNotas
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Alumnos.Visible = false;
+            Profesores.Visible = false;
+            Ramos.Visible = false;
+            Semestre.Visible = false;
+            label1.Text = "Administrar Ramos";
         }
+<<<<<<< HEAD
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Alumnos.Visible = false;
+            Profesores.Visible = false;
+            Ramos.Visible = false;
+            Semestre.Visible = false;
+            label1.Text = "Administrar Alumnos";
+        }
+
+        private void Profesores_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Alumnos.Visible = false;
+            Profesores.Visible = false;
+            Ramos.Visible = false;
+            Semestre.Visible = false;
+            label1.Text = "Administrar Profesores";
+        }
+
+        private void Semestre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Alumnos.Visible = false;
+            Profesores.Visible = false;
+            Ramos.Visible = false;
+            Semestre.Visible = false;
+            label1.Text = "Administrar Semestres";
+        }
+=======
+>>>>>>> d5eb4dbf87ac56e6460b6419416fed9a7ea689fd
     }
 }

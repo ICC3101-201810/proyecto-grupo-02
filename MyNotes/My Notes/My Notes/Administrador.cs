@@ -76,8 +76,8 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
         {
             if (VerificarNombre(nombre, als, profs))
             {
-                List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
-                if (alumnoEditado.Count() > 1)
+                Alumno alumnoEditado = (als.Find(nom => nom.GetNombre() == nombre)); //Esta lsta deberia tener solo 1 elemnto
+                if (alumnoEditado == null)
                 {
                     Console.Beep();
                     Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
@@ -86,7 +86,7 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
                 else
                 {
                     Console.WriteLine(alumnoEditado);
-                    alumnoEditado[0].SetNombre(nombreNuevo);
+                    alumnoEditado.SetNombre(nombreNuevo);
                     Console.WriteLine("Se edito correctamente al alumno.");
                     return true;
                 }
@@ -98,17 +98,17 @@ namespace My_Notes//Metodos de verificar, no como interfaces si no en MyNotes pa
         {
             if (VerificarNombre(nombre, als, profs))
             {
-                List<Profesor> profeEditado = (profs.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
-                if (profeEditado.Count() < 2)
+                Profesor profeEditado = (profs.Find(nom => nom.GetNombre() == nombre)); //Esta lsta deberia tener solo 1 elemnto
+                if (profeEditado == null)
                 {
                     Console.Beep();
-                    Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
+                    Console.WriteLine("Algo salio mal al editar al profesor. Se cancelo la operacion.");
                     return false;
                 }
                 else
                 {
-                    profeEditado[0].SetNombre(nombreNuevo);
-                    Console.WriteLine("Se edito correctamente al alumno.");
+                    profeEditado.SetNombre(nombreNuevo);
+                    Console.WriteLine("Se edito correctamente al profesor.");
                     return true;
                 }
 

@@ -36,16 +36,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HOLANDA = new System.Windows.Forms.ToolTip(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
+<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(602, 488);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(562, 186);
+=======
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(492, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(253, 121);
+>>>>>>> d99cd06d437f8741f48015d88d544e4999755491
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Log In";
             this.HOLANDA.SetToolTip(this.button1, "ESTE ES UN BOTON, APRETAME");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -114,18 +122,40 @@
             this.HOLANDA.IsBalloon = true;
             this.HOLANDA.Popup += new System.Windows.Forms.PopupEventHandler(this.HOLANDA_Popup);
             // 
+<<<<<<< HEAD
+=======
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 391);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 47);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Salir del Programa";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.SalirPrograma_Click);
+            // 
+>>>>>>> d99cd06d437f8741f48015d88d544e4999755491
             // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1184, 692);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+>>>>>>> d99cd06d437f8741f48015d88d544e4999755491
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TContrasena);
             this.Controls.Add(this.USUARIO);
             this.Controls.Add(this.TUsuario);
             this.Controls.Add(this.button1);
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+=======
+>>>>>>> d99cd06d437f8741f48015d88d544e4999755491
             this.Name = "Entrada";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -143,6 +173,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip HOLANDA;
+        private System.Windows.Forms.Button button2;
     }
 }
 

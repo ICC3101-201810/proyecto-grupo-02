@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace VistaNotas
 {
     static class Program
@@ -14,6 +15,7 @@ namespace VistaNotas
         [STAThread]
         static void Main()
         {
+            MyNotes myNotes = new MyNotes();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

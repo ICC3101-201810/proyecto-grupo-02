@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="Agregar alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar alumno.Designer.cs">
+      <DependentUpon>Agregar alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alumno.cs" />
     <Compile Include="Apuntes.cs" />
     <Compile Include="CambiarNombreAlumno.cs">
@@ -87,6 +94,9 @@
     <Compile Include="Semestre.cs" />
     <Compile Include="serial.cs" />
     <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="Agregar alumno.resx">
+      <DependentUpon>Agregar alumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambiarNombreAlumno.resx">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
     </EmbeddedResource>

@@ -136,6 +136,8 @@ namespace VistaNotas
             linkLabel8.Visible = false;
             linkLabel9.Visible = false;
             linkLabel10.Visible = false;
+            Agregar_alumno agregar_Alumno = new Agregar_alumno();
+            agregar_Alumno.ShowDialog();
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // editar alumno

@@ -15,7 +15,6 @@ namespace VistaNotas
         public CambiarNombreAlumno()
         {
             InitializeComponent();
-            checkBox1.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,28 +22,18 @@ namespace VistaNotas
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string nombreAlumno = textBox1.Text;
-            
+            foreach(Alumno i in MyNotes.GetListaAlumnos())
+            {
+                string nombre = i.GetNombre();
+                comboBox1.Items.Add(nombre);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            string nombreAlumno = textBox1.Text;
-            List<Alumno> alumnos = MyNotes.GetListaAlumnos();
-            checkBox1.Visible = true;
-            /*try        // deberia funcionar cuando implementemos crear alumno
-            {
-                checkBox1.Name = ((MyNotes.GetListaAlumnos()).Find(nom => nom.GetNombre() == textBox1.Text)).ToString();
-            }
-            catch
-            {
-
-            }*/
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

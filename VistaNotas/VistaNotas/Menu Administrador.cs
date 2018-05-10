@@ -87,7 +87,7 @@ namespace VistaNotas
             label1.Text = "Administrar Semestres";
         }
 
-        private void button1_Click(object sender, EventArgs e) // atras
+        private void button1_Click(object sender, EventArgs e) // vuelve a menu admin
         {
             
             linkLabel1.Visible = true;
@@ -102,6 +102,18 @@ namespace VistaNotas
             linkLabel10.Visible = false;
 
             label1.Text = "¿Qué desea administrar?";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
+
+            linkLabel5.Visible = true;
+            linkLabel6.Visible = true;
+            linkLabel7.Visible = true;
         }
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e) //alumnos
@@ -138,6 +150,11 @@ namespace VistaNotas
             linkLabel10.Visible = false;
             Agregar_alumno agregar_Alumno = new Agregar_alumno();
             agregar_Alumno.ShowDialog();
+
+            linkLabel5.Visible = true;
+            linkLabel6.Visible = true;
+            linkLabel7.Visible = true;
+
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // editar alumno
@@ -171,12 +188,16 @@ namespace VistaNotas
 
         private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// hacer ayud
         {
-
+            Hacer_Ayudante hacer_Ayudante = new Hacer_Ayudante();
+            hacer_Ayudante.ShowDialog();
         }
 
         private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// eliminar ayudante
         {
-
+            Eliminar_ayudante eliminar_Ayudante = new Eliminar_ayudante();
+            eliminar_Ayudante.ShowDialog();
         }
+
+        
     }
 }

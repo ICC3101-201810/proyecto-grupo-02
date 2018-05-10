@@ -40,6 +40,8 @@ namespace VistaNotas
             {
                 Close();
             }
+
+            
             
         }
     }

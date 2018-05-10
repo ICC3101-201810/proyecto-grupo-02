@@ -41,6 +41,7 @@
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bienvenida
@@ -186,11 +187,23 @@
             this.linkLabel10.Text = "Eliminar Ayudante";
             this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
             // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Location = new System.Drawing.Point(78, 271);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 36);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Atrás";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.linkLabel10);
             this.Controls.Add(this.linkLabel9);
             this.Controls.Add(this.linkLabel8);
@@ -228,5 +241,6 @@
         private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.LinkLabel linkLabel10;
+        private System.Windows.Forms.Button button2;
     }
 }

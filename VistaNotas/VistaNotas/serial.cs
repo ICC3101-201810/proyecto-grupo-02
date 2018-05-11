@@ -47,6 +47,16 @@ namespace VistaNotas
                         MyNotes.AgregarAlumnos(alumno);
                     }
                 }
+                using (Stream stream = File.Open("DataSemestre.bin", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    List<Semestre> semestres = (List<Semestre>) bin.Deserialize(stream);
+                    foreach (Semestre sem in semestres)
+                    {
+                        MyNotes.AgregarSemestre(sem);
+                    }
+                }
             }
             catch (Exception)
             {
@@ -80,6 +90,13 @@ namespace VistaNotas
 
                 BinaryFormatter bin = new BinaryFormatter();
                 bin.Serialize(stream, ListaAlumnos);
+                stream.Close();
+            }
+            using (Stream stream = File.Open("DataSemestre.bin", FileMode.Create))
+            {
+                List<Semestre> ListaSemestres = MyNotes.GetListaSemestres();
+                BinaryFormatter bin = new BinaryFormatter();
+                bin.Serialize(stream, ListaSemestres);
                 stream.Close();
             }
             //datos guardados 

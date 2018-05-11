@@ -27,5 +27,10 @@ namespace VistaNotas
             Nombre_Nuevo_Apunte.Hide();
             BotonAceptar.Hide();
         }
+
+        private void Nombre_Nuevo_Apunte_TextChanged(object sender, EventArgs e)
+        {
+            //ACA VA EL METODO CREAR APUNTE.
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace VistaNotas
 {
@@ -30,11 +31,11 @@ namespace VistaNotas
             nombre = nombreNuevo.ToUpper();
         }
 
-        public bool CrearApunte ()
+        public bool CrearApunte (string FileName)
         {
+            //FileStream File = new FileStream(FileName, FileMode.Create, FileAccess.ReadWrite);
+
             return true;
-            //aun no implementada
-            //necesita tener clase ramo
         }
 
         public void AgregarRecordatorio()

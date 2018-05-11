@@ -30,21 +30,23 @@
         {
             this.TextoBienvenida = new System.Windows.Forms.Label();
             this.PreguntaOpciones = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.BotonAgregarRecordatorio = new System.Windows.Forms.Button();
+            this.BotonCompartirApunte = new System.Windows.Forms.Button();
+            this.BotonEditarApunte = new System.Windows.Forms.Button();
             this.BotonCrearApunte = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.NombreDelAlumno = new System.Windows.Forms.Label();
+            this.LinkCrearApunte = new System.Windows.Forms.LinkLabel();
+            this.LinkAgregarRecordatorio = new System.Windows.Forms.LinkLabel();
+            this.LinkEditarApunte = new System.Windows.Forms.LinkLabel();
+            this.LinkCompartirApunte = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // TextoBienvenida
             // 
             this.TextoBienvenida.AutoSize = true;
             this.TextoBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextoBienvenida.Location = new System.Drawing.Point(130, 44);
+            this.TextoBienvenida.Location = new System.Drawing.Point(152, 43);
             this.TextoBienvenida.Name = "TextoBienvenida";
             this.TextoBienvenida.Size = new System.Drawing.Size(271, 31);
             this.TextoBienvenida.TabIndex = 1;
@@ -54,66 +56,48 @@
             // 
             this.PreguntaOpciones.AutoSize = true;
             this.PreguntaOpciones.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreguntaOpciones.Location = new System.Drawing.Point(133, 75);
+            this.PreguntaOpciones.Location = new System.Drawing.Point(155, 74);
             this.PreguntaOpciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PreguntaOpciones.Name = "PreguntaOpciones";
             this.PreguntaOpciones.Size = new System.Drawing.Size(158, 18);
             this.PreguntaOpciones.TabIndex = 10;
             this.PreguntaOpciones.Text = "¿Qué desea hacer?";
             // 
-            // button3
+            // BotonAgregarRecordatorio
             // 
-            this.button3.Location = new System.Drawing.Point(368, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 112);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "AgregarRecordatorio";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BotonAgregarRecordatorio.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BotonAgregarRecordatorio.Location = new System.Drawing.Point(386, 240);
+            this.BotonAgregarRecordatorio.Name = "BotonAgregarRecordatorio";
+            this.BotonAgregarRecordatorio.Size = new System.Drawing.Size(38, 25);
+            this.BotonAgregarRecordatorio.TabIndex = 11;
+            this.BotonAgregarRecordatorio.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BotonCompartirApunte
             // 
-            this.button1.Location = new System.Drawing.Point(368, 295);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 112);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "salte";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BotonCompartirApunte.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BotonCompartirApunte.Location = new System.Drawing.Point(386, 289);
+            this.BotonCompartirApunte.Name = "BotonCompartirApunte";
+            this.BotonCompartirApunte.Size = new System.Drawing.Size(38, 24);
+            this.BotonCompartirApunte.TabIndex = 14;
+            this.BotonCompartirApunte.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BotonEditarApunte
             // 
-            this.button2.Location = new System.Drawing.Point(554, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 112);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "salte";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(554, 147);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(155, 112);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "CompartirApunte";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(186, 295);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 112);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "salte";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BotonEditarApunte.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BotonEditarApunte.Location = new System.Drawing.Point(386, 191);
+            this.BotonEditarApunte.Name = "BotonEditarApunte";
+            this.BotonEditarApunte.Size = new System.Drawing.Size(38, 25);
+            this.BotonEditarApunte.TabIndex = 15;
+            this.BotonEditarApunte.UseVisualStyleBackColor = false;
             // 
             // BotonCrearApunte
             // 
-            this.BotonCrearApunte.Location = new System.Drawing.Point(186, 147);
+            this.BotonCrearApunte.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BotonCrearApunte.Location = new System.Drawing.Point(386, 141);
             this.BotonCrearApunte.Name = "BotonCrearApunte";
-            this.BotonCrearApunte.Size = new System.Drawing.Size(155, 112);
+            this.BotonCrearApunte.Size = new System.Drawing.Size(38, 25);
             this.BotonCrearApunte.TabIndex = 16;
-            this.BotonCrearApunte.Text = "Crear Apunte";
-            this.BotonCrearApunte.UseVisualStyleBackColor = true;
+            this.BotonCrearApunte.UseVisualStyleBackColor = false;
             this.BotonCrearApunte.Click += new System.EventHandler(this.BotonCrearApunte_Click);
             // 
             // button7
@@ -130,24 +114,70 @@
             // NombreDelAlumno
             // 
             this.NombreDelAlumno.AutoSize = true;
-            this.NombreDelAlumno.Location = new System.Drawing.Point(430, 52);
+            this.NombreDelAlumno.Location = new System.Drawing.Point(452, 53);
             this.NombreDelAlumno.Name = "NombreDelAlumno";
             this.NombreDelAlumno.Size = new System.Drawing.Size(0, 13);
             this.NombreDelAlumno.TabIndex = 18;
+            // 
+            // LinkCrearApunte
+            // 
+            this.LinkCrearApunte.AutoSize = true;
+            this.LinkCrearApunte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkCrearApunte.Location = new System.Drawing.Point(154, 142);
+            this.LinkCrearApunte.Name = "LinkCrearApunte";
+            this.LinkCrearApunte.Size = new System.Drawing.Size(116, 20);
+            this.LinkCrearApunte.TabIndex = 19;
+            this.LinkCrearApunte.TabStop = true;
+            this.LinkCrearApunte.Text = "Crear Apunte";
+            // 
+            // LinkAgregarRecordatorio
+            // 
+            this.LinkAgregarRecordatorio.AutoSize = true;
+            this.LinkAgregarRecordatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkAgregarRecordatorio.Location = new System.Drawing.Point(154, 241);
+            this.LinkAgregarRecordatorio.Name = "LinkAgregarRecordatorio";
+            this.LinkAgregarRecordatorio.Size = new System.Drawing.Size(182, 20);
+            this.LinkAgregarRecordatorio.TabIndex = 20;
+            this.LinkAgregarRecordatorio.TabStop = true;
+            this.LinkAgregarRecordatorio.Text = "Agregar Recordatorio";
+            // 
+            // LinkEditarApunte
+            // 
+            this.LinkEditarApunte.AutoSize = true;
+            this.LinkEditarApunte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkEditarApunte.Location = new System.Drawing.Point(154, 192);
+            this.LinkEditarApunte.Name = "LinkEditarApunte";
+            this.LinkEditarApunte.Size = new System.Drawing.Size(120, 20);
+            this.LinkEditarApunte.TabIndex = 21;
+            this.LinkEditarApunte.TabStop = true;
+            this.LinkEditarApunte.Text = "Editar Apunte";
+            // 
+            // LinkCompartirApunte
+            // 
+            this.LinkCompartirApunte.AutoSize = true;
+            this.LinkCompartirApunte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkCompartirApunte.Location = new System.Drawing.Point(154, 290);
+            this.LinkCompartirApunte.Name = "LinkCompartirApunte";
+            this.LinkCompartirApunte.Size = new System.Drawing.Size(150, 20);
+            this.LinkCompartirApunte.TabIndex = 22;
+            this.LinkCompartirApunte.TabStop = true;
+            this.LinkCompartirApunte.Text = "Compartir Apunte";
             // 
             // Menu_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LinkCompartirApunte);
+            this.Controls.Add(this.LinkEditarApunte);
+            this.Controls.Add(this.LinkAgregarRecordatorio);
+            this.Controls.Add(this.LinkCrearApunte);
             this.Controls.Add(this.NombreDelAlumno);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.BotonCrearApunte);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BotonEditarApunte);
+            this.Controls.Add(this.BotonCompartirApunte);
+            this.Controls.Add(this.BotonAgregarRecordatorio);
             this.Controls.Add(this.PreguntaOpciones);
             this.Controls.Add(this.TextoBienvenida);
             this.Name = "Menu_Alumno";
@@ -162,13 +192,15 @@
 
         private System.Windows.Forms.Label TextoBienvenida;
         private System.Windows.Forms.Label PreguntaOpciones;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BotonAgregarRecordatorio;
+        private System.Windows.Forms.Button BotonCompartirApunte;
+        private System.Windows.Forms.Button BotonEditarApunte;
         private System.Windows.Forms.Button BotonCrearApunte;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label NombreDelAlumno;
+        private System.Windows.Forms.LinkLabel LinkCrearApunte;
+        private System.Windows.Forms.LinkLabel LinkAgregarRecordatorio;
+        private System.Windows.Forms.LinkLabel LinkEditarApunte;
+        private System.Windows.Forms.LinkLabel LinkCompartirApunte;
     }
 }

@@ -36,5 +36,26 @@ namespace VistaNotas
             entrada.ShowDialog();
             this.Close();
         }
+
+        private void BotonSubirMaterial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonCrearMaterial_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CrearMaterial crearMaterial = new CrearMaterial();
+            crearMaterial.ShowDialog();
+            this.Close();
+        }
+
+        private void LinkAgregarRecordatorio_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            CrearMaterial crearMaterial = new CrearMaterial();
+            crearMaterial.ShowDialog();
+            this.Close();
+        }
     }
 }

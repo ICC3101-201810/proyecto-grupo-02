@@ -15,7 +15,6 @@ namespace VistaNotas
         [STAThread]
         static void Main()
         {
-            //Application.Run(new Creacion_Archivo_Apunte());
             serial.Cargar();
             //Administrador administrador = new Administrador("admin", "123", true);
             //MyNotes.AgregarAdmin(administrador);

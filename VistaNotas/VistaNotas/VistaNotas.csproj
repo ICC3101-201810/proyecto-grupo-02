@@ -109,11 +109,11 @@
     <Compile Include="Editar Fecha Ramo.Designer.cs">
       <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Editar Semestre.cs">
+    <Compile Include="Cambiar Nombre Semestre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editar Semestre.Designer.cs">
-      <DependentUpon>Editar Semestre.cs</DependentUpon>
+    <Compile Include="Cambiar Nombre Semestre.Designer.cs">
+      <DependentUpon>Cambiar Nombre Semestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Eliminar alumno.cs">
       <SubType>Form</SubType>
@@ -138,6 +138,12 @@
     </Compile>
     <Compile Include="Eliminar Ramo.Designer.cs">
       <DependentUpon>Eliminar Ramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar Semestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar Semestre.Designer.cs">
+      <DependentUpon>Eliminar Semestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
@@ -214,8 +220,8 @@
     <EmbeddedResource Include="Editar Fecha Ramo.resx">
       <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editar Semestre.resx">
-      <DependentUpon>Editar Semestre.cs</DependentUpon>
+    <EmbeddedResource Include="Cambiar Nombre Semestre.resx">
+      <DependentUpon>Cambiar Nombre Semestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar alumno.resx">
       <DependentUpon>Eliminar alumno.cs</DependentUpon>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar Ramo.resx">
       <DependentUpon>Eliminar Ramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar Semestre.resx">
+      <DependentUpon>Eliminar Semestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>

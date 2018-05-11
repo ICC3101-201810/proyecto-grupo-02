@@ -55,6 +55,7 @@
             this.linkLabel22 = new System.Windows.Forms.LinkLabel();
             this.linkLabel23 = new System.Windows.Forms.LinkLabel();
             this.linkLabel24 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel25 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Bienvenida
@@ -352,11 +353,23 @@
             this.linkLabel24.Text = "Eliminar Material";
             this.linkLabel24.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel24_LinkClicked);
             // 
+            // linkLabel25
+            // 
+            this.linkLabel25.AutoSize = true;
+            this.linkLabel25.Location = new System.Drawing.Point(301, 148);
+            this.linkLabel25.Name = "linkLabel25";
+            this.linkLabel25.Size = new System.Drawing.Size(121, 20);
+            this.linkLabel25.TabIndex = 27;
+            this.linkLabel25.TabStop = true;
+            this.linkLabel25.Text = "Crear Semestre";
+            this.linkLabel25.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel25_LinkClicked);
+            // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel25);
             this.Controls.Add(this.linkLabel24);
             this.Controls.Add(this.linkLabel23);
             this.Controls.Add(this.linkLabel22);
@@ -422,5 +435,6 @@
         private System.Windows.Forms.LinkLabel linkLabel22;
         private System.Windows.Forms.LinkLabel linkLabel23;
         private System.Windows.Forms.LinkLabel linkLabel24;
+        private System.Windows.Forms.LinkLabel linkLabel25;
     }
 }

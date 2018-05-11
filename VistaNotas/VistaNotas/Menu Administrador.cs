@@ -39,6 +39,7 @@ namespace VistaNotas
             linkLabel22.Visible = false;
             linkLabel23.Visible = false;
             linkLabel24.Visible = false;
+            linkLabel25.Visible = false;
 
             button1.Visible = false;
         }
@@ -107,8 +108,9 @@ namespace VistaNotas
             linkLabel10.Visible = false;
 
             label1.Text = "Administrar Semestres";
-
             button1.Visible = true;
+
+            linkLabel25.Visible = false;
 
         }
 
@@ -231,6 +233,8 @@ namespace VistaNotas
 
                 linkLabel23.Visible = false;
                 linkLabel24.Visible = false;
+
+                linkLabel25.Visible = false;
 
                 label1.Text = "¿Qué desea administrar?";
                 button1.Visible = false;
@@ -473,5 +477,15 @@ namespace VistaNotas
 
         }
 
+        private void linkLabel25_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
+
+            label1.Text = "Crear Semestre";
+            button1.Visible = true;
+        }
     }   
 }

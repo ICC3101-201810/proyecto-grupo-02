@@ -56,6 +56,8 @@
             this.linkLabel23 = new System.Windows.Forms.LinkLabel();
             this.linkLabel24 = new System.Windows.Forms.LinkLabel();
             this.linkLabel25 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel26 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel27 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Bienvenida
@@ -364,11 +366,35 @@
             this.linkLabel25.Text = "Crear Semestre";
             this.linkLabel25.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel25_LinkClicked);
             // 
+            // linkLabel26
+            // 
+            this.linkLabel26.AutoSize = true;
+            this.linkLabel26.Location = new System.Drawing.Point(301, 168);
+            this.linkLabel26.Name = "linkLabel26";
+            this.linkLabel26.Size = new System.Drawing.Size(201, 20);
+            this.linkLabel26.TabIndex = 28;
+            this.linkLabel26.TabStop = true;
+            this.linkLabel26.Text = "Cambiar Nombre Semestre";
+            this.linkLabel26.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel26_LinkClicked);
+            // 
+            // linkLabel27
+            // 
+            this.linkLabel27.AutoSize = true;
+            this.linkLabel27.Location = new System.Drawing.Point(301, 188);
+            this.linkLabel27.Name = "linkLabel27";
+            this.linkLabel27.Size = new System.Drawing.Size(138, 20);
+            this.linkLabel27.TabIndex = 29;
+            this.linkLabel27.TabStop = true;
+            this.linkLabel27.Text = "Eliminar Semestre";
+            this.linkLabel27.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel27_LinkClicked);
+            // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel27);
+            this.Controls.Add(this.linkLabel26);
             this.Controls.Add(this.linkLabel25);
             this.Controls.Add(this.linkLabel24);
             this.Controls.Add(this.linkLabel23);
@@ -436,5 +462,7 @@
         private System.Windows.Forms.LinkLabel linkLabel23;
         private System.Windows.Forms.LinkLabel linkLabel24;
         private System.Windows.Forms.LinkLabel linkLabel25;
+        private System.Windows.Forms.LinkLabel linkLabel26;
+        private System.Windows.Forms.LinkLabel linkLabel27;
     }
 }

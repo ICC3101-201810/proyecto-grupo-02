@@ -1,6 +1,6 @@
 ﻿namespace VistaNotas
 {
-    partial class Eliminar_alumno
+    partial class Cambiar_Nombre_Profesor
     {
         /// <summary>
         /// Required designer variable.
@@ -36,18 +36,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 158);
+            this.button1.Location = new System.Drawing.Point(412, 197);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 33);
+            this.button1.Size = new System.Drawing.Size(137, 33);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Eliminar";
+            this.button1.Text = "Cambiar nombre";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(292, 107);
+            this.comboBox1.Location = new System.Drawing.Point(317, 143);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(232, 28);
             this.comboBox1.TabIndex = 6;
@@ -55,23 +55,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 110);
+            this.label2.Location = new System.Drawing.Point(58, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 20);
+            this.label2.Size = new System.Drawing.Size(238, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Nombre del alumno a eliminar:";
+            this.label2.Text = "Nombre del profesor a modificar:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 56);
+            this.label1.Location = new System.Drawing.Point(57, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 29);
+            this.label1.Size = new System.Drawing.Size(320, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Eliminar alumno";
+            this.label1.Text = "Cambiar nombre profesor";
             // 
-            // Eliminar_alumno
+            // Cambiar_Nombre_Profesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,9 +80,8 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Eliminar_alumno";
-            this.Text = "Eliminar_alumno";
-            this.Load += new System.EventHandler(this.Eliminar_alumno_Load);
+            this.Name = "Cambiar_Nombre_Profesor";
+            this.Text = "Cambiar_Nombre_Profesor";
             this.ResumeLayout(false);
             this.PerformLayout();
 

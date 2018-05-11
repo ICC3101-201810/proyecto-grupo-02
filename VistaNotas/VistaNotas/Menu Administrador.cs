@@ -25,6 +25,11 @@ namespace VistaNotas
             linkLabel8.Visible = false;
             linkLabel9.Visible = false;
             linkLabel10.Visible = false;
+            linkLabel11.Visible = false;
+            linkLabel12.Visible = false;
+            linkLabel13.Visible = false;
+            linkLabel14.Visible = false;
+
             button1.Visible = false;
 
 
@@ -44,6 +49,7 @@ namespace VistaNotas
             linkLabel8.Visible = false;
             linkLabel9.Visible = false;
             linkLabel10.Visible = false;
+
 
             label1.Text = "Administrar Ramos";
 
@@ -65,8 +71,12 @@ namespace VistaNotas
             linkLabel10.Visible = false;
 
             label1.Text = "Administrar Profesores";
-
             button1.Visible = true;
+
+
+            linkLabel11.Visible = true;
+            linkLabel12.Visible = true;
+            linkLabel13.Visible = true;
 
         }
 
@@ -91,7 +101,7 @@ namespace VistaNotas
 
         private void button1_Click(object sender, EventArgs e) //boton atras
         {
-            if (label1.Text == "Editar Alumno")
+            if (label1.Text == "Editar alumno")
             {
                 linkLabel1.Visible = false;
                 linkLabel2.Visible = false;
@@ -106,7 +116,32 @@ namespace VistaNotas
                 linkLabel9.Visible = false;
                 linkLabel10.Visible = false;
 
-                label1.Text = "Alumno";
+                label1.Text = "Administrar alumnos";
+            }
+
+            else if (label1.Text == "Editar profesor")
+            {
+                linkLabel1.Visible = false;
+                linkLabel2.Visible = false;
+                linkLabel3.Visible = false;
+                linkLabel4.Visible = false;
+
+                linkLabel5.Visible = false;
+                linkLabel6.Visible = false;
+                linkLabel7.Visible = false;
+
+                linkLabel8.Visible = false;
+                linkLabel9.Visible = false;
+                linkLabel10.Visible = false;
+
+                linkLabel11.Visible = true;
+                linkLabel12.Visible = true;
+                linkLabel13.Visible = true;
+
+                linkLabel14.Visible = false;
+
+
+                label1.Text = "Administrar profesores";
             }
 
             else 
@@ -123,6 +158,12 @@ namespace VistaNotas
                 linkLabel8.Visible = false;
                 linkLabel9.Visible = false;
                 linkLabel10.Visible = false;
+
+                linkLabel11.Visible = false;
+                linkLabel12.Visible = false;
+                linkLabel13.Visible = false;
+
+                linkLabel14.Visible = false;
 
                 label1.Text = "¿Qué desea administrar?";
             }
@@ -144,7 +185,7 @@ namespace VistaNotas
             linkLabel9.Visible = false;
             linkLabel10.Visible = false;
 
-            label1.Text = "Administrar Alumnos";
+            label1.Text = "Administrar alumnos";
 
             linkLabel5.Visible = true;
             linkLabel6.Visible = true;
@@ -225,6 +266,53 @@ namespace VistaNotas
             eliminar_Ayudante.ShowDialog();
         }
 
-       
+        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// agregar profesor
+        {
+            Agregar_profesor agregar_Profesor = new Agregar_profesor();
+            agregar_Profesor.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// editar profe
+        {
+            linkLabel1.Visible = false;
+            linkLabel2.Visible = false;
+            linkLabel3.Visible = false;
+            linkLabel4.Visible = false;
+
+            linkLabel5.Visible = false;
+            linkLabel6.Visible = false;
+            linkLabel7.Visible = false;
+
+            linkLabel8.Visible = false;
+            linkLabel9.Visible = false;
+            linkLabel10.Visible = false;
+
+            linkLabel11.Visible = false;
+            linkLabel12.Visible = false;
+            linkLabel13.Visible = false;
+
+            linkLabel14.Visible = true;
+
+
+            label1.Text = "Editar profesor";
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cambiar_Nombre_Profesor cambiar_Nombre_Profesor = new Cambiar_Nombre_Profesor();
+            cambiar_Nombre_Profesor.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Eliminar_Profesor eliminar_Profesor = new Eliminar_Profesor();
+            eliminar_Profesor.ShowDialog();
+        }
     }
 }

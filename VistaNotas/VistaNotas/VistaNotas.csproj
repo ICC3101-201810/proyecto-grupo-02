@@ -53,8 +53,20 @@
     <Compile Include="Agregar alumno.Designer.cs">
       <DependentUpon>Agregar alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agregar profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar profesor.Designer.cs">
+      <DependentUpon>Agregar profesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alumno.cs" />
     <Compile Include="Apuntes.cs" />
+    <Compile Include="Cambiar Nombre Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar Nombre Profesor.Designer.cs">
+      <DependentUpon>Cambiar Nombre Profesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CambiarNombreAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="Eliminar ayudante.Designer.cs">
       <DependentUpon>Eliminar ayudante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar Profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar Profesor.Designer.cs">
+      <DependentUpon>Eliminar Profesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
@@ -115,6 +133,12 @@
     <EmbeddedResource Include="Agregar alumno.resx">
       <DependentUpon>Agregar alumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Agregar profesor.resx">
+      <DependentUpon>Agregar profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar Nombre Profesor.resx">
+      <DependentUpon>Cambiar Nombre Profesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambiarNombreAlumno.resx">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar ayudante.resx">
       <DependentUpon>Eliminar ayudante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar Profesor.resx">
+      <DependentUpon>Eliminar Profesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>

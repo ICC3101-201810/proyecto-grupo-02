@@ -10,7 +10,6 @@ namespace VistaNotas
     [Serializable()]
     class Alumno : Usuario
     {
-        bool administrador = false;
         List<Apuntes>  apuntes = new List<Apuntes>();
         bool ayudante = false;
 
@@ -31,11 +30,11 @@ namespace VistaNotas
             nombre = nombreNuevo.ToUpper();
         }
 
-        public bool CrearApunte (string FileName)
+        public void CrearApunte (string nombreApunte, string contenido, Ramo ramo, Seccion seccion)
         {
-            //FileStream File = new FileStream(FileName, FileMode.Create, FileAccess.ReadWrite);
-
-            return true;
+            //entra ya verificado que esta correcto el ramo
+            apuntes.Add(new Apuntes(nombre, ramo, contenido, DateTime.Now, seccion));
+            return;
         }
 
         public void AgregarRecordatorio()

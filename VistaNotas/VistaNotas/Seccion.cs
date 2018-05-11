@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 namespace VistaNotas
 {
     [Serializable()]
-    class Seccion
+    class Seccion : Ramo
     {
         string IDSeccion;
         List<Alumno> alumnos = new List<Alumno>();
         List<Alumno> ayudantes = new List<Alumno>();
         List<Profesor> profesores = new List<Profesor>();
         int vacantes;
+        string NRC;
 
-        public Seccion(string IDSeccion, int vacantes)
+
+        public Seccion(string IDSeccion, int vacantes, string NRC, string NombreRamo) : base (NRC, NombreRamo)
         {
             this.IDSeccion = IDSeccion;
             this.vacantes = vacantes;

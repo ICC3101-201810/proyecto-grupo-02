@@ -34,13 +34,17 @@ namespace VistaNotas
             string newContraena = textBox2.Text;
             Alumno newAlumno = new Alumno(newName, newContraena);
             MyNotes.AgregarAlumnos(newAlumno);
-            serial.Guardar();
 
             Close();
             
 
             
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

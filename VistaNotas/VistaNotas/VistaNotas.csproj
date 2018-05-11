@@ -91,6 +91,12 @@
     <Compile Include="Crear Ramo.Designer.cs">
       <DependentUpon>Crear Ramo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Crear Semestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear Semestre.Designer.cs">
+      <DependentUpon>Crear Semestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="Editar Fecha Ramo.Designer.cs">
       <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cambiar Nombre Semestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar Nombre Semestre.Designer.cs">
+      <DependentUpon>Cambiar Nombre Semestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Eliminar alumno.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,12 @@
     </Compile>
     <Compile Include="Eliminar Ramo.Designer.cs">
       <DependentUpon>Eliminar Ramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar Semestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar Semestre.Designer.cs">
+      <DependentUpon>Eliminar Semestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
@@ -193,11 +211,17 @@
     <EmbeddedResource Include="Crear Ramo.resx">
       <DependentUpon>Crear Ramo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crear Semestre.resx">
+      <DependentUpon>Crear Semestre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearMaterial.resx">
       <DependentUpon>CrearMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar Fecha Ramo.resx">
       <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar Nombre Semestre.resx">
+      <DependentUpon>Cambiar Nombre Semestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar alumno.resx">
       <DependentUpon>Eliminar alumno.cs</DependentUpon>
@@ -210,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar Ramo.resx">
       <DependentUpon>Eliminar Ramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar Semestre.resx">
+      <DependentUpon>Eliminar Semestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>

@@ -40,6 +40,9 @@ namespace VistaNotas
             linkLabel23.Visible = false;
             linkLabel24.Visible = false;
             linkLabel25.Visible = false;
+            linkLabel26.Visible = false;
+            linkLabel27.Visible = false;
+
 
             button1.Visible = false;
         }
@@ -107,11 +110,12 @@ namespace VistaNotas
             linkLabel9.Visible = false;
             linkLabel10.Visible = false;
 
+            linkLabel25.Visible = true;
+            linkLabel26.Visible = true;
+            linkLabel27.Visible = true;
+
             label1.Text = "Administrar Semestres";
             button1.Visible = true;
-
-            linkLabel25.Visible = false;
-
         }
 
         private void button1_Click(object sender, EventArgs e) //boton atras
@@ -235,6 +239,8 @@ namespace VistaNotas
                 linkLabel24.Visible = false;
 
                 linkLabel25.Visible = false;
+                linkLabel26.Visible = false;
+                linkLabel27.Visible = false;
 
                 label1.Text = "¿Qué desea administrar?";
                 button1.Visible = false;
@@ -324,6 +330,8 @@ namespace VistaNotas
         {
             CambiarNombreAlumno cambiarNombreAlumno = new CambiarNombreAlumno();
             cambiarNombreAlumno.ShowDialog();
+
+            button1.Visible = true;
         }
 
         private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// hacer ayud
@@ -477,15 +485,28 @@ namespace VistaNotas
 
         }
 
-        private void linkLabel25_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel25_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// crear semestre
         {
+            Crear_Semestre crear_Semestre = new Crear_Semestre();
+            crear_Semestre.ShowDialog();
+
             linkLabel1.Visible = false;
             linkLabel2.Visible = false;
             linkLabel3.Visible = false;
             linkLabel4.Visible = false;
 
-            label1.Text = "Crear Semestre";
             button1.Visible = true;
+        }
+
+        private void linkLabel26_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// editar semestre
+        {
+            Editar_Semestre editar_Semestre = new Editar_Semestre();
+            editar_Semestre.ShowDialog();
+        }
+
+        private void linkLabel27_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// eliminar semestre
+        {
+
         }
     }   
 }

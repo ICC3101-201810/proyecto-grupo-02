@@ -91,6 +91,12 @@
     <Compile Include="Crear Ramo.Designer.cs">
       <DependentUpon>Crear Ramo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Crear Semestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear Semestre.Designer.cs">
+      <DependentUpon>Crear Semestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="Editar Fecha Ramo.Designer.cs">
       <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar Semestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Semestre.Designer.cs">
+      <DependentUpon>Editar Semestre.cs</DependentUpon>
     </Compile>
     <Compile Include="Eliminar alumno.cs">
       <SubType>Form</SubType>
@@ -193,11 +205,17 @@
     <EmbeddedResource Include="Crear Ramo.resx">
       <DependentUpon>Crear Ramo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Crear Semestre.resx">
+      <DependentUpon>Crear Semestre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearMaterial.resx">
       <DependentUpon>CrearMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar Fecha Ramo.resx">
       <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Semestre.resx">
+      <DependentUpon>Editar Semestre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar alumno.resx">
       <DependentUpon>Eliminar alumno.cs</DependentUpon>

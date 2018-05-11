@@ -43,7 +43,7 @@ namespace VistaNotas
             button1.Visible = false;
         }
 
-        
+
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // ramos
         {
@@ -66,7 +66,7 @@ namespace VistaNotas
             linkLabel16.Visible = true;
             linkLabel17.Visible = true;
 
-            
+
         }
 
 
@@ -197,8 +197,8 @@ namespace VistaNotas
                 label1.Text = "Editar Ramo";
             }
 
-            else 
-            { 
+            else
+            {
                 linkLabel1.Visible = true;
                 linkLabel2.Visible = true;
                 linkLabel3.Visible = true;
@@ -233,13 +233,14 @@ namespace VistaNotas
                 linkLabel24.Visible = false;
 
                 label1.Text = "¿Qué desea administrar?";
+                button1.Visible = false;
             }
 
-            
+
 
         }
 
-        
+
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e) //alumnos
         {
@@ -471,5 +472,6 @@ namespace VistaNotas
         {
 
         }
-    }
+
+    }   
 }

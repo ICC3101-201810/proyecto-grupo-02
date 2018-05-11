@@ -32,8 +32,6 @@ namespace VistaNotas
             serial.Guardar();
             //MessageBox.Show("\tSus cambios han sido guardados.\n\tSe he cerrado secion", "Guardado");
             this.Hide();
-            Entrada entrada = new Entrada();
-            entrada.ShowDialog();
             this.Close();
         }
 

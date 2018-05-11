@@ -27,8 +27,6 @@ namespace VistaNotas
         {
             serial.Guardar();
             this.Hide();
-            Entrada entrada = new Entrada();
-            entrada.ShowDialog();
             this.Close();
         }
 

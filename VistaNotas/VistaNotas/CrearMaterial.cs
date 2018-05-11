@@ -49,8 +49,6 @@ namespace VistaNotas
                     profe.CrearMaterial(); //crear el material --> no implementado aun
                     serial.Guardar();
                     this.Hide();
-                    Menu_Profesor menu_Profesor = new Menu_Profesor();
-                    menu_Profesor.ShowDialog();
                     this.Close();
                 }
             }

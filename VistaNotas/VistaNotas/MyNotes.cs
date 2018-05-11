@@ -49,7 +49,15 @@ namespace VistaNotas
         }
         public static Usuario Usuario_Actual()
         {
-            return UsuarioActual[0];
+            try
+            {
+                return UsuarioActual[0];
+            }
+            catch
+            {
+                return null;
+            }
+            
         }
         
         public static string GetNombreUsuarioAcutal()

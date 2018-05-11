@@ -28,9 +28,8 @@ namespace VistaNotas
                     alumno.CrearApunte(IngresoApunte.Text); //crear el material --> no implementado aun
                     serial.Guardar();
                     this.Hide();
-                    Menu_Alumno menu_Alumno = new Menu_Alumno();
-                    menu_Alumno.ShowDialog();
                     this.Close();
+                    return;
                 }
             }
             MessageBox.Show("error al crear");

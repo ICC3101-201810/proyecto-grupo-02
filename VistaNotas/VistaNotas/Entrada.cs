@@ -52,7 +52,9 @@ namespace VistaNotas
                         this.Hide();
                         Menu_Administrador menu_Administrador = new Menu_Administrador();
                         menu_Administrador.ShowDialog();
-                        this.Close();
+                        TContrasena.Text = "";
+                        TUsuario.Text = "";
+                        this.ShowDialog();
                     }
                 }
                 foreach (Alumno alumn in MyNotes.GetListaAlumnos())
@@ -62,7 +64,9 @@ namespace VistaNotas
                         this.Hide();
                         Menu_Alumno menu_Alumno = new Menu_Alumno();
                         menu_Alumno.ShowDialog();
-                        this.Close();
+                        TContrasena.Text = "";
+                        TUsuario.Text = "";
+                        this.ShowDialog();
                     }
                 }
 
@@ -73,7 +77,9 @@ namespace VistaNotas
                         this.Hide();
                         Menu_Profesor menu_Profesor = new Menu_Profesor();
                         menu_Profesor.ShowDialog();
-                        this.Close();
+                        TUsuario.Text = "";
+                        TContrasena.Text = "";
+                        this.ShowDialog();
                     }
                 }
 

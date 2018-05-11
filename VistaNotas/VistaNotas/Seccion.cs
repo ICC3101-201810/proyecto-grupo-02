@@ -26,5 +26,17 @@ namespace VistaNotas
         {
             return IDSeccion;
         }
+        public List<Alumno> GetAlumnos()
+        {
+            return alumnos;
+        }
+        public List<Profesor> GetProfesores()
+        {
+            return profesores;
+        }
+        public List<Alumno> GetAyudantes()
+        {
+            return ayudantes;
+        }
     }
 }

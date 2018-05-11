@@ -142,6 +142,10 @@ namespace VistaNotas
         {
             return ListaSemestres;
         }
+        public static void AgregarSemestre(Semestre semestre)
+        {
+            ListaSemestres.Add(semestre);
+        }
 
 
     }

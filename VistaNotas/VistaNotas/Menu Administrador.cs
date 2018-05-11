@@ -29,10 +29,18 @@ namespace VistaNotas
             linkLabel12.Visible = false;
             linkLabel13.Visible = false;
             linkLabel14.Visible = false;
+            linkLabel15.Visible = false;
+            linkLabel16.Visible = false;
+            linkLabel17.Visible = false;
+            linkLabel18.Visible = false;
+            linkLabel19.Visible = false;
+            linkLabel20.Visible = false;
+            linkLabel21.Visible = false;
+            linkLabel22.Visible = false;
+            linkLabel23.Visible = false;
+            linkLabel24.Visible = false;
 
             button1.Visible = false;
-
-
         }
 
         
@@ -52,8 +60,13 @@ namespace VistaNotas
 
 
             label1.Text = "Administrar Ramos";
-
             button1.Visible = true;
+
+            linkLabel15.Visible = true;
+            linkLabel16.Visible = true;
+            linkLabel17.Visible = true;
+
+            
         }
 
 
@@ -144,6 +157,46 @@ namespace VistaNotas
                 label1.Text = "Administrar profesores";
             }
 
+            else if (label1.Text == "Editar Ramo")
+            {
+                linkLabel15.Visible = true;
+                linkLabel16.Visible = true;
+                linkLabel17.Visible = true;
+
+                linkLabel18.Visible = false;
+                linkLabel19.Visible = false;
+                linkLabel20.Visible = false;
+
+                label1.Text = "Administrar Ramos";
+            }
+
+            else if (label1.Text == "Administrar Fechas")
+            {
+                linkLabel18.Visible = true;
+                linkLabel19.Visible = true;
+                linkLabel20.Visible = true;
+
+                linkLabel21.Visible = false;
+                linkLabel22.Visible = false;
+
+                label1.Text = "Editar Ramo";
+            }
+
+            else if (label1.Text == "Administrar Material")
+            {
+                linkLabel18.Visible = true;
+                linkLabel19.Visible = true;
+                linkLabel20.Visible = true;
+
+                linkLabel21.Visible = false;
+                linkLabel22.Visible = false;
+
+                linkLabel23.Visible = false;
+                linkLabel24.Visible = false;
+
+                label1.Text = "Editar Ramo";
+            }
+
             else 
             { 
                 linkLabel1.Visible = true;
@@ -164,6 +217,20 @@ namespace VistaNotas
                 linkLabel13.Visible = false;
 
                 linkLabel14.Visible = false;
+
+                linkLabel15.Visible = false;
+                linkLabel16.Visible = false;
+                linkLabel17.Visible = false;
+
+                linkLabel18.Visible = false;
+                linkLabel19.Visible = false;
+                linkLabel20.Visible = false;
+
+                linkLabel21.Visible = false;
+                linkLabel22.Visible = false;
+
+                linkLabel23.Visible = false;
+                linkLabel24.Visible = false;
 
                 label1.Text = "¿Qué desea administrar?";
             }
@@ -301,7 +368,7 @@ namespace VistaNotas
             button1.Visible = true;
         }
 
-        private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// cambiar nombre profe
         {
             Cambiar_Nombre_Profesor cambiar_Nombre_Profesor = new Cambiar_Nombre_Profesor();
             cambiar_Nombre_Profesor.ShowDialog();
@@ -309,10 +376,95 @@ namespace VistaNotas
             button1.Visible = true;
         }
 
-        private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// eliminar profe
         {
             Eliminar_Profesor eliminar_Profesor = new Eliminar_Profesor();
             eliminar_Profesor.ShowDialog();
+        }
+
+        private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// crear ramo
+        {
+            Crear_Ramo crear_Ramo = new Crear_Ramo();
+            crear_Ramo.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// editar ramo
+        {
+            linkLabel15.Visible = false;
+            linkLabel16.Visible = false;
+            linkLabel17.Visible = false;
+
+            linkLabel18.Visible = true;
+            linkLabel19.Visible = true;
+            linkLabel20.Visible = true;
+
+            label1.Text = "Editar Ramo";
+            button1.Visible = true;
+        }
+
+        private void linkLabel18_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// cambiar nombre ramo
+        {
+            Cambiar_Nombre_Ramo cambiar_Nombre_Ramo = new Cambiar_Nombre_Ramo();
+            cambiar_Nombre_Ramo.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel19_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// fechas
+        {
+            linkLabel18.Visible = false;
+            linkLabel19.Visible = false;
+            linkLabel20.Visible = false;
+
+            linkLabel21.Visible = true;
+            linkLabel22.Visible = true;
+
+            label1.Text = "Administrar Fechas";
+            button1.Visible = true;
+        }
+
+        private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// material
+        {
+            linkLabel23.Visible = true;
+            linkLabel24.Visible = true;
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel17_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// eliminar ramo
+        {
+            Eliminar_Ramo eliminar_Ramo = new Eliminar_Ramo();
+            eliminar_Ramo.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel21_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// crear fecha ramo
+        {
+            Crear_Fecha_Ramo crear_Fecha_Ramo = new Crear_Fecha_Ramo();
+            crear_Fecha_Ramo.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel22_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// editar fecha ramo
+        {
+            Editar_Fecha_Ramo editar_Fecha_Ramo = new Editar_Fecha_Ramo();
+            editar_Fecha_Ramo.ShowDialog();
+
+            button1.Visible = true;
+        }
+
+        private void linkLabel23_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// editar material
+        {
+
+        }
+
+        private void linkLabel24_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// eliminar material
+        {
+
         }
     }
 }

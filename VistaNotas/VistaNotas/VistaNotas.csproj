@@ -67,11 +67,35 @@
     <Compile Include="Cambiar Nombre Profesor.Designer.cs">
       <DependentUpon>Cambiar Nombre Profesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cambiar Nombre Ramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambiar Nombre Ramo.Designer.cs">
+      <DependentUpon>Cambiar Nombre Ramo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CambiarNombreAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CambiarNombreAlumno.Designer.cs">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crear Fecha Ramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear Fecha Ramo.Designer.cs">
+      <DependentUpon>Crear Fecha Ramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crear Ramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crear Ramo.Designer.cs">
+      <DependentUpon>Crear Ramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar Fecha Ramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Fecha Ramo.Designer.cs">
+      <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
     </Compile>
     <Compile Include="Eliminar alumno.cs">
       <SubType>Form</SubType>
@@ -90,6 +114,12 @@
     </Compile>
     <Compile Include="Eliminar Profesor.Designer.cs">
       <DependentUpon>Eliminar Profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar Ramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar Ramo.Designer.cs">
+      <DependentUpon>Eliminar Ramo.cs</DependentUpon>
     </Compile>
     <Compile Include="Entrada.cs">
       <SubType>Form</SubType>
@@ -139,8 +169,20 @@
     <EmbeddedResource Include="Cambiar Nombre Profesor.resx">
       <DependentUpon>Cambiar Nombre Profesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cambiar Nombre Ramo.resx">
+      <DependentUpon>Cambiar Nombre Ramo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambiarNombreAlumno.resx">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear Fecha Ramo.resx">
+      <DependentUpon>Crear Fecha Ramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crear Ramo.resx">
+      <DependentUpon>Crear Ramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Fecha Ramo.resx">
+      <DependentUpon>Editar Fecha Ramo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar alumno.resx">
       <DependentUpon>Eliminar alumno.cs</DependentUpon>
@@ -150,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar Profesor.resx">
       <DependentUpon>Eliminar Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar Ramo.resx">
+      <DependentUpon>Eliminar Ramo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>

@@ -19,10 +19,9 @@ namespace VistaNotas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ayudante creado", "", MessageBoxButtons.OK) == DialogResult.OK)
-            {
-                Close();
-            }
+            
+            Close();
+            
         }
     }
 }

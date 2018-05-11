@@ -36,10 +36,8 @@ namespace VistaNotas
             MyNotes.AgregarAlumnos(newAlumno);
             serial.Guardar();
 
-            if (MessageBox.Show("Alumno creado","", MessageBoxButtons.OK) == DialogResult.OK)
-            {
-                Close();
-            }
+            Close();
+            
 
             
             

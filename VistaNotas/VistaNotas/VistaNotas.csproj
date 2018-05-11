@@ -61,6 +61,12 @@
     <Compile Include="CambiarNombreAlumno.Designer.cs">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Eliminar alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar alumno.Designer.cs">
+      <DependentUpon>Eliminar alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eliminar ayudante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambiarNombreAlumno.resx">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar alumno.resx">
+      <DependentUpon>Eliminar alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eliminar ayudante.resx">
       <DependentUpon>Eliminar ayudante.cs</DependentUpon>

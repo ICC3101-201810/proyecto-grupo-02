@@ -37,6 +37,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.NombreDelAlumno = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,9 +46,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(130, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(762, 31);
+            this.label1.Size = new System.Drawing.Size(271, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido Alumno {Mynotes.GetNombreUsuarioAcutal()}";
+            this.label1.Text = "Bienvenido Alumno ";
             // 
             // label2
             // 
@@ -124,12 +125,22 @@
             this.button7.TabIndex = 17;
             this.button7.Text = "Cerrar Sesion";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // NombreDelAlumno
+            // 
+            this.NombreDelAlumno.AutoSize = true;
+            this.NombreDelAlumno.Location = new System.Drawing.Point(430, 52);
+            this.NombreDelAlumno.Name = "NombreDelAlumno";
+            this.NombreDelAlumno.Size = new System.Drawing.Size(0, 13);
+            this.NombreDelAlumno.TabIndex = 18;
             // 
             // Menu_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.NombreDelAlumno);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -158,5 +169,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label NombreDelAlumno;
     }
 }

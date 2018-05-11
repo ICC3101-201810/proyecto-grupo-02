@@ -15,6 +15,8 @@ namespace VistaNotas
         public Entrada()
         {
             InitializeComponent();
+            MyNotes.CerrarSesion();
+            
         }
 
 

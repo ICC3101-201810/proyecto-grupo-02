@@ -22,10 +22,6 @@ namespace VistaNotas
 
                     foreach (Administrador aadministrador in administradores)
                     {
-                        if (aadministrador.GetNombre() == "admin")
-                        {
-                            continue;
-                        }
                         MyNotes.AgregarAdmin(aadministrador);
                     }
                 }

@@ -15,6 +15,7 @@ namespace VistaNotas
         static List<Profesor> ListaProfesores = new List<Profesor>();
         static List<Administrador> ListaAdministradores = new List<Administrador>();
         static List<Usuario> UsuarioActual = new List<Usuario>(); //usuario que este en uso actualmente 
+        static List<Semestre> ListaSemestres = new List<Semestre>();
 
         /*
         public  MyNotes()
@@ -135,6 +136,11 @@ namespace VistaNotas
                 else { return false; }
             }
             else { return false; }
+        }
+
+        public static List<Semestre> GetListaSemestres ()
+        {
+            return ListaSemestres;
         }
 
 

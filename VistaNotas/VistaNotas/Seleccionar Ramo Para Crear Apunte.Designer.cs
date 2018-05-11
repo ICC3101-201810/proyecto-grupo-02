@@ -76,6 +76,7 @@
             this.IngresoApunte.Name = "IngresoApunte";
             this.IngresoApunte.Size = new System.Drawing.Size(752, 230);
             this.IngresoApunte.TabIndex = 17;
+            this.IngresoApunte.TextChanged += new System.EventHandler(this.IngresoApunte_TextChanged);
             // 
             // Label_Escriba_Nombre
             // 
@@ -93,6 +94,7 @@
             this.Nombre_Nuevo_Apunte.Name = "Nombre_Nuevo_Apunte";
             this.Nombre_Nuevo_Apunte.Size = new System.Drawing.Size(345, 20);
             this.Nombre_Nuevo_Apunte.TabIndex = 15;
+            this.Nombre_Nuevo_Apunte.TextChanged += new System.EventHandler(this.Nombre_Nuevo_Apunte_TextChanged);
             // 
             // LabelSeleccioneRamo
             // 

@@ -9,7 +9,6 @@ namespace VistaNotas
     [Serializable()]
     class Profesor : Usuario
     {
-        bool administrador = false;
         List<string> informaicon;
         List<Apuntes> material;
 

@@ -25,15 +25,39 @@ namespace VistaNotas
                 if (MyNotes.Usuario_Actual().GetNombree() == alumno.GetNombre())
                 {
                     //MessageBox.Show(IngresoMaterial.Text); //--> lo hace cambiado, nice
-                    alumno.CrearApunte(IngresoApunte.Text); //crear el material --> no implementado aun
-                    serial.Guardar();
-                    this.Hide();
-                    this.Close();
-                    return;
+                    //comboBox_Seleccion_Ramo
+                    foreach (Semestre semestre in MyNotes.GetListaSemestres())
+                    {
+                        foreach(Ramo ramo in semestre.GetListaRamos())
+                        {
+                            foreach (Seccion seccion in ramo.GetSecciones())
+                            {
+                                if (comboBox_Seleccion_Ramo.GetItemText(comboBox_Seleccion_Ramo.SelectedItem) == ramo.GetNRC())
+                                {
+                                    alumno.CrearApunte(Nombre_Nuevo_Apunte.Text, IngresoApunte.Text, ramo, seccion); //crear el material --> no implementado aun
+                                    serial.Guardar();
+                                    this.Hide();
+                                    this.Close();
+                                    return;
+                                }
+                            }
+                            
+                        }
+                    }
                 }
             }
             MessageBox.Show("error al crear");
             
+        }
+
+        private void Nombre_Nuevo_Apunte_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngresoApunte_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

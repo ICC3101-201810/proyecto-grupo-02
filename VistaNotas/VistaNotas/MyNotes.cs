@@ -93,7 +93,7 @@ namespace VistaNotas
             {
                 if (Alumno.GetContrasena() == constrasena)
                 {
-                    Administrador admin = new Administrador(nombre, constrasena, true);
+                    Administrador admin = new Administrador(nombre, constrasena);
                     UsuarioActual.Add(admin);
                 }
                 else { }

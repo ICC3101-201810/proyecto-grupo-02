@@ -54,7 +54,7 @@ namespace VistaNotas
                         menu_Administrador.ShowDialog();
                         TContrasena.Text = "";
                         TUsuario.Text = "";
-                        this.ShowDialog();
+                        this.Show();
                     }
                 }
                 foreach (Alumno alumn in MyNotes.GetListaAlumnos())
@@ -66,7 +66,7 @@ namespace VistaNotas
                         menu_Alumno.ShowDialog();
                         TContrasena.Text = "";
                         TUsuario.Text = "";
-                        this.ShowDialog();
+                        this.Show();
                     }
                 }
 
@@ -79,7 +79,7 @@ namespace VistaNotas
                         menu_Profesor.ShowDialog();
                         TUsuario.Text = "";
                         TContrasena.Text = "";
-                        this.ShowDialog();
+                        this.Show();
                     }
                 }
 

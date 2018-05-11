@@ -9,11 +9,10 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
     [Serializable()]
     class Administrador : Usuario
     {
-        bool administrador = true;
 
-        public Administrador(string nombre, string contrasena, bool miAdministrador) : base(nombre, contrasena)
+        public Administrador(string nombre, string contrasena) : base(nombre, contrasena)
         {
-            administrador = miAdministrador;
+            
         }
         public string GetNombre()
         {

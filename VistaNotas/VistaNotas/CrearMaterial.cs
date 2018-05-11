@@ -38,5 +38,22 @@ namespace VistaNotas
         {
 
         }
+
+        private void BotonCrear_Click(object sender, EventArgs e)
+        {
+            foreach(Profesor profe in MyNotes.GetListaProfesores())
+            {
+                if (MyNotes.Usuario_Actual().GetNombree() == profe.GetNombre())
+                {
+                    //MessageBox.Show(IngresoMaterial.Text); //--> lo hace cambiado, nice
+                    profe.CrearMaterial(); //crear el material --> no implementado aun
+                    serial.Guardar();
+                    this.Hide();
+                    Menu_Profesor menu_Profesor = new Menu_Profesor();
+                    menu_Profesor.ShowDialog();
+                    this.Close();
+                }
+            }
+        }
     }
 }

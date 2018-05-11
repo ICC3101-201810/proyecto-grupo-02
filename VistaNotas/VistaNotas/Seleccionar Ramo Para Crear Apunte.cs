@@ -18,19 +18,23 @@ namespace VistaNotas
 
         }
 
-        private void BotonAceptar_Click(object sender, EventArgs e)
+        private void BotonCrear_Click(object sender, EventArgs e)
         {
-            //confirmar que no hay un apunte con el mismo nombre en este ramo
-            comboBox_Seleccion_Ramo.Hide();
-            LabelSeleccioneRamo.Hide();
-            Label_Escriba_Nombre.Hide();
-            Nombre_Nuevo_Apunte.Hide();
-            BotonAceptar.Hide();
-        }
-
-        private void Nombre_Nuevo_Apunte_TextChanged(object sender, EventArgs e)
-        {
-            //ACA VA EL METODO CREAR APUNTE.
+            foreach (Alumno alumno in MyNotes.GetListaAlumnos())
+            {
+                if (MyNotes.Usuario_Actual().GetNombree() == alumno.GetNombre())
+                {
+                    //MessageBox.Show(IngresoMaterial.Text); //--> lo hace cambiado, nice
+                    alumno.CrearApunte(IngresoApunte.Text); //crear el material --> no implementado aun
+                    serial.Guardar();
+                    this.Hide();
+                    Menu_Alumno menu_Alumno = new Menu_Alumno();
+                    menu_Alumno.ShowDialog();
+                    this.Close();
+                }
+            }
+            MessageBox.Show("error al crear");
+            
         }
     }
 }

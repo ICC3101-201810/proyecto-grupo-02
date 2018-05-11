@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LinkEditarApunte = new System.Windows.Forms.LinkLabel();
             this.LinkAgregarRecordatorio = new System.Windows.Forms.LinkLabel();
-            this.LinkCrearApunte = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -91,17 +90,6 @@
             this.LinkAgregarRecordatorio.Text = "Crear Material";
             this.LinkAgregarRecordatorio.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkAgregarRecordatorio_LinkClicked);
             // 
-            // LinkCrearApunte
-            // 
-            this.LinkCrearApunte.AutoSize = true;
-            this.LinkCrearApunte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkCrearApunte.Location = new System.Drawing.Point(145, 156);
-            this.LinkCrearApunte.Name = "LinkCrearApunte";
-            this.LinkCrearApunte.Size = new System.Drawing.Size(120, 20);
-            this.LinkCrearApunte.TabIndex = 27;
-            this.LinkCrearApunte.TabStop = true;
-            this.LinkCrearApunte.Text = "Subir Material";
-            // 
             // Menu_Profesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,7 +97,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LinkEditarApunte);
             this.Controls.Add(this.LinkAgregarRecordatorio);
-            this.Controls.Add(this.LinkCrearApunte);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -128,6 +115,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel LinkEditarApunte;
         private System.Windows.Forms.LinkLabel LinkAgregarRecordatorio;
-        private System.Windows.Forms.LinkLabel LinkCrearApunte;
     }
 }

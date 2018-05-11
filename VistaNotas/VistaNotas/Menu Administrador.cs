@@ -506,7 +506,15 @@ namespace VistaNotas
 
         private void linkLabel27_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// eliminar semestre
         {
+            Eliminar_Semestre eliminar_Semestre = new Eliminar_Semestre();
+            eliminar_Semestre.ShowDialog();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            serial.Guardar();
+            Close();
+            
         }
     }   
 }

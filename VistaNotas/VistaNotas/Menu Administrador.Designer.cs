@@ -58,6 +58,7 @@
             this.linkLabel25 = new System.Windows.Forms.LinkLabel();
             this.linkLabel26 = new System.Windows.Forms.LinkLabel();
             this.linkLabel27 = new System.Windows.Forms.LinkLabel();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bienvenida
@@ -127,9 +128,9 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(78, 271);
+            this.button1.Location = new System.Drawing.Point(653, 264);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.Size = new System.Drawing.Size(75, 54);
             this.button1.TabIndex = 6;
             this.button1.Text = "Atrás";
             this.button1.UseVisualStyleBackColor = true;
@@ -358,7 +359,7 @@
             // linkLabel25
             // 
             this.linkLabel25.AutoSize = true;
-            this.linkLabel25.Location = new System.Drawing.Point(301, 148);
+            this.linkLabel25.Location = new System.Drawing.Point(87, 148);
             this.linkLabel25.Name = "linkLabel25";
             this.linkLabel25.Size = new System.Drawing.Size(121, 20);
             this.linkLabel25.TabIndex = 27;
@@ -369,7 +370,7 @@
             // linkLabel26
             // 
             this.linkLabel26.AutoSize = true;
-            this.linkLabel26.Location = new System.Drawing.Point(301, 168);
+            this.linkLabel26.Location = new System.Drawing.Point(87, 168);
             this.linkLabel26.Name = "linkLabel26";
             this.linkLabel26.Size = new System.Drawing.Size(201, 20);
             this.linkLabel26.TabIndex = 28;
@@ -380,7 +381,7 @@
             // linkLabel27
             // 
             this.linkLabel27.AutoSize = true;
-            this.linkLabel27.Location = new System.Drawing.Point(301, 188);
+            this.linkLabel27.Location = new System.Drawing.Point(88, 188);
             this.linkLabel27.Name = "linkLabel27";
             this.linkLabel27.Size = new System.Drawing.Size(138, 20);
             this.linkLabel27.TabIndex = 29;
@@ -388,11 +389,22 @@
             this.linkLabel27.Text = "Eliminar Semestre";
             this.linkLabel27.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel27_LinkClicked);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(78, 264);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 54);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Cerrar Sesión";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.linkLabel27);
             this.Controls.Add(this.linkLabel26);
             this.Controls.Add(this.linkLabel25);
@@ -464,5 +476,6 @@
         private System.Windows.Forms.LinkLabel linkLabel25;
         private System.Windows.Forms.LinkLabel linkLabel26;
         private System.Windows.Forms.LinkLabel linkLabel27;
+        private System.Windows.Forms.Button button2;
     }
 }

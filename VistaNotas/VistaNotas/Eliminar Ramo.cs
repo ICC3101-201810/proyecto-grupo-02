@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VistaNotas
 {
-    public partial class Cambiar_Nombre_Profesor : Form
+    public partial class Eliminar_Ramo : Form
     {
-        public Cambiar_Nombre_Profesor()
+        public Eliminar_Ramo()
         {
             InitializeComponent();
         }
@@ -20,11 +20,6 @@ namespace VistaNotas
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

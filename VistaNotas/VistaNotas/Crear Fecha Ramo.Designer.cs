@@ -1,6 +1,6 @@
 ﻿namespace VistaNotas
 {
-    partial class Cambiar_Nombre_Profesor
+    partial class Crear_Fecha_Ramo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,93 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(71, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Fecha:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(412, 205);
+            this.button1.Location = new System.Drawing.Point(456, 212);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 33);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Cambiar nombre";
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Crear Fecha";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(317, 119);
+            this.comboBox1.Location = new System.Drawing.Point(287, 101);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 28);
-            this.comboBox1.TabIndex = 6;
+            this.comboBox1.Size = new System.Drawing.Size(306, 28);
+            this.comboBox1.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 122);
+            this.label2.Location = new System.Drawing.Point(71, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Nombre del profesor a modificar:";
+            this.label2.Size = new System.Drawing.Size(185, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Ramo de la nueva fecha:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 65);
+            this.label1.Location = new System.Drawing.Point(70, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Cambiar nombre profesor";
+            this.label1.Size = new System.Drawing.Size(332, 29);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Crear Fecha para un Ramo";
             // 
-            // textBox1
+            // dateTimePicker1
             // 
-            this.textBox1.Location = new System.Drawing.Point(317, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 26);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.dateTimePicker1.Location = new System.Drawing.Point(287, 144);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(306, 26);
+            this.dateTimePicker1.TabIndex = 22;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Nombre nuevo:";
-            // 
-            // Cambiar_Nombre_Profesor
+            // Crear_Fecha_Ramo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Cambiar_Nombre_Profesor";
-            this.Text = "Cambiar_Nombre_Profesor";
+            this.Name = "Crear_Fecha_Ramo";
+            this.Text = "Crear_Fecha_Ramo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

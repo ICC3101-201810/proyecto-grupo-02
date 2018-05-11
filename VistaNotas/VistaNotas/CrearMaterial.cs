@@ -53,5 +53,10 @@ namespace VistaNotas
                 }
             }
         }
+
+        private void comboBox_Seleccion_Ramo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

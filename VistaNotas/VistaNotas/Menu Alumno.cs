@@ -22,19 +22,19 @@ namespace VistaNotas
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button7_Click(object sender, EventArgs e)
         {
             serial.Guardar();
-            MessageBox.Show("\tSus cambios han sido guardados.\n\tSe he cerrado secion", "Guardado");
             this.Hide();
             Entrada entrada = new Entrada();
             entrada.ShowDialog();
             this.Close();
+        }
+
+        private void BotonCrearApunte_Click(object sender, EventArgs e)
+        {
+            new Seleccionar_Ramo_Para_Crear_Apunte().ShowDialog();
         }
     }
 }

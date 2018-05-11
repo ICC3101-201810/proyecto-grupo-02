@@ -157,6 +157,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ramo.cs" />
     <Compile Include="Seccion.cs" />
+    <Compile Include="Seleccionar Ramo Para Crear Apunte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seleccionar Ramo Para Crear Apunte.Designer.cs">
+      <DependentUpon>Seleccionar Ramo Para Crear Apunte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Semestre.cs" />
     <Compile Include="serial.cs" />
     <Compile Include="Usuario.cs" />
@@ -220,6 +226,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Seleccionar Ramo Para Crear Apunte.resx">
+      <DependentUpon>Seleccionar Ramo Para Crear Apunte.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

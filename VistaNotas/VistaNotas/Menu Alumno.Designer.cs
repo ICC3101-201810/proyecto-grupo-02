@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TextoBienvenida = new System.Windows.Forms.Label();
+            this.PreguntaOpciones = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BotonCrearApunte = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.NombreDelAlumno = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // TextoBienvenida
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 31);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido Alumno ";
+            this.TextoBienvenida.AutoSize = true;
+            this.TextoBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextoBienvenida.Location = new System.Drawing.Point(130, 44);
+            this.TextoBienvenida.Name = "TextoBienvenida";
+            this.TextoBienvenida.Size = new System.Drawing.Size(271, 31);
+            this.TextoBienvenida.TabIndex = 1;
+            this.TextoBienvenida.Text = "Bienvenido Alumno ";
             // 
-            // label2
+            // PreguntaOpciones
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(133, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 18);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "¿Qué desea hacer?";
+            this.PreguntaOpciones.AutoSize = true;
+            this.PreguntaOpciones.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreguntaOpciones.Location = new System.Drawing.Point(133, 75);
+            this.PreguntaOpciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PreguntaOpciones.Name = "PreguntaOpciones";
+            this.PreguntaOpciones.Size = new System.Drawing.Size(158, 18);
+            this.PreguntaOpciones.TabIndex = 10;
+            this.PreguntaOpciones.Text = "¿Qué desea hacer?";
             // 
             // button3
             // 
@@ -106,15 +106,15 @@
             this.button5.Text = "salte";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // BotonCrearApunte
             // 
-            this.button6.Location = new System.Drawing.Point(186, 147);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 112);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "Crear Apunte";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.BotonCrearApunte.Location = new System.Drawing.Point(186, 147);
+            this.BotonCrearApunte.Name = "BotonCrearApunte";
+            this.BotonCrearApunte.Size = new System.Drawing.Size(155, 112);
+            this.BotonCrearApunte.TabIndex = 16;
+            this.BotonCrearApunte.Text = "Crear Apunte";
+            this.BotonCrearApunte.UseVisualStyleBackColor = true;
+            this.BotonCrearApunte.Click += new System.EventHandler(this.BotonCrearApunte_Click);
             // 
             // button7
             // 
@@ -142,14 +142,14 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.NombreDelAlumno);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.BotonCrearApunte);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PreguntaOpciones);
+            this.Controls.Add(this.TextoBienvenida);
             this.Name = "Menu_Alumno";
             this.Text = "Menu_Alumno";
             this.Load += new System.EventHandler(this.Menu_Alumno_Load);
@@ -160,14 +160,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TextoBienvenida;
+        private System.Windows.Forms.Label PreguntaOpciones;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BotonCrearApunte;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label NombreDelAlumno;
     }

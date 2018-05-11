@@ -34,9 +34,6 @@
             this.LinkEditarApunte = new System.Windows.Forms.LinkLabel();
             this.LinkAgregarRecordatorio = new System.Windows.Forms.LinkLabel();
             this.LinkCrearApunte = new System.Windows.Forms.LinkLabel();
-            this.BotonSubirMaterial = new System.Windows.Forms.Button();
-            this.BotonCrearMaterial = new System.Windows.Forms.Button();
-            this.BotonHacerAyudante = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,10 +74,10 @@
             this.LinkEditarApunte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkEditarApunte.Location = new System.Drawing.Point(145, 255);
             this.LinkEditarApunte.Name = "LinkEditarApunte";
-            this.LinkEditarApunte.Size = new System.Drawing.Size(138, 20);
+            this.LinkEditarApunte.Size = new System.Drawing.Size(151, 20);
             this.LinkEditarApunte.TabIndex = 29;
             this.LinkEditarApunte.TabStop = true;
-            this.LinkEditarApunte.Text = "Hacer Ayudante";
+            this.LinkEditarApunte.Text = "Asignar Ayudante";
             // 
             // LinkAgregarRecordatorio
             // 
@@ -92,6 +89,7 @@
             this.LinkAgregarRecordatorio.TabIndex = 28;
             this.LinkAgregarRecordatorio.TabStop = true;
             this.LinkAgregarRecordatorio.Text = "Crear Material";
+            this.LinkAgregarRecordatorio.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkAgregarRecordatorio_LinkClicked);
             // 
             // LinkCrearApunte
             // 
@@ -104,35 +102,6 @@
             this.LinkCrearApunte.TabStop = true;
             this.LinkCrearApunte.Text = "Subir Material";
             // 
-            // BotonSubirMaterial
-            // 
-            this.BotonSubirMaterial.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonSubirMaterial.Location = new System.Drawing.Point(377, 155);
-            this.BotonSubirMaterial.Name = "BotonSubirMaterial";
-            this.BotonSubirMaterial.Size = new System.Drawing.Size(38, 25);
-            this.BotonSubirMaterial.TabIndex = 26;
-            this.BotonSubirMaterial.UseVisualStyleBackColor = false;
-            this.BotonSubirMaterial.Click += new System.EventHandler(this.BotonSubirMaterial_Click);
-            // 
-            // BotonCrearMaterial
-            // 
-            this.BotonCrearMaterial.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonCrearMaterial.Location = new System.Drawing.Point(377, 205);
-            this.BotonCrearMaterial.Name = "BotonCrearMaterial";
-            this.BotonCrearMaterial.Size = new System.Drawing.Size(38, 25);
-            this.BotonCrearMaterial.TabIndex = 25;
-            this.BotonCrearMaterial.UseVisualStyleBackColor = false;
-            this.BotonCrearMaterial.Click += new System.EventHandler(this.BotonCrearMaterial_Click);
-            // 
-            // BotonHacerAyudante
-            // 
-            this.BotonHacerAyudante.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonHacerAyudante.Location = new System.Drawing.Point(377, 254);
-            this.BotonHacerAyudante.Name = "BotonHacerAyudante";
-            this.BotonHacerAyudante.Size = new System.Drawing.Size(38, 25);
-            this.BotonHacerAyudante.TabIndex = 23;
-            this.BotonHacerAyudante.UseVisualStyleBackColor = false;
-            // 
             // Menu_Profesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,9 +110,6 @@
             this.Controls.Add(this.LinkEditarApunte);
             this.Controls.Add(this.LinkAgregarRecordatorio);
             this.Controls.Add(this.LinkCrearApunte);
-            this.Controls.Add(this.BotonSubirMaterial);
-            this.Controls.Add(this.BotonCrearMaterial);
-            this.Controls.Add(this.BotonHacerAyudante);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -163,8 +129,5 @@
         private System.Windows.Forms.LinkLabel LinkEditarApunte;
         private System.Windows.Forms.LinkLabel LinkAgregarRecordatorio;
         private System.Windows.Forms.LinkLabel LinkCrearApunte;
-        private System.Windows.Forms.Button BotonSubirMaterial;
-        private System.Windows.Forms.Button BotonCrearMaterial;
-        private System.Windows.Forms.Button BotonHacerAyudante;
     }
 }

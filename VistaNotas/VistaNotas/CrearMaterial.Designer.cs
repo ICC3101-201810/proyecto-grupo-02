@@ -32,7 +32,7 @@
             this.Nombre_Nuevo_Apunte = new System.Windows.Forms.TextBox();
             this.LabelSeleccioneRamo = new System.Windows.Forms.Label();
             this.comboBox_Seleccion_Ramo = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IngresoMaterial = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,13 +73,13 @@
             this.comboBox_Seleccion_Ramo.Size = new System.Drawing.Size(350, 21);
             this.comboBox_Seleccion_Ramo.TabIndex = 5;
             // 
-            // textBox1
+            // IngresoMaterial
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 155);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(752, 230);
-            this.textBox1.TabIndex = 9;
+            this.IngresoMaterial.Location = new System.Drawing.Point(36, 155);
+            this.IngresoMaterial.Multiline = true;
+            this.IngresoMaterial.Name = "IngresoMaterial";
+            this.IngresoMaterial.Size = new System.Drawing.Size(752, 230);
+            this.IngresoMaterial.TabIndex = 9;
             // 
             // label1
             // 
@@ -119,13 +119,14 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IngresoMaterial);
             this.Controls.Add(this.Label_Escriba_Nombre);
             this.Controls.Add(this.Nombre_Nuevo_Apunte);
             this.Controls.Add(this.LabelSeleccioneRamo);
             this.Controls.Add(this.comboBox_Seleccion_Ramo);
             this.Name = "CrearMaterial";
             this.Text = "CrearMaterial";
+            this.Load += new System.EventHandler(this.CrearMaterial_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,7 +138,7 @@
         private System.Windows.Forms.TextBox Nombre_Nuevo_Apunte;
         private System.Windows.Forms.Label LabelSeleccioneRamo;
         private System.Windows.Forms.ComboBox comboBox_Seleccion_Ramo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IngresoMaterial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

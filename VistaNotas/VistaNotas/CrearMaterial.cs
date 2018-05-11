@@ -15,6 +15,13 @@ namespace VistaNotas
         public CrearMaterial()
         {
             InitializeComponent();
+            comboBox_Seleccion_Ramo.Items.Add("asd"); //asi se agrega un item al combobox
+            IngresoMaterial.Text = "hola"; //asi agregamos texto inicial al textbox
+        }
+
+        private void CrearMaterial_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

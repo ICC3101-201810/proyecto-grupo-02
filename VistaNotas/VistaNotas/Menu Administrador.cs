@@ -427,9 +427,14 @@ namespace VistaNotas
 
         private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// material
         {
+            linkLabel18.Visible = false;
+
+            linkLabel20.Visible = false;
+
             linkLabel23.Visible = true;
             linkLabel24.Visible = true;
 
+            label1.Text = "Administrar Material";
             button1.Visible = true;
         }
 

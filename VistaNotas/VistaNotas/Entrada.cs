@@ -28,7 +28,7 @@ namespace VistaNotas
 
                 if (MyNotes.ConfirmarContrasena(NombreUsuario, ContrasenaUsuario))
                 {
-                    MessageBox.Show("Bienvenido a MyNotes "+ NombreUsuario.ToUpper());
+                    
                     passright = true;
 
                 }
@@ -36,11 +36,13 @@ namespace VistaNotas
                 {
                     Console.Beep();
                     MessageBox.Show("Contrasena invalida.\nIntente nuevamente.");
+                    
                 }
 
             }
             if (passright == true)
             {
+                MyNotes.IniciarSesion(NombreUsuario, ContrasenaUsuario);
                 foreach (Administrador admin in MyNotes.GetListaAdmin())
                 {
                     if (NombreUsuario == admin.GetNombre())

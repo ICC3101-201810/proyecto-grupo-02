@@ -63,7 +63,7 @@ namespace VistaNotas
                 UsuarioActual.Remove(UsuarioActual[0]);
             }
         }
-        public static void IniciarSesion(string nombre, string pass)
+        public static void IniciarSesion(string nombre, string constrasena)
         {
             Alumno Alumno = (ListaAlumnos.Find(nom => nom.GetNombre() == nombre));
             Profesor profesor = (ListaProfesores.Find(nom => nom.GetNombre() == nombre));
@@ -73,27 +73,27 @@ namespace VistaNotas
             }
             else if (Alumno == null && profesor == null)
             {
-                if (administrador.GetContrasena() == pass)
+                if (administrador.GetContrasena() == constrasena)
                 {
-                    Alumno alumno = new Alumno(nombre, pass);
+                    Alumno alumno = new Alumno(nombre, constrasena);
                     UsuarioActual.Add(alumno);
                 }
                 else { }
             }
             else if (administrador == null && profesor == null)
             {
-                if (Alumno.GetContrasena() == pass)
+                if (Alumno.GetContrasena() == constrasena)
                 {
-                    Administrador admin = new Administrador(nombre, pass, true);
+                    Administrador admin = new Administrador(nombre, constrasena, true);
                     UsuarioActual.Add(admin);
                 }
                 else { }
             }
             else if (Alumno == null && administrador == null)
             {
-                if (profesor.GetContrasena() == pass)
+                if (profesor.GetContrasena() == constrasena)
                 {
-                    Profesor profe = new Profesor(nombre, pass);
+                    Profesor profe = new Profesor(nombre, constrasena);
                     UsuarioActual.Add(profe);
 
                 }

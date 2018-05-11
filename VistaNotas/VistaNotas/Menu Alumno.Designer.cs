@@ -45,9 +45,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(130, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 31);
+            this.label1.Size = new System.Drawing.Size(762, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido Alumno";
+            this.label1.Text = "Bienvenido Alumno {Mynotes.GetNombreUsuarioAcutal()}";
             // 
             // label2
             // 

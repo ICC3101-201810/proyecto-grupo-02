@@ -36,5 +36,15 @@ namespace VistaNotas
             entrada.ShowDialog();
             this.Close();
         }
+
+        private void BotonSubirMaterial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonCrearMaterial_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

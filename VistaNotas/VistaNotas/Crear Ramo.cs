@@ -15,13 +15,17 @@ namespace VistaNotas
         public Crear_Ramo()
         {
             InitializeComponent();
+            foreach (Semestre i in MyNotes.GetListaSemestres())
+            {
+                comboBox1.Items.Add(i.GetID());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string nombreRamo = textBox1.Text;
             string NRC = textBox2.Text;
-            string semestre = textBox3.Text;
+            string semestre = comboBox1.Text;
 
             Ramo ramo = new Ramo(NRC, nombreRamo);
             foreach(Semestre i in MyNotes.GetListaSemestres())

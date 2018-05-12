@@ -17,13 +17,14 @@ namespace VistaNotas
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // cancelar
         {
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // crear
         {
+            MyNotes.GetListaSemestres().Add(new Semestre(textBox1.Text));
             Close();
         }
     }

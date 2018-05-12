@@ -22,17 +22,15 @@ namespace VistaNotas
 
         }
 
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            serial.Guardar();
-            this.Hide();
-            this.Close();
-        }
-
         private void BotonCrearApunte_Click(object sender, EventArgs e)
         {
             new Seleccionar_Ramo_Para_Crear_Apunte().ShowDialog();
+        }
+
+        private void LinkCrearApunte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new Seleccionar_Ramo_Para_Crear_Apunte().ShowDialog();
+
         }
     }
 }

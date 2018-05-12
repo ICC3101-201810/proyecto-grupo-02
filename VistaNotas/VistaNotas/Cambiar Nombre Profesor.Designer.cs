@@ -39,63 +39,67 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(412, 205);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(586, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 33);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Cambiar nombre";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(317, 119);
+            this.comboBox1.Location = new System.Drawing.Point(467, 126);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 28);
+            this.comboBox1.Size = new System.Drawing.Size(273, 28);
             this.comboBox1.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(58, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 20);
+            this.label2.Size = new System.Drawing.Size(367, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nombre del profesor a modificar:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 65);
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 29);
+            this.label1.Size = new System.Drawing.Size(483, 45);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cambiar nombre profesor";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(317, 153);
+            this.textBox1.Location = new System.Drawing.Point(467, 160);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 26);
+            this.textBox1.Size = new System.Drawing.Size(273, 26);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(58, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.Size = new System.Drawing.Size(178, 29);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre nuevo:";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(298, 204);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(414, 272);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 34);
+            this.button2.Size = new System.Drawing.Size(137, 33);
             this.button2.TabIndex = 10;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;

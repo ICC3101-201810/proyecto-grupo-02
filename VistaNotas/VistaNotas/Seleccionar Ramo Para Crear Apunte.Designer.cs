@@ -41,9 +41,10 @@
             // BotonCrear
             // 
             this.BotonCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonCrear.Location = new System.Drawing.Point(700, 376);
+            this.BotonCrear.Location = new System.Drawing.Point(1050, 578);
+            this.BotonCrear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonCrear.Name = "BotonCrear";
-            this.BotonCrear.Size = new System.Drawing.Size(88, 47);
+            this.BotonCrear.Size = new System.Drawing.Size(132, 72);
             this.BotonCrear.TabIndex = 20;
             this.BotonCrear.Text = "Crear";
             this.BotonCrear.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 376);
+            this.button2.Location = new System.Drawing.Point(18, 578);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 47);
+            this.button2.Size = new System.Drawing.Size(132, 72);
             this.button2.TabIndex = 19;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
@@ -63,18 +65,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 113);
+            this.label1.Location = new System.Drawing.Point(48, 174);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 24);
+            this.label1.Size = new System.Drawing.Size(225, 33);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ingrese Apunte";
             // 
             // IngresoApunte
             // 
-            this.IngresoApunte.Location = new System.Drawing.Point(36, 140);
+            this.IngresoApunte.Location = new System.Drawing.Point(54, 215);
+            this.IngresoApunte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IngresoApunte.Multiline = true;
             this.IngresoApunte.Name = "IngresoApunte";
-            this.IngresoApunte.Size = new System.Drawing.Size(752, 230);
+            this.IngresoApunte.Size = new System.Drawing.Size(1126, 352);
             this.IngresoApunte.TabIndex = 17;
             this.IngresoApunte.TextChanged += new System.EventHandler(this.IngresoApunte_TextChanged);
             // 
@@ -82,17 +86,19 @@
             // 
             this.Label_Escriba_Nombre.AutoSize = true;
             this.Label_Escriba_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Escriba_Nombre.Location = new System.Drawing.Point(32, 79);
+            this.Label_Escriba_Nombre.Location = new System.Drawing.Point(48, 122);
+            this.Label_Escriba_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_Escriba_Nombre.Name = "Label_Escriba_Nombre";
-            this.Label_Escriba_Nombre.Size = new System.Drawing.Size(225, 24);
+            this.Label_Escriba_Nombre.Size = new System.Drawing.Size(329, 33);
             this.Label_Escriba_Nombre.TabIndex = 16;
             this.Label_Escriba_Nombre.Text = "Nombre Nuevo Apunte";
             // 
             // Nombre_Nuevo_Apunte
             // 
-            this.Nombre_Nuevo_Apunte.Location = new System.Drawing.Point(394, 85);
+            this.Nombre_Nuevo_Apunte.Location = new System.Drawing.Point(591, 131);
+            this.Nombre_Nuevo_Apunte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Nombre_Nuevo_Apunte.Name = "Nombre_Nuevo_Apunte";
-            this.Nombre_Nuevo_Apunte.Size = new System.Drawing.Size(345, 20);
+            this.Nombre_Nuevo_Apunte.Size = new System.Drawing.Size(516, 26);
             this.Nombre_Nuevo_Apunte.TabIndex = 15;
             this.Nombre_Nuevo_Apunte.TextChanged += new System.EventHandler(this.Nombre_Nuevo_Apunte_TextChanged);
             // 
@@ -100,25 +106,28 @@
             // 
             this.LabelSeleccioneRamo.AutoSize = true;
             this.LabelSeleccioneRamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSeleccioneRamo.Location = new System.Drawing.Point(33, 27);
+            this.LabelSeleccioneRamo.Location = new System.Drawing.Point(50, 42);
+            this.LabelSeleccioneRamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelSeleccioneRamo.Name = "LabelSeleccioneRamo";
-            this.LabelSeleccioneRamo.Size = new System.Drawing.Size(175, 24);
+            this.LabelSeleccioneRamo.Size = new System.Drawing.Size(259, 33);
             this.LabelSeleccioneRamo.TabIndex = 14;
             this.LabelSeleccioneRamo.Text = "Seleccione Ramo";
             // 
             // comboBox_Seleccion_Ramo
             // 
             this.comboBox_Seleccion_Ramo.FormattingEnabled = true;
-            this.comboBox_Seleccion_Ramo.Location = new System.Drawing.Point(390, 31);
+            this.comboBox_Seleccion_Ramo.Location = new System.Drawing.Point(585, 48);
+            this.comboBox_Seleccion_Ramo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox_Seleccion_Ramo.Name = "comboBox_Seleccion_Ramo";
-            this.comboBox_Seleccion_Ramo.Size = new System.Drawing.Size(350, 21);
+            this.comboBox_Seleccion_Ramo.Size = new System.Drawing.Size(523, 28);
             this.comboBox_Seleccion_Ramo.TabIndex = 13;
+            this.comboBox_Seleccion_Ramo.SelectedIndexChanged += new System.EventHandler(this.comboBox_Seleccion_Ramo_SelectedIndexChanged);
             // 
             // Seleccionar_Ramo_Para_Crear_Apunte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.BotonCrear);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -127,6 +136,7 @@
             this.Controls.Add(this.Nombre_Nuevo_Apunte);
             this.Controls.Add(this.LabelSeleccioneRamo);
             this.Controls.Add(this.comboBox_Seleccion_Ramo);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Seleccionar_Ramo_Para_Crear_Apunte";
             this.Text = "Seleccionar_Ramo_Para_Crear_Apunte";
             this.ResumeLayout(false);

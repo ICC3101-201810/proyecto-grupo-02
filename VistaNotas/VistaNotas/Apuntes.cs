@@ -16,13 +16,13 @@ namespace VistaNotas
         string contenido;
         DateTime fecha;
 
-        public Apuntes (string ElNombre, Ramo esteRamo, string ElContenido, DateTime time, Seccion seccion)
+        public Apuntes (string ElNombre, Ramo esteRamo, string ElContenido, DateTime time)
         {
             nombre = ElNombre;
             ramo = esteRamo;
             contenido = ElContenido;
             fecha = time;
-            this.seccion = seccion;
+            //this.seccion = seccion;
         }
 
 

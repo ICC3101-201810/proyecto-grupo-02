@@ -19,12 +19,22 @@ namespace VistaNotas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string nombreRamo = textBox1.Text;
+            string NRC = textBox2.Text;
+
+            Ramo ramo = new Ramo(NRC, nombreRamo);
+
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

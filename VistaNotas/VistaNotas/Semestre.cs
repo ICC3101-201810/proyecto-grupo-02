@@ -42,6 +42,11 @@ namespace VistaNotas
             }
         }
 
+        public string GetID()
+        {
+            return ID;
+        }
+
 
         
 

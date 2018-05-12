@@ -15,6 +15,7 @@ namespace VistaNotas
         public Agregar_profesor()
         {
             InitializeComponent();
+
         }
 
         private void Agregar_profesor_Load(object sender, EventArgs e)
@@ -24,7 +25,18 @@ namespace VistaNotas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            string newName = textBox1.Text;
+            string newContraena = textBox2.Text;
+            if (MyNotes.VerificarContrasena(newContraena) == false)
+                MessageBox.Show("La contrasena debe tener mas de 3 caracteres");
+            else if (MyNotes.VerificarNombre(newName) == true)
+                MessageBox.Show("Ya existe un Usuario con ese nombre");
+            else
+            {
+                Profesor newprofe = new Profesor(newName, newContraena);
+                MyNotes.AgregarProfesor(newprofe);
+                Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

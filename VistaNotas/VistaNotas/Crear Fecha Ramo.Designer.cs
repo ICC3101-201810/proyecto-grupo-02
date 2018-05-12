@@ -40,61 +40,65 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(71, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 20;
             this.label3.Text = "Fecha:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(456, 212);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(516, 264);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 33);
+            this.button1.Size = new System.Drawing.Size(143, 34);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Crear Fecha";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(287, 101);
+            this.comboBox1.Location = new System.Drawing.Point(364, 108);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(306, 28);
+            this.comboBox1.Size = new System.Drawing.Size(367, 28);
             this.comboBox1.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(71, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 20);
+            this.label2.Size = new System.Drawing.Size(276, 29);
             this.label2.TabIndex = 17;
             this.label2.Text = "Ramo de la nueva fecha:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(70, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 29);
+            this.label1.Size = new System.Drawing.Size(507, 45);
             this.label1.TabIndex = 16;
             this.label1.Text = "Crear Fecha para un Ramo";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(287, 144);
+            this.dateTimePicker1.Location = new System.Drawing.Point(364, 151);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(306, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(367, 26);
             this.dateTimePicker1.TabIndex = 22;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(287, 211);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(347, 264);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 34);
+            this.button2.Size = new System.Drawing.Size(115, 34);
             this.button2.TabIndex = 23;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;

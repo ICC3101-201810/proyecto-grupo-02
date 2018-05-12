@@ -16,18 +16,19 @@ namespace VistaNotas
         static List<Administrador> ListaAdministradores = new List<Administrador>();
         static List<Usuario> UsuarioActual = new List<Usuario>(); //usuario que este en uso actualmente 
         static List<Semestre> ListaSemestres = new List<Semestre>();
-
+        
         /*
         public  MyNotes()
         {
             serial.Cargar(this);
         }
         */
-        public static  void AgregarAdmin(Administrador administrador)
+        
+        public static void AgregarAdmin(Administrador administrador)
         {
             ListaAdministradores.Add(administrador);
         }
-        public static  void AgregarAlumnos(Alumno alumno)
+        public static void AgregarAlumnos(Alumno alumno)
         {
             ListaAlumnos.Add(alumno);
         }
@@ -154,7 +155,45 @@ namespace VistaNotas
         {
             ListaSemestres.Add(semestre);
         }
-
+        public static bool VerificarNombre(string nombre)
+        {
+            List<Alumno> verificandoNombreAl = (ListaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();
+            List<Profesor> verificandoNombrePr = (ListaProfesores.Where(nom => nom.GetNombre() == nombre)).ToList();
+            List<Administrador> verificandoNombreAd = (ListaAdministradores.Where(nom => nom.GetNombre() == nombre)).ToList();
+            if (!((verificandoNombreAl.Count() > 0) & (verificandoNombrePr.Count() > 0) & (verificandoNombreAd.Count() > 0)))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public static bool VerificarContrasena(string constrasena)
+        {
+            if (constrasena.Length < 3)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
     }
 }
+/*
+            while (MyNotes.GetListaAdmin().Count >= 1)
+            {
+                MyNotes.GetListaAdmin().Remove(MyNotes.GetListaAdmin()[0]);
+            }
+            while (MyNotes.GetListaAlumnos().Count >= 1)
+            {
+                MyNotes.GetListaAlumnos().Remove(MyNotes.GetListaAlumnos()[0]);
+            }
+            while (MyNotes.GetListaProfesores().Count >= 1)
+            {
+                MyNotes.GetListaProfesores().Remove(MyNotes.GetListaProfesores()[0]);
+            }
+            */

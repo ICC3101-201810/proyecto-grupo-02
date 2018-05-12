@@ -16,9 +16,9 @@ namespace VistaNotas
         static void Main()
         {
             serial.Cargar();
-
-            Administrador administrador = new Administrador("admin", "123");
-            MyNotes.AgregarAdmin(administrador);
+            
+            //Administrador administrador = new Administrador("admin", "123");
+            //MyNotes.AgregarAdmin(administrador);
             //Alumno alumno = new Alumno("alumno", "123");
             //MyNotes.AgregarAlumnos(alumno);
             //Profesor profe = new Profesor("tata", "123");

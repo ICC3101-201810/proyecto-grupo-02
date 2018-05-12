@@ -30,10 +30,6 @@
         {
             this.TextoBienvenida = new System.Windows.Forms.Label();
             this.PreguntaOpciones = new System.Windows.Forms.Label();
-            this.BotonAgregarRecordatorio = new System.Windows.Forms.Button();
-            this.BotonCompartirApunte = new System.Windows.Forms.Button();
-            this.BotonEditarApunte = new System.Windows.Forms.Button();
-            this.BotonCrearApunte = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.NombreDelAlumno = new System.Windows.Forms.Label();
             this.LinkCrearApunte = new System.Windows.Forms.LinkLabel();
@@ -63,43 +59,6 @@
             this.PreguntaOpciones.TabIndex = 10;
             this.PreguntaOpciones.Text = "¿Qué desea hacer?";
             // 
-            // BotonAgregarRecordatorio
-            // 
-            this.BotonAgregarRecordatorio.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonAgregarRecordatorio.Location = new System.Drawing.Point(386, 240);
-            this.BotonAgregarRecordatorio.Name = "BotonAgregarRecordatorio";
-            this.BotonAgregarRecordatorio.Size = new System.Drawing.Size(38, 25);
-            this.BotonAgregarRecordatorio.TabIndex = 11;
-            this.BotonAgregarRecordatorio.UseVisualStyleBackColor = false;
-            // 
-            // BotonCompartirApunte
-            // 
-            this.BotonCompartirApunte.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonCompartirApunte.Location = new System.Drawing.Point(386, 289);
-            this.BotonCompartirApunte.Name = "BotonCompartirApunte";
-            this.BotonCompartirApunte.Size = new System.Drawing.Size(38, 24);
-            this.BotonCompartirApunte.TabIndex = 14;
-            this.BotonCompartirApunte.UseVisualStyleBackColor = false;
-            // 
-            // BotonEditarApunte
-            // 
-            this.BotonEditarApunte.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonEditarApunte.Location = new System.Drawing.Point(386, 191);
-            this.BotonEditarApunte.Name = "BotonEditarApunte";
-            this.BotonEditarApunte.Size = new System.Drawing.Size(38, 25);
-            this.BotonEditarApunte.TabIndex = 15;
-            this.BotonEditarApunte.UseVisualStyleBackColor = false;
-            // 
-            // BotonCrearApunte
-            // 
-            this.BotonCrearApunte.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BotonCrearApunte.Location = new System.Drawing.Point(386, 141);
-            this.BotonCrearApunte.Name = "BotonCrearApunte";
-            this.BotonCrearApunte.Size = new System.Drawing.Size(38, 25);
-            this.BotonCrearApunte.TabIndex = 16;
-            this.BotonCrearApunte.UseVisualStyleBackColor = false;
-            this.BotonCrearApunte.Click += new System.EventHandler(this.BotonCrearApunte_Click);
-            // 
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,7 +68,6 @@
             this.button7.TabIndex = 17;
             this.button7.Text = "Cerrar Sesion";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // NombreDelAlumno
             // 
@@ -129,6 +87,7 @@
             this.LinkCrearApunte.TabIndex = 19;
             this.LinkCrearApunte.TabStop = true;
             this.LinkCrearApunte.Text = "Crear Apunte";
+            this.LinkCrearApunte.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkCrearApunte_LinkClicked);
             // 
             // LinkAgregarRecordatorio
             // 
@@ -174,10 +133,6 @@
             this.Controls.Add(this.LinkCrearApunte);
             this.Controls.Add(this.NombreDelAlumno);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.BotonCrearApunte);
-            this.Controls.Add(this.BotonEditarApunte);
-            this.Controls.Add(this.BotonCompartirApunte);
-            this.Controls.Add(this.BotonAgregarRecordatorio);
             this.Controls.Add(this.PreguntaOpciones);
             this.Controls.Add(this.TextoBienvenida);
             this.Name = "Menu_Alumno";
@@ -192,10 +147,6 @@
 
         private System.Windows.Forms.Label TextoBienvenida;
         private System.Windows.Forms.Label PreguntaOpciones;
-        private System.Windows.Forms.Button BotonAgregarRecordatorio;
-        private System.Windows.Forms.Button BotonCompartirApunte;
-        private System.Windows.Forms.Button BotonEditarApunte;
-        private System.Windows.Forms.Button BotonCrearApunte;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label NombreDelAlumno;
         private System.Windows.Forms.LinkLabel LinkCrearApunte;

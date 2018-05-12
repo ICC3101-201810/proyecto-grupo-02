@@ -42,6 +42,7 @@ namespace VistaNotas
             linkLabel25.Visible = false;
             linkLabel26.Visible = false;
             linkLabel27.Visible = false;
+            linkLabel28.Visible = false;
 
 
             button1.Visible = false;
@@ -69,6 +70,7 @@ namespace VistaNotas
             linkLabel15.Visible = true;
             linkLabel16.Visible = true;
             linkLabel17.Visible = true;
+            linkLabel28.Visible = true;
 
 
         }
@@ -113,6 +115,8 @@ namespace VistaNotas
             linkLabel25.Visible = true;
             linkLabel26.Visible = true;
             linkLabel27.Visible = true;
+
+            linkLabel28.Visible = false;
 
             label1.Text = "Administrar Semestres";
             button1.Visible = true;
@@ -241,6 +245,7 @@ namespace VistaNotas
                 linkLabel25.Visible = false;
                 linkLabel26.Visible = false;
                 linkLabel27.Visible = false;
+                linkLabel28.Visible = false;
 
                 label1.Text = "¿Qué desea administrar?";
                 button1.Visible = false;
@@ -513,8 +518,17 @@ namespace VistaNotas
         private void button2_Click(object sender, EventArgs e)
         {
             serial.Guardar();
+            Hide();
             Close();
+
             
-        }
+        } // cerrar sesion
+
+        private void linkLabel28_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)// inscribir alumnos en un ramo
+        {
+            ADMIN_Inscribir_Alumnos_en_Ramo aDMIN_Inscribir_Alumnos_En_Ramo = new ADMIN_Inscribir_Alumnos_en_Ramo();
+            aDMIN_Inscribir_Alumnos_En_Ramo.ShowDialog();
+
+        } 
     }   
 }

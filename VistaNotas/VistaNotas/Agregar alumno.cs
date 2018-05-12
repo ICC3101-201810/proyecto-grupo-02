@@ -24,18 +24,23 @@ namespace VistaNotas
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            string newName = textBox1.Text;
-            string newContraena = textBox2.Text;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string newName = textBox1.Text;
             string newContraena = textBox2.Text;
-            Alumno newAlumno = new Alumno(newName, newContraena);
-            MyNotes.AgregarAlumnos(newAlumno);
-
-            Close();
+            if (MyNotes.VerificarContrasena(newContraena) == false)
+                MessageBox.Show("La contrasena debe tener mas de 3 caracteres");
+            else if (MyNotes.VerificarNombre(newName) == true)
+                MessageBox.Show("Usuario ya creado");
+            else
+            {
+                Alumno newAlumno = new Alumno(newName, newContraena);
+                MyNotes.AgregarAlumnos(newAlumno);
+                Close();
+            }
             
 
             
@@ -45,6 +50,11 @@ namespace VistaNotas
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Agregar_alumno_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

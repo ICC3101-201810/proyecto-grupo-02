@@ -37,18 +37,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(303, 175);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(439, 214);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 33);
+            this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Eliminar ayudante";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 123);
+            this.comboBox1.Location = new System.Drawing.Point(211, 131);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 28);
             this.comboBox1.TabIndex = 6;
@@ -56,28 +57,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(64, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(114, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Alumno:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(62, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 35);
+            this.label1.Size = new System.Drawing.Size(346, 45);
             this.label1.TabIndex = 4;
             this.label1.Text = "Eliminar ayudante";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(167, 174);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(275, 214);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 34);
+            this.button2.Size = new System.Drawing.Size(112, 34);
             this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;

@@ -44,80 +44,73 @@
             // 
             this.Label_Escriba_Nombre.AutoSize = true;
             this.Label_Escriba_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Escriba_Nombre.Location = new System.Drawing.Point(44, 75);
-            this.Label_Escriba_Nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label_Escriba_Nombre.Location = new System.Drawing.Point(33, 61);
             this.Label_Escriba_Nombre.Name = "Label_Escriba_Nombre";
-            this.Label_Escriba_Nombre.Size = new System.Drawing.Size(290, 29);
+            this.Label_Escriba_Nombre.Size = new System.Drawing.Size(231, 24);
             this.Label_Escriba_Nombre.TabIndex = 8;
             this.Label_Escriba_Nombre.Text = "Nombre Nuevo Material";
             // 
             // Nombre_Nuevo_Apunte
             // 
-            this.Nombre_Nuevo_Apunte.Location = new System.Drawing.Point(521, 75);
-            this.Nombre_Nuevo_Apunte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nombre_Nuevo_Apunte.Location = new System.Drawing.Point(391, 61);
             this.Nombre_Nuevo_Apunte.Name = "Nombre_Nuevo_Apunte";
-            this.Nombre_Nuevo_Apunte.Size = new System.Drawing.Size(464, 22);
+            this.Nombre_Nuevo_Apunte.Size = new System.Drawing.Size(349, 20);
             this.Nombre_Nuevo_Apunte.TabIndex = 7;
             // 
             // LabelSeleccioneRamo
             // 
             this.LabelSeleccioneRamo.AutoSize = true;
             this.LabelSeleccioneRamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSeleccioneRamo.Location = new System.Drawing.Point(44, 35);
-            this.LabelSeleccioneRamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelSeleccioneRamo.Location = new System.Drawing.Point(33, 28);
             this.LabelSeleccioneRamo.Name = "LabelSeleccioneRamo";
-            this.LabelSeleccioneRamo.Size = new System.Drawing.Size(219, 29);
+            this.LabelSeleccioneRamo.Size = new System.Drawing.Size(175, 24);
             this.LabelSeleccioneRamo.TabIndex = 6;
             this.LabelSeleccioneRamo.Text = "Seleccione Ramo";
             // 
             // comboBox_Seleccion_Ramo
             // 
             this.comboBox_Seleccion_Ramo.FormattingEnabled = true;
-            this.comboBox_Seleccion_Ramo.Location = new System.Drawing.Point(521, 35);
-            this.comboBox_Seleccion_Ramo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_Seleccion_Ramo.Location = new System.Drawing.Point(391, 28);
             this.comboBox_Seleccion_Ramo.Name = "comboBox_Seleccion_Ramo";
-            this.comboBox_Seleccion_Ramo.Size = new System.Drawing.Size(465, 24);
+            this.comboBox_Seleccion_Ramo.Size = new System.Drawing.Size(350, 21);
             this.comboBox_Seleccion_Ramo.TabIndex = 5;
             this.comboBox_Seleccion_Ramo.SelectedIndexChanged += new System.EventHandler(this.comboBox_Seleccion_Ramo_SelectedIndexChanged);
             // 
             // IngresoMaterial
             // 
-            this.IngresoMaterial.Location = new System.Drawing.Point(48, 191);
-            this.IngresoMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IngresoMaterial.Location = new System.Drawing.Point(36, 155);
             this.IngresoMaterial.Multiline = true;
             this.IngresoMaterial.Name = "IngresoMaterial";
-            this.IngresoMaterial.Size = new System.Drawing.Size(1001, 282);
+            this.IngresoMaterial.Size = new System.Drawing.Size(752, 230);
             this.IngresoMaterial.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 158);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(32, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 29);
+            this.label1.Size = new System.Drawing.Size(159, 24);
             this.label1.TabIndex = 10;
             this.label1.Text = "Ingrese Material";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(16, 481);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(12, 391);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 58);
+            this.button2.Size = new System.Drawing.Size(88, 47);
             this.button2.TabIndex = 11;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // BotonCrear
             // 
             this.BotonCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonCrear.Location = new System.Drawing.Point(933, 481);
-            this.BotonCrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonCrear.Location = new System.Drawing.Point(700, 391);
             this.BotonCrear.Name = "BotonCrear";
-            this.BotonCrear.Size = new System.Drawing.Size(117, 58);
+            this.BotonCrear.Size = new System.Drawing.Size(88, 47);
             this.BotonCrear.TabIndex = 12;
             this.BotonCrear.Text = "Crear";
             this.BotonCrear.UseVisualStyleBackColor = true;
@@ -127,25 +120,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 118);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(33, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 29);
+            this.label2.Size = new System.Drawing.Size(69, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "Fecha";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(521, 125);
+            this.dateTimePicker1.Location = new System.Drawing.Point(391, 102);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(465, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(350, 20);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // CrearMaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BotonCrear);
@@ -156,7 +149,6 @@
             this.Controls.Add(this.Nombre_Nuevo_Apunte);
             this.Controls.Add(this.LabelSeleccioneRamo);
             this.Controls.Add(this.comboBox_Seleccion_Ramo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CrearMaterial";
             this.Text = "CrearMaterial";
             this.Load += new System.EventHandler(this.CrearMaterial_Load);

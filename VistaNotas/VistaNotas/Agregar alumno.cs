@@ -33,7 +33,7 @@ namespace VistaNotas
             string newContraena = textBox2.Text;
             if (MyNotes.VerificarContrasena(newContraena) == false)
                 MessageBox.Show("La contrasena debe tener mas de 3 caracteres");
-            else if (MyNotes.VerificarNombre(newName) == false)
+            else if (MyNotes.VerificarNombre(newName) == true)
                 MessageBox.Show("Usuario ya creado");
             else
             {

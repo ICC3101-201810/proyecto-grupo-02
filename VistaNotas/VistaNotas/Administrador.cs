@@ -26,59 +26,6 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
         {
             return base.contrasena;
         }
-        public bool VerificarNombre(string nombre, List<Alumno> listaAlumnos, List<Profesor> listaProfesores)
-        {
-            List<Alumno> verificandoNombreAl = (listaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();
-            List<Profesor> verificandoNombrePr = (listaProfesores.Where(nom => nom.GetNombre() == nombre)).ToList();
-            if (verificandoNombreAl.Count() > 0 && verificandoNombrePr.Count() > 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-        public bool VerificarContrasena(string constrasena)
-        {
-            if (contrasena.Length < 3)
-            {
-                Console.WriteLine("La contrasena debe tener mas de 3 caracteres");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        public bool EditarProfesor(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
-        {
-            if (VerificarNombre(nombre, als, profs))
-            {
-                List<Profesor> profeEditado = (profs.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
-                if (profeEditado.Count() < 2)
-                {
-                    Console.Beep();
-                    Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
-                    return false;
-                }
-                else
-                {
-                    profeEditado[0].SetNombre(nombreNuevo);
-                    Console.WriteLine("Se edito correctamente al alumno.");
-                    return true;
-                }
-
-            }
-            return true;
-        }
-        public bool EliminarProfesor(string nombre, List<Profesor> profs)
-        {
-            Profesor profesorX = (profs.Find(nom => nom.GetNombre() == nombre));
-            profs.Remove(profesorX);
-            return true;
-        }
         public bool CrearRamo(string nombre, string nrc)
         {
             Ramo ramo = new Ramo(nrc, nombre);

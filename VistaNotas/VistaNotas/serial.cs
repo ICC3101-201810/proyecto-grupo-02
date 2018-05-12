@@ -15,7 +15,7 @@ namespace VistaNotas
             try
             {
 
-                using (Stream stream = File.Open("DataAdmin.bin", FileMode.Open))
+                using (Stream stream = File.Open(@"..\..\data\DataAdmin.bin", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
                     List<Administrador> administradores = (List<Administrador>)bin.Deserialize(stream);
@@ -26,7 +26,7 @@ namespace VistaNotas
                     }
                 }
 
-                using (Stream stream = File.Open("DataProfesores.bin", FileMode.Open))
+                using (Stream stream = File.Open(@"..\..\data\DataProfesores.bin", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
                     List<Profesor> profesores = (List<Profesor>)bin.Deserialize(stream);
@@ -37,7 +37,7 @@ namespace VistaNotas
 
 
                 }
-                using (Stream stream = File.Open("DataAlumno.bin", FileMode.Open))
+                using (Stream stream = File.Open(@"..\..\data\DataAlumno.bin", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
@@ -47,7 +47,7 @@ namespace VistaNotas
                         MyNotes.AgregarAlumnos(alumno);
                     }
                 }
-                using (Stream stream = File.Open("DataSemestre.bin", FileMode.Open))
+                using (Stream stream = File.Open(@"..\..\data\DataSemestre.bin", FileMode.Open))
                 {
                     BinaryFormatter bin = new BinaryFormatter();
 
@@ -68,7 +68,8 @@ namespace VistaNotas
         public static void Guardar()
         {
             // serializacion para guardado de datos 
-            using (Stream stream = File.Open("DataAdmin.bin", FileMode.Create))
+            //using (Stream stream = File.Open(@"..\data\DataAlumno.bin", FileMode.Create));
+            using (Stream stream = File.Open(@"..\..\data\DataAdmin.bin", FileMode.Create))
             {
                 List<Administrador> ListaAdministradores = MyNotes.GetListaAdmin();
 
@@ -76,7 +77,7 @@ namespace VistaNotas
                 bin.Serialize(stream, ListaAdministradores);
                 stream.Close();
             }
-            using (Stream stream = File.Open("DataProfesores.bin", FileMode.Create))
+            using (Stream stream = File.Open(@"..\..\data\DataProfesores.bin", FileMode.Create))
             {
                 List<Profesor> ListaProfesores = MyNotes.GetListaProfesores();
 
@@ -84,7 +85,7 @@ namespace VistaNotas
                 bin.Serialize(stream, ListaProfesores);
                 stream.Close();
             }
-            using (Stream stream = File.Open("DataAlumno.bin", FileMode.Create))
+            using (Stream stream = File.Open(@"..\..\data\DataAlumno.bin", FileMode.Create)) 
             {
                 List<Alumno> ListaAlumnos = MyNotes.GetListaAlumnos();
 
@@ -92,7 +93,7 @@ namespace VistaNotas
                 bin.Serialize(stream, ListaAlumnos);
                 stream.Close();
             }
-            using (Stream stream = File.Open("DataSemestre.bin", FileMode.Create))
+            using (Stream stream = File.Open(@"..\..\data\DataSemestre.bin", FileMode.Create))
             {
                 List<Semestre> ListaSemestres = MyNotes.GetListaSemestres();
                 BinaryFormatter bin = new BinaryFormatter();

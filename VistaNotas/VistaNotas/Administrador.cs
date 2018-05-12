@@ -51,49 +51,7 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
                 return true;
             }
         }
-        public bool AgregarAlumno(string nombre, string contrasena, List<Alumno> als, List<Profesor> profs)
-        {
-            while (VerificarNombre(nombre, als, profs) != true)
-            {
-                Console.Beep();
-                Console.WriteLine("Nombre ya existe.\nIngrese otro:");
-                nombre = Console.ReadLine();
-                VerificarNombre(nombre, als, profs);
-            }
 
-            while (VerificarContrasena(contrasena) != true)
-            {
-                Console.Beep();
-                Console.WriteLine("Contrasena invalida.\nIngrese otra:");
-                contrasena = Console.ReadLine();
-                VerificarContrasena(contrasena);
-            }
-            Alumno alumno = new Alumno(nombre, contrasena);
-            return true;
-        }
-        public bool EditarAlumno(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
-        {
-            if (VerificarNombre(nombre, als, profs))
-            {
-                List<Alumno> alumnoEditado = (als.Where(nom => nom.GetNombre() == nombre)).ToList(); //Esta lsta deberia tener solo 1 elemnto
-                if (alumnoEditado.Count() > 1)
-                {
-                    Console.Beep();
-                    Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
-                    return false;
-                    
-                }
-                else
-                {
-                    Console.WriteLine(alumnoEditado);
-                    alumnoEditado[0].SetNombre(nombreNuevo);
-                    Console.WriteLine("Se edito correctamente al alumno.");
-                    return true;
-                }
-
-            }
-            return true;
-        }
         public bool EditarProfesor(string nombre, string nombreNuevo, List<Alumno> als, List<Profesor> profs)
         {
             if (VerificarNombre(nombre, als, profs))
@@ -113,18 +71,6 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
                 }
 
             }
-            return true;
-        }
-        public bool EliminarAlumno(string nombre, List<Alumno> als)
-        {
-            Alumno AlumnoX = (als.Find(nom => nom.GetNombre() == nombre));
-            als.Remove(AlumnoX);
-            return true;
-        }
-        public bool EliminarAdmin(string nombre, List<Administrador> ads)
-        {
-            Administrador AdminX = (ads.Find(nom => nom.GetNombre() == nombre));
-            ads.Remove(AdminX);
             return true;
         }
         public bool EliminarProfesor(string nombre, List<Profesor> profs)

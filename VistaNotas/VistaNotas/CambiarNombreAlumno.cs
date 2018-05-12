@@ -15,6 +15,10 @@ namespace VistaNotas
         public CambiarNombreAlumno()
         {
             InitializeComponent();
+            foreach (Alumno i in MyNotes.GetListaAlumnos())
+            {
+                comboBox1.Items.Add(i.GetNombre());
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,10 +30,7 @@ namespace VistaNotas
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach(Alumno i in MyNotes.GetListaAlumnos())
-            {
-
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e) // boton cambiar nombre
@@ -39,29 +40,19 @@ namespace VistaNotas
             string nombreNuevo = textBox1.Text;
             Usuario usuarioActual = MyNotes.Usuario_Actual(); 
 
-            string nombreALumnoAEditar = (alumnos.Where(nom => nom.GetNombre() == comboBox1.GetItemText(comboBox1.SelectedItem)).ToString());
-
-            foreach(Alumno i in alumnos)
+            if (MyNotes.VerificarNombre(nombreNuevo) == true)
             {
-                foreach(Administrador j in MyNotes.GetListaAdmin())
+                foreach(Alumno al in MyNotes.GetListaAlumnos())
                 {
-                    if (j.GetNombre() == usuarioActual.GetNombree())
-                    {
-                        bool flag = j.VerificarNombre(nombreNuevo, alumnos, profesores);
-
-                        if (flag == true)
-                        {
-                            if (i.GetNombre() == nombreALumnoAEditar)
-                            {
-                                i.SetNombre(nombreNuevo);
-                            }
-                        }
-                    }
+                    if (al.GetNombre() == comboBox1.Text)
+                        al.SetNombre(nombreNuevo);
+                    Close();
                 }
-                
             }
-
-            Close();
+            else
+            {
+                MessageBox.Show("ya existe el nombre en admin/alumno/profesor, intente nuevamente");
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

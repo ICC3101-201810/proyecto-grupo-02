@@ -155,7 +155,31 @@ namespace VistaNotas
         {
             ListaSemestres.Add(semestre);
         }
-
+        public static bool VerificarNombre(string nombre)
+        {
+            List<Alumno> verificandoNombreAl = (ListaAlumnos.Where(nom => nom.GetNombre() == nombre)).ToList();
+            List<Profesor> verificandoNombrePr = (ListaProfesores.Where(nom => nom.GetNombre() == nombre)).ToList();
+            List<Administrador> verificandoNombreAd = (ListaAdministradores.Where(nom => nom.GetNombre() == nombre)).ToList();
+            if (!((verificandoNombreAl.Count() > 0) & (verificandoNombrePr.Count() > 0) & (verificandoNombreAd.Count() > 0)))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public static bool VerificarContrasena(string constrasena)
+        {
+            if (constrasena.Length < 3)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
     }
 }

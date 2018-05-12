@@ -45,7 +45,7 @@ namespace VistaNotas
                         {
                             if (a.GetNombre() == comboBox1.Text )
                             {
-                                //a.agregar ramo
+                                MyNotes.
 
                                 MessageBox.Show("Alumno inscrito");
                                 Close();

@@ -180,10 +180,22 @@ namespace VistaNotas
                 return true;
             }
         }
+        public static void AgregarAlumnoARamo (Alumno al, Ramo ram, Seccion seccion)
+        {
+            foreach (Seccion sec in ram.GetSecciones())
+            {
+                if (sec == seccion)
+                {
+                    sec.inscribirAlumno(al);
+                    return;
+                }
+            }
+        }
 
     }
 }
 /*
+            //por si hay que resetear
             while (MyNotes.GetListaAdmin().Count >= 1)
             {
                 MyNotes.GetListaAdmin().Remove(MyNotes.GetListaAdmin()[0]);

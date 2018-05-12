@@ -54,6 +54,10 @@ namespace VistaNotas
         {
             return NRC;
         }
+        public string GetNombre()
+        {
+            return Nombre;
+        }
 
     }
 }

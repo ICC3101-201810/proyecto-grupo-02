@@ -21,9 +21,16 @@ namespace VistaNotas
         {
             string nombreRamo = textBox1.Text;
             string NRC = textBox2.Text;
+            string semestre = textBox3.Text;
 
             Ramo ramo = new Ramo(NRC, nombreRamo);
-
+            foreach(Semestre i in MyNotes.GetListaSemestres())
+            {
+                if (i.GetID() == semestre)
+                {
+                    i.AgregarRamo(ramo);
+                }
+            }
             Close();
         }
 
@@ -33,6 +40,11 @@ namespace VistaNotas
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Crear_Ramo_Load(object sender, EventArgs e)
         {
 
         }

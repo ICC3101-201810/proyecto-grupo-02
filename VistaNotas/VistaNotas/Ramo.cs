@@ -27,7 +27,7 @@ namespace VistaNotas
             {
                 secciones.Add(seccion);
                 
-                Console.WriteLine("Seccion " +seccion.GetIDSeccion().ToString() + " Agregada al Ramo "+ Nombre + " satisfactoriamente" );
+                //Console.WriteLine("Seccion " +seccion.GetIDSeccion().ToString() + " Agregada al Ramo "+ Nombre + " satisfactoriamente" );
                 return true;
             }
             

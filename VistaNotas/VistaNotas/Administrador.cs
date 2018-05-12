@@ -81,6 +81,7 @@ namespace VistaNotas//Metodos de verificar, no como interfaces si no en MyNotes 
                     Console.Beep();
                     Console.WriteLine("Algo salio mal al editar al alumno. Se cancelo la operacion.");
                     return false;
+                    
                 }
                 else
                 {

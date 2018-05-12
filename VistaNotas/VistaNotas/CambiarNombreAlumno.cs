@@ -28,13 +28,39 @@ namespace VistaNotas
         {
             foreach(Alumno i in MyNotes.GetListaAlumnos())
             {
-                string nombre = i.GetNombre();
-                comboBox1.Items.Add(nombre);
+
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // boton cambiar nombre
         {
+            List<Alumno> alumnos = MyNotes.GetListaAlumnos();
+            List<Profesor> profesores = MyNotes.GetListaProfesores();
+            string nombreNuevo = textBox1.Text;
+            Usuario usuarioActual = MyNotes.Usuario_Actual(); 
+
+            string nombreALumnoAEditar = (alumnos.Where(nom => nom.GetNombre() == comboBox1.GetItemText(comboBox1.SelectedItem)).ToString());
+
+            foreach(Alumno i in alumnos)
+            {
+                foreach(Administrador j in MyNotes.GetListaAdmin())
+                {
+                    if (j.GetNombre() == usuarioActual.GetNombree())
+                    {
+                        bool flag = j.VerificarNombre(nombreNuevo, alumnos, profesores);
+
+                        if (flag == true)
+                        {
+                            if (i.GetNombre() == nombreALumnoAEditar)
+                            {
+                                i.SetNombre(nombreNuevo);
+                            }
+                        }
+                    }
+                }
+                
+            }
+
             Close();
         }
 
@@ -46,6 +72,11 @@ namespace VistaNotas
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

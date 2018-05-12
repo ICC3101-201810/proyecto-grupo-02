@@ -24,8 +24,7 @@ namespace VistaNotas
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            string newName = textBox1.Text;
-            string newContraena = textBox2.Text;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

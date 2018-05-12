@@ -58,6 +58,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -113,6 +114,7 @@
             this.comboBox_Seleccion_Ramo.Name = "comboBox_Seleccion_Ramo";
             this.comboBox_Seleccion_Ramo.Size = new System.Drawing.Size(350, 21);
             this.comboBox_Seleccion_Ramo.TabIndex = 13;
+            this.comboBox_Seleccion_Ramo.SelectedIndexChanged += new System.EventHandler(this.comboBox_Seleccion_Ramo_SelectedIndexChanged);
             // 
             // Seleccionar_Ramo_Para_Crear_Apunte
             // 

@@ -30,10 +30,10 @@ namespace VistaNotas
             nombre = nombreNuevo.ToUpper();
         }
 
-        public void CrearApunte (string nombreApunte, string contenido, Ramo ramo, Seccion seccion)
+        public void CrearApunte (string nombreApunte, string contenido, Ramo ramo)
         {
             //entra ya verificado que esta correcto el ramo
-            apuntes.Add(new Apuntes(nombre, ramo, contenido, DateTime.Now, seccion));
+            apuntes.Add(new Apuntes(nombre, ramo, contenido, DateTime.Now));
             return;
         }
 

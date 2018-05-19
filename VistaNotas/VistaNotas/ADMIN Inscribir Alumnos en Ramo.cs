@@ -35,8 +35,26 @@ namespace VistaNotas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Alumno inscrito");
-            Close();
+            foreach (Semestre sem in MyNotes.GetListaSemestres())
+            {
+                foreach(Ramo ra in sem.GetListaRamos())
+                {
+                   if (ra.GetNombre() == comboBox2.Text)
+                    {
+                        foreach (Alumno a in MyNotes.GetListaAlumnos())
+                        {
+                            if (a.GetNombre() == comboBox1.Text )
+                            {
+                                MyNotes.
+
+                                MessageBox.Show("Alumno inscrito");
+                                Close();
+                            }
+                        }
+                    }
+                }
+            }
+            MessageBox.Show("seleccione opciones");
         }
     }
 }

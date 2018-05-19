@@ -40,5 +40,9 @@ namespace VistaNotas
         {
             return ayudantes;
         }
+        public void inscribirAlumno (Alumno alumno) // irá aca??
+        {
+            alumnos.Add(alumno);
+        }
     }
 }

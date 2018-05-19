@@ -39,6 +39,15 @@ namespace MyNotes2._0
                 return false;
             }
         }
+        public bool EliminarRamo(Ramo ramo)
+        {
+            if (!(ramos.IndexOf(ramo) == -1))
+            {
+                ramos.Remove(ramo);
+                return true;
+            }
+            return false;
+        }
 
         public string GetID()
         {

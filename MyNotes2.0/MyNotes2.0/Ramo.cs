@@ -8,13 +8,13 @@ namespace MyNotes2._0
 {
     class Ramo
     {
+        //no NRC por que hay un solo ramo llamado, con distintas secciones dentro
         string nombreRamo;
         List<Seccion> secciones = new List<Seccion>();
-        List<DateTime> Fechas = new List<DateTime>();
+        List<DateTime> Fechas = new List<DateTime>(); //trabajar fechas
 
-        public Ramo(string NRC, string Nombre)
+        public Ramo(string Nombre)
         {
-            this.NRC = NRC;
             this.nombreRamo = Nombre;
             //no contriene profesor, ya que el profesor, es profesor de la seccion
         }
@@ -24,11 +24,8 @@ namespace MyNotes2._0
             if (secciones.IndexOf(seccion) == -1)
             {
                 secciones.Add(seccion);
-
-                //Console.WriteLine("Seccion " +seccion.GetIDSeccion().ToString() + " Agregada al Ramo "+ Nombre + " satisfactoriamente" );
                 return true;
             }
-
             return false;
         }
         public bool AgregarFechas(DateTime date)
@@ -47,10 +44,6 @@ namespace MyNotes2._0
         public void SetNombre(string nombrenuevo)
         {
             nombreRamo = nombrenuevo;
-        }
-        public string GetNRC()
-        {
-            return NRC;
         }
         public string GetNombre()
         {

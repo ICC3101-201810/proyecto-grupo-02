@@ -23,7 +23,6 @@ namespace MyNotes2._0
             //ver como se une con Profesor
         }
 
-
         public string GetIDSeccion()
         {
             return IDSeccion;
@@ -87,9 +86,9 @@ namespace MyNotes2._0
         }
         public bool EliminarAyudante(Alumno Ayudante)
         {
-            if (!(alumnos.IndexOf(Ayudante) == -1))
+            if (!(ayudantes.IndexOf(Ayudante) == -1))
             {
-                alumnos.Remove(Ayudante);
+                ayudantes.Remove(Ayudante);
                 return true;
             }
             return false;

@@ -68,6 +68,7 @@
             this.button7.TabIndex = 17;
             this.button7.Text = "Cerrar Sesion";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // NombreDelAlumno
             // 

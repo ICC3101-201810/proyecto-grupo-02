@@ -40,18 +40,21 @@
             // 
             // textBox_Content
             // 
-            this.textBox_Content.Location = new System.Drawing.Point(12, 269);
+            this.textBox_Content.Location = new System.Drawing.Point(9, 219);
+            this.textBox_Content.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Content.Multiline = true;
             this.textBox_Content.Name = "textBox_Content";
-            this.textBox_Content.Size = new System.Drawing.Size(968, 22);
+            this.textBox_Content.Size = new System.Drawing.Size(727, 22);
             this.textBox_Content.TabIndex = 0;
             // 
             // label_Nombre
             // 
             this.label_Nombre.AutoSize = true;
             this.label_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Nombre.Location = new System.Drawing.Point(12, 73);
+            this.label_Nombre.Location = new System.Drawing.Point(9, 59);
+            this.label_Nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Nombre.Name = "label_Nombre";
-            this.label_Nombre.Size = new System.Drawing.Size(103, 29);
+            this.label_Nombre.Size = new System.Drawing.Size(81, 25);
             this.label_Nombre.TabIndex = 1;
             this.label_Nombre.Text = "Nombre";
             // 
@@ -59,9 +62,10 @@
             // 
             this.label_Ramo.AutoSize = true;
             this.label_Ramo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Ramo.Location = new System.Drawing.Point(12, 132);
+            this.label_Ramo.Location = new System.Drawing.Point(9, 107);
+            this.label_Ramo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Ramo.Name = "label_Ramo";
-            this.label_Ramo.Size = new System.Drawing.Size(81, 29);
+            this.label_Ramo.Size = new System.Drawing.Size(63, 25);
             this.label_Ramo.TabIndex = 2;
             this.label_Ramo.Text = "Ramo";
             // 
@@ -69,38 +73,43 @@
             // 
             this.label_Fecha.AutoSize = true;
             this.label_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Fecha.Location = new System.Drawing.Point(12, 190);
+            this.label_Fecha.Location = new System.Drawing.Point(9, 154);
+            this.label_Fecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Fecha.Name = "label_Fecha";
-            this.label_Fecha.Size = new System.Drawing.Size(83, 29);
+            this.label_Fecha.Size = new System.Drawing.Size(67, 25);
             this.label_Fecha.TabIndex = 3;
             this.label_Fecha.Text = "Fecha";
             // 
             // textBox_Nombre
             // 
-            this.textBox_Nombre.Location = new System.Drawing.Point(172, 80);
+            this.textBox_Nombre.Location = new System.Drawing.Point(129, 65);
+            this.textBox_Nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Nombre.Name = "textBox_Nombre";
-            this.textBox_Nombre.Size = new System.Drawing.Size(200, 22);
+            this.textBox_Nombre.Size = new System.Drawing.Size(151, 20);
             this.textBox_Nombre.TabIndex = 4;
             // 
             // textBox_Ramo
             // 
-            this.textBox_Ramo.Location = new System.Drawing.Point(172, 139);
+            this.textBox_Ramo.Location = new System.Drawing.Point(129, 113);
+            this.textBox_Ramo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Ramo.Name = "textBox_Ramo";
-            this.textBox_Ramo.Size = new System.Drawing.Size(200, 22);
+            this.textBox_Ramo.Size = new System.Drawing.Size(151, 20);
             this.textBox_Ramo.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 197);
+            this.dateTimePicker1.Location = new System.Drawing.Point(129, 160);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // button_Save
             // 
-            this.button_Save.Location = new System.Drawing.Point(703, 80);
+            this.button_Save.Location = new System.Drawing.Point(527, 65);
+            this.button_Save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(142, 43);
+            this.button_Save.Size = new System.Drawing.Size(106, 35);
             this.button_Save.TabIndex = 7;
             this.button_Save.Text = "Guardar";
             this.button_Save.UseVisualStyleBackColor = true;
@@ -108,9 +117,9 @@
             // 
             // Apuntes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 550);
+            this.ClientSize = new System.Drawing.Size(744, 447);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox_Ramo);
@@ -119,6 +128,7 @@
             this.Controls.Add(this.label_Ramo);
             this.Controls.Add(this.label_Nombre);
             this.Controls.Add(this.textBox_Content);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Apuntes";
             this.Text = "Apuntes";
             this.ResumeLayout(false);

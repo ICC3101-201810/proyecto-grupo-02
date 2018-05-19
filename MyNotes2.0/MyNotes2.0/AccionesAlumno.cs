@@ -26,5 +26,10 @@ namespace MyNotes2._0
         {
             label_NameAl.Text = usuario.GetNombre();
         }
+
+        private void button_CrearAp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

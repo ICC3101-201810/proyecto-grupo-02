@@ -32,5 +32,10 @@ namespace VistaNotas
             new Seleccionar_Ramo_Para_Crear_Apunte().ShowDialog();
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

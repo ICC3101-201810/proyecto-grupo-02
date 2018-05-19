@@ -13,7 +13,6 @@ namespace MyNotes2._0
     public partial class Bienvenida : Form , ILoger
     {
         BaseDeDatos bd;
-        private ILoger loger;
         public Bienvenida()
         {
             InitializeComponent();
@@ -26,6 +25,18 @@ namespace MyNotes2._0
         }
         public void Login(Usuario usuario)
         {
+            if (usuario is Alumno)
+            {
+                Alumno UsuarioActual = new Alumno(usuario.GetNombre(), usuario.GetContrasena());
+            }
+            else if (usuario is Profesor)
+            {
+                Profesor UsuarioActual = new Profesor(usuario.GetNombre(), usuario.GetContrasena());
+            }
+            else if (usuario is Administrador)
+            {
+                Administrador UsuarioActual = new Administrador(usuario.GetNombre(), usuario.GetContrasena());
+            }
         }
         private void button_Iniciar_Click(object sender, EventArgs e)
         {
@@ -37,6 +48,7 @@ namespace MyNotes2._0
                 if (usuario is Administrador)
                 {
                     AccionesAdmin accionesAdmin = new AccionesAdmin(this);
+                    Login(usuario);
                     accionesAdmin.Show();
                 }
                 else if (usuario is Alumno)

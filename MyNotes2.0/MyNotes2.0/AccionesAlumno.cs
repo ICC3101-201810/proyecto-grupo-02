@@ -21,15 +21,18 @@ namespace MyNotes2._0
                 loger = (ILoger)sender;
             }
             
+            
         }
         public void Login(Usuario usuario)
         {
+            usuario = (Alumno)usuario;
             label_NameAl.Text = usuario.GetNombre();
         }
 
         private void button_CrearAp_Click(object sender, EventArgs e)
         {
-
+            Apuntes apuntes = new Apuntes();
+            apuntes.Show();
         }
     }
 }

@@ -24,6 +24,12 @@ namespace MyNotes2._0
             DateTime dateTime = dateTimePicker1.Value;
             string contenido = textBox_Content.Text;
             Notes notes = new Notes(nombre, ramo, dateTime, contenido);
+            MessageBox.Show("Apunte guardado");
+        }
+
+        private void button_Cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

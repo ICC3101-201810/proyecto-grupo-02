@@ -119,6 +119,9 @@
     <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ramo.cs" />
+    <Compile Include="Seccion.cs" />
+    <Compile Include="Semestre.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="AccionesAdmin.resx">
       <DependentUpon>AccionesAdmin.cs</DependentUpon>

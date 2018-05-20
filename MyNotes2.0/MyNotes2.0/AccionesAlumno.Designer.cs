@@ -53,12 +53,14 @@
             // 
             // button_CrearAp
             // 
-            this.button_CrearAp.Location = new System.Drawing.Point(178, 211);
+            this.button_CrearAp.Location = new System.Drawing.Point(179, 210);
+            this.button_CrearAp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_CrearAp.Name = "button_CrearAp";
-            this.button_CrearAp.Size = new System.Drawing.Size(75, 23);
+            this.button_CrearAp.Size = new System.Drawing.Size(100, 54);
             this.button_CrearAp.TabIndex = 2;
             this.button_CrearAp.Text = "Crear Apuntes";
             this.button_CrearAp.UseVisualStyleBackColor = true;
+            this.button_CrearAp.Click += new System.EventHandler(this.button_CrearAp_Click);
             // 
             // AccionesAlumno
             // 
@@ -68,6 +70,7 @@
             this.Controls.Add(this.button_CrearAp);
             this.Controls.Add(this.label_NameAl);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AccionesAlumno";
             this.Text = "AccionesAlumno";
             this.ResumeLayout(false);

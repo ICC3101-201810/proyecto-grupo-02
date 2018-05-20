@@ -10,6 +10,7 @@ namespace MyNotes2._0
     {
         bool ayudante = false;
         List<Notes> apuntes = new List<Notes>();
+        //List<Ramo> Ramos = new List<Ramo>();
         public Alumno(string nombre, string contrasena) : base(nombre, contrasena)
         {
 
@@ -26,5 +27,13 @@ namespace MyNotes2._0
         {
             apuntes.Add(notas);
         }
+        /*public void AgregarRamo(Ramo ramo)
+        {
+            Ramos.Add(ramo);
+        }
+        public void LimpiarRamos()
+        {
+            Ramos.Clear();
+        }*/
     }
 }

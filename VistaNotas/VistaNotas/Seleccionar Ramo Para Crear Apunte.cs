@@ -34,7 +34,7 @@ namespace VistaNotas
                             {
                                 if (comboBox_Seleccion_Ramo.GetItemText(comboBox_Seleccion_Ramo.SelectedItem) == ramo.GetNRC())
                                 {
-                                    alumno.CrearApunte(Nombre_Nuevo_Apunte.Text, IngresoApunte.Text, ramo, seccion); //crear el material --> no implementado aun
+                                    alumno.CrearApunte(Nombre_Nuevo_Apunte.Text, IngresoApunte.Text, ramo); //crear el material --> no implementado aun
                                     serial.Guardar();
                                     this.Hide();
                                     this.Close();

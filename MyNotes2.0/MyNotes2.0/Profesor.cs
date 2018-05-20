@@ -8,6 +8,9 @@ namespace MyNotes2._0
 {
     class Profesor : Usuario
     {
+        List<string> informacion;
+        List<Apuntes> material;
+
         public Profesor(string nombre, string contrasena) : base(nombre, contrasena)
         {
 
@@ -19,6 +22,18 @@ namespace MyNotes2._0
         public string GetContrasena()
         {
             return base.GetContrasena();
+        }
+        public void SubirMaterial()
+        {
+
+        }
+        public void HacerAyudante()
+        {
+
+        }
+        public void CrearMaterial()
+        {
+
         }
     }
 }

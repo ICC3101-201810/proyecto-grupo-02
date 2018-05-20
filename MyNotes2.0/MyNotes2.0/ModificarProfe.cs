@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VistaNotas
+namespace MyNotes2._0
 {
-    public partial class Cambiar_Nombre_Ramo : Form
+    public partial class ModificarProfe : Form
     {
-        public Cambiar_Nombre_Ramo()
+        public ModificarProfe()
         {
             InitializeComponent();
         }
@@ -20,16 +20,6 @@ namespace VistaNotas
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

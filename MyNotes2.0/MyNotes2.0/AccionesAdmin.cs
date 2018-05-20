@@ -16,5 +16,21 @@ namespace MyNotes2._0
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AlumnoAdmin clickAlumno = new AlumnoAdmin();
+            clickAlumno.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminProfesor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

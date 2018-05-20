@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Administrador.cs" />
     <Compile Include="Alumno.cs" />
+    <Compile Include="AlumnoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnoAdmin.Designer.cs">
+      <DependentUpon>AlumnoAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apuntes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +78,44 @@
     <Compile Include="Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambiarNombreAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarNombreAlumno.Designer.cs">
+      <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearAlumno.Designer.cs">
+      <DependentUpon>CrearAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearProfesor.Designer.cs">
+      <DependentUpon>CrearProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ILoger.cs" />
+    <Compile Include="ModificarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAlumno.Designer.cs">
+      <DependentUpon>ModificarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarProfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarProfe.Designer.cs">
+      <DependentUpon>ModificarProfe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Notes.cs" />
+    <Compile Include="ProfeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfeAdmin.Designer.cs">
+      <DependentUpon>ProfeAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,11 +126,32 @@
     <EmbeddedResource Include="AccionesAlumno.resx">
       <DependentUpon>AccionesAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlumnoAdmin.resx">
+      <DependentUpon>AlumnoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apuntes.resx">
       <DependentUpon>Apuntes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarNombreAlumno.resx">
+      <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearAlumno.resx">
+      <DependentUpon>CrearAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearProfesor.resx">
+      <DependentUpon>CrearProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAlumno.resx">
+      <DependentUpon>ModificarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarProfe.resx">
+      <DependentUpon>ModificarProfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfeAdmin.resx">
+      <DependentUpon>ProfeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

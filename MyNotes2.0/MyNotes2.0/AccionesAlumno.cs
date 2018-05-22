@@ -34,5 +34,15 @@ namespace MyNotes2._0
             Apuntes apuntes = new Apuntes();
             apuntes.Show();
         }
+
+        private void label_NameAl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

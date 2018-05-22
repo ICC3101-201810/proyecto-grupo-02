@@ -13,11 +13,13 @@ namespace MyNotes2._0
         List<Profesor> listaProfesores;
         List<Administrador> listaAdmins;
         List<Semestre> listaSemestres;
+        Usuario usuarioActual;
         public BaseDeDatos()
         {
             listaAdmins = new List<Administrador>();
             listaAlumnos = new List<Alumno>();
             listaProfesores = new List<Profesor>();
+            listaSemestres = new List<Semestre>();
         }
         public List<Administrador> GetListaAdmins()
         {
@@ -114,6 +116,14 @@ namespace MyNotes2._0
             }
             listaSemestres.Add(semestre);
             return true;
+        }
+        public void SetUsuarioActual(Usuario usuario)
+        {
+            usuarioActual = usuario;
+        }
+        public Usuario GetUsuarioActual()
+        {
+            return usuarioActual;
         }
     }
 }

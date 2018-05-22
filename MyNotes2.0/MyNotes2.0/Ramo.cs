@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyNotes2._0
 {
+    [Serializable()]
     class Ramo
     {
         //no NRC por que hay un solo ramo llamado, con distintas secciones dentro

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyNotes2._0
 {
+    [Serializable()]
     class Administrador : Usuario
     {
         public Administrador(string nombre, string contrasena): base(nombre, contrasena)

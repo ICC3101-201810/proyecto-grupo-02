@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class Bienvenida : Form , ILoger
+    public partial class Bienvenida : Form , ILoger, IUsuario
     {
         BaseDeDatos bd;
         public Bienvenida()
@@ -20,22 +20,34 @@ namespace MyNotes2._0
             Administrador tester = new Administrador("admin", "123");
             bd.AgregarUsuario(tester);
             Alumno alumno = new Alumno("pancho", "hola");
+            Profesor profe = new Profesor("profe", "123");
             bd.AgregarUsuario(alumno);
+            bd.AgregarUsuario(profe);
             
         }
+
+        public Usuario GetUsuario()
+        {
+            return bd.GetUsuarioActual();
+        }
+
         public void Login(Usuario usuario)
         {
+            
             if (usuario is Alumno)
             {
                 Alumno UsuarioActual = new Alumno(usuario.GetNombre(), usuario.GetContrasena());
+                bd.SetUsuarioActual(UsuarioActual);
             }
             else if (usuario is Profesor)
             {
                 Profesor UsuarioActual = new Profesor(usuario.GetNombre(), usuario.GetContrasena());
+                bd.SetUsuarioActual(UsuarioActual);
             }
             else if (usuario is Administrador)
             {
                 Administrador UsuarioActual = new Administrador(usuario.GetNombre(), usuario.GetContrasena());
+                bd.SetUsuarioActual(UsuarioActual);
             }
         }
         private void button_Iniciar_Click(object sender, EventArgs e)
@@ -57,9 +69,12 @@ namespace MyNotes2._0
                     Login(usuario);
                     accionesAlumno.Show();
                 }
-                else //Parte para el profesor
+                else 
                 {
-
+                    AccionesProfesor accionesProfesor = new AccionesProfesor(this);
+                    Login(usuario);
+                    //MessageBox.Show(GetUsuario().GetNombre());
+                    accionesProfesor.Show();
                 }
             }
             else

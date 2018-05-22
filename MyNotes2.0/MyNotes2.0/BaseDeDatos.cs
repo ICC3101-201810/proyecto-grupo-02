@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace MyNotes2._0
 {
+    [Serializable()]
     class BaseDeDatos
     {
         List<Alumno> listaAlumnos;
         List<Profesor> listaProfesores;
         List<Administrador> listaAdmins;
-
+        List<Semestre> listaSemestres;
+        Usuario usuarioActual;
         public BaseDeDatos()
         {
             listaAdmins = new List<Administrador>();
             listaAlumnos = new List<Alumno>();
             listaProfesores = new List<Profesor>();
+            listaSemestres = new List<Semestre>();
         }
         public List<Administrador> GetListaAdmins()
         {
@@ -53,6 +56,10 @@ namespace MyNotes2._0
         public List<Alumno> GetListaAlumnos()
         {
             return listaAlumnos;
+        }
+        public List<Profesor> GetListaProfesores()
+        {
+            return listaProfesores;
         }
         public bool ExisteUser(string nombre)
         {
@@ -93,6 +100,30 @@ namespace MyNotes2._0
             {
                 listaProfesores.Add((Profesor)usuario);
             }
+        }
+        public List<Semestre> GetListaSemestres()
+        {
+            return listaSemestres;
+        }
+        public bool AgregarSemestre(Semestre semestre)
+        {
+            foreach (Semestre sem in listaSemestres)
+            {
+                if(sem.GetID() == semestre.GetID() )
+                {
+                    return false;
+                }
+            }
+            listaSemestres.Add(semestre);
+            return true;
+        }
+        public void SetUsuarioActual(Usuario usuario)
+        {
+            usuarioActual = usuario;
+        }
+        public Usuario GetUsuarioActual()
+        {
+            return usuarioActual;
         }
     }
 }

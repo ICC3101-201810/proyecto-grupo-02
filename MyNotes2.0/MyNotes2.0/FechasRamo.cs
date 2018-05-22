@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class CrearRamo : Form
+    public partial class FechasRamo : Form
     {
-        public CrearRamo()
+        public FechasRamo()
         {
             InitializeComponent();
         }
@@ -22,9 +22,9 @@ namespace MyNotes2._0
             Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void editarAlumno_Click(object sender, EventArgs e)
         {
-            Close();
+
         }
     }
 }

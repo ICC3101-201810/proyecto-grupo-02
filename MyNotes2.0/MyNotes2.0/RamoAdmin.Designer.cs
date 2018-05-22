@@ -54,6 +54,7 @@
             this.oldRamo.TabIndex = 10;
             this.oldRamo.Text = "Modificar ramo antiguo";
             this.oldRamo.UseVisualStyleBackColor = true;
+            this.oldRamo.Click += new System.EventHandler(this.oldRamo_Click);
             // 
             // newRamo
             // 
@@ -63,6 +64,7 @@
             this.newRamo.TabIndex = 9;
             this.newRamo.Text = "Crear ramo nuevo";
             this.newRamo.UseVisualStyleBackColor = true;
+            this.newRamo.Click += new System.EventHandler(this.newRamo_Click);
             // 
             // label1
             // 
@@ -82,6 +84,7 @@
             this.datesRamo.TabIndex = 12;
             this.datesRamo.Text = "Ver fechas de un ramo";
             this.datesRamo.UseVisualStyleBackColor = true;
+            this.datesRamo.Click += new System.EventHandler(this.datesRamo_Click);
             // 
             // materialRamo
             // 

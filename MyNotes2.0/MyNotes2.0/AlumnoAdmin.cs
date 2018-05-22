@@ -27,6 +27,13 @@ namespace MyNotes2._0
         {
             ModificarAlumno modificarAlumno = new ModificarAlumno();
             modificarAlumno.ShowDialog();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+            
         }
     }
 }

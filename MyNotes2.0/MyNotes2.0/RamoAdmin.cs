@@ -21,5 +21,22 @@ namespace MyNotes2._0
         {
             Close();
         }
+
+        private void newRamo_Click(object sender, EventArgs e)
+        {
+            CrearRamo crearRamo = new CrearRamo();
+            crearRamo.ShowDialog();
+        }
+
+        private void oldRamo_Click(object sender, EventArgs e)
+        {
+            ModificarRamo modificarRamo = new ModificarRamo();
+            modificarRamo.ShowDialog();
+        }
+
+        private void datesRamo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

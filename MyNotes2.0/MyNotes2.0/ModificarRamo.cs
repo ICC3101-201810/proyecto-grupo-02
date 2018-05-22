@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class CrearRamo : Form
+    public partial class ModificarRamo : Form
     {
-        public CrearRamo()
+        public ModificarRamo()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
         {
             Close();
         }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.eliminarAlumno = new System.Windows.Forms.Button();
+            this.eliminarProfesor = new System.Windows.Forms.Button();
             this.editarAlumno = new System.Windows.Forms.Button();
             this.listaAlumnos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,14 +45,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // eliminarAlumno
+            // eliminarProfesor
             // 
-            this.eliminarAlumno.Location = new System.Drawing.Point(109, 178);
-            this.eliminarAlumno.Name = "eliminarAlumno";
-            this.eliminarAlumno.Size = new System.Drawing.Size(244, 31);
-            this.eliminarAlumno.TabIndex = 10;
-            this.eliminarAlumno.Text = "Eliminar profesor";
-            this.eliminarAlumno.UseVisualStyleBackColor = true;
+            this.eliminarProfesor.Location = new System.Drawing.Point(109, 178);
+            this.eliminarProfesor.Name = "eliminarProfesor";
+            this.eliminarProfesor.Size = new System.Drawing.Size(244, 31);
+            this.eliminarProfesor.TabIndex = 10;
+            this.eliminarProfesor.Text = "Eliminar profesor";
+            this.eliminarProfesor.UseVisualStyleBackColor = true;
+            this.eliminarProfesor.Click += new System.EventHandler(this.eliminarAlumno_Click);
             // 
             // editarAlumno
             // 
@@ -62,6 +63,7 @@
             this.editarAlumno.TabIndex = 9;
             this.editarAlumno.Text = "Cambiar nombre profesor";
             this.editarAlumno.UseVisualStyleBackColor = true;
+            this.editarAlumno.Click += new System.EventHandler(this.editarAlumno_Click);
             // 
             // listaAlumnos
             // 
@@ -86,7 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.eliminarAlumno);
+            this.Controls.Add(this.eliminarProfesor);
             this.Controls.Add(this.editarAlumno);
             this.Controls.Add(this.listaAlumnos);
             this.Controls.Add(this.label1);
@@ -99,7 +101,7 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button eliminarAlumno;
+        private System.Windows.Forms.Button eliminarProfesor;
         private System.Windows.Forms.Button editarAlumno;
         private System.Windows.Forms.ComboBox listaAlumnos;
         private System.Windows.Forms.Label label1;

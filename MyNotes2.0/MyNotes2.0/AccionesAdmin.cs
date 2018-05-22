@@ -30,7 +30,14 @@ namespace MyNotes2._0
 
         private void adminProfesor_Click(object sender, EventArgs e)
         {
+            ProfeAdmin profeAdmin = new ProfeAdmin();
+            profeAdmin.Show();
+        }
 
+        private void adminRamo_Click(object sender, EventArgs e)
+        {
+            RamoAdmin ramoAdmin = new RamoAdmin();
+            ramoAdmin.Show();
         }
     }
 }

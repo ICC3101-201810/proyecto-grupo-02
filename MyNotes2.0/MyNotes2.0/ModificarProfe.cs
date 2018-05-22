@@ -21,5 +21,17 @@ namespace MyNotes2._0
         {
             Close();
         }
+
+        private void editarAlumno_Click(object sender, EventArgs e)
+        {
+            CambiarNombreProfesor cambiarNombreProfesor = new CambiarNombreProfesor();
+            cambiarNombreProfesor.ShowDialog();
+        }
+
+        private void eliminarAlumno_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Profesor eliminado exitosamente!");
+            //podriamos poner un messagebox como: esta seguro? bla bla
+        }
     }
 }

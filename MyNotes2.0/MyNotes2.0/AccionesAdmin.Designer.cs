@@ -85,6 +85,7 @@
             this.adminRamo.TabIndex = 4;
             this.adminRamo.Text = "Ramos";
             this.adminRamo.UseVisualStyleBackColor = true;
+            this.adminRamo.Click += new System.EventHandler(this.adminRamo_Click);
             // 
             // adminSemestre
             // 

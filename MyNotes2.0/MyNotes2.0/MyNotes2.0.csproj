@@ -84,6 +84,12 @@
     <Compile Include="CambiarNombreAlumno.Designer.cs">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambiarNombreProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarNombreProfesor.Designer.cs">
+      <DependentUpon>CambiarNombreProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="CrearProfesor.Designer.cs">
       <DependentUpon>CrearProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearRamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearRamo.Designer.cs">
+      <DependentUpon>CrearRamo.cs</DependentUpon>
     </Compile>
     <Compile Include="ILoger.cs" />
     <Compile Include="ModificarAlumno.cs">
@@ -120,6 +132,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ramo.cs" />
+    <Compile Include="RamoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RamoAdmin.Designer.cs">
+      <DependentUpon>RamoAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seccion.cs" />
     <Compile Include="Semestre.cs" />
     <Compile Include="Usuario.cs" />
@@ -141,11 +159,17 @@
     <EmbeddedResource Include="CambiarNombreAlumno.resx">
       <DependentUpon>CambiarNombreAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambiarNombreProfesor.resx">
+      <DependentUpon>CambiarNombreProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearAlumno.resx">
       <DependentUpon>CrearAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearProfesor.resx">
       <DependentUpon>CrearProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearRamo.resx">
+      <DependentUpon>CrearRamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarAlumno.resx">
       <DependentUpon>ModificarAlumno.cs</DependentUpon>
@@ -165,6 +189,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RamoAdmin.resx">
+      <DependentUpon>RamoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

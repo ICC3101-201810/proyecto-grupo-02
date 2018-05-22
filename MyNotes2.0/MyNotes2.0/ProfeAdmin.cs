@@ -24,12 +24,14 @@ namespace MyNotes2._0
 
         private void newProfe_Click(object sender, EventArgs e)
         {
-
+            CrearProfesor crearProfesor = new CrearProfesor();
+            crearProfesor.ShowDialog();
         }
 
         private void oldProfe_Click(object sender, EventArgs e)
         {
-
+            ModificarProfe modificarProfe = new ModificarProfe();
+            modificarProfe.ShowDialog();
         }
     }
 }

@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Seccion.cs" />
     <Compile Include="Semestre.cs" />
+    <Compile Include="Serial.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="AccionesAdmin.resx">
       <DependentUpon>AccionesAdmin.cs</DependentUpon>

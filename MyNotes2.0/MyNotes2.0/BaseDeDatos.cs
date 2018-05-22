@@ -11,7 +11,7 @@ namespace MyNotes2._0
         List<Alumno> listaAlumnos;
         List<Profesor> listaProfesores;
         List<Administrador> listaAdmins;
-
+        List<Semestre> listaSemestres;
         public BaseDeDatos()
         {
             listaAdmins = new List<Administrador>();
@@ -54,6 +54,10 @@ namespace MyNotes2._0
         {
             return listaAlumnos;
         }
+        public List<Profesor> GetListaProfesores()
+        {
+            return listaProfesores;
+        }
         public bool ExisteUser(string nombre)
         {
             foreach (Administrador a in listaAdmins)
@@ -93,6 +97,22 @@ namespace MyNotes2._0
             {
                 listaProfesores.Add((Profesor)usuario);
             }
+        }
+        public List<Semestre> GetListaSemestres()
+        {
+            return listaSemestres;
+        }
+        public bool AgregarSemestre(Semestre semestre)
+        {
+            foreach (Semestre sem in listaSemestres)
+            {
+                if(sem.GetID() == semestre.GetID() )
+                {
+                    return false;
+                }
+            }
+            listaSemestres.Add(semestre);
+            return true;
         }
     }
 }

@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class AlumnoAdmin : Form
+    public partial class AlumnoAdmin : Form, Ibd
     {
         public AlumnoAdmin()
         {
             InitializeComponent();
+            
         }
 
         private void newAlumno_Click(object sender, EventArgs e)
         {
-            CrearAlumno crearAlumno = new CrearAlumno();
+            CrearAlumno crearAlumno = new CrearAlumno(this);
             crearAlumno.ShowDialog();
+            Hide();
         }
 
         private void oldAlumno_Click(object sender, EventArgs e)

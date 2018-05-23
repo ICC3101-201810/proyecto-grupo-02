@@ -12,15 +12,18 @@ namespace MyNotes2._0
 {
     public partial class AccionesAdmin : Form
     {
-        public AccionesAdmin(object sender)
+        public AccionesAdmin(object sender, string nombre)
         {
             InitializeComponent();
+            label_NombreAdm.Text = nombre;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             AlumnoAdmin clickAlumno = new AlumnoAdmin();
             clickAlumno.Show();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace MyNotes2._0
         {
             RamoAdmin ramoAdmin = new RamoAdmin();
             ramoAdmin.Show();
+        }
+
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

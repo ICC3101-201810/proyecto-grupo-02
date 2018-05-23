@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyNotes2._0
 {
     [Serializable()]
-    class BaseDeDatos
+    public class BaseDeDatos
     {
         List<Alumno> listaAlumnos;
         List<Profesor> listaProfesores;
@@ -21,11 +21,11 @@ namespace MyNotes2._0
             listaProfesores = new List<Profesor>();
             listaSemestres = new List<Semestre>();
         }
-        public List<Administrador> GetListaAdmins()
+        List<Administrador> GetListaAdmins()
         {
             return listaAdmins;
         }
-        public Administrador GetAdmin(string nombre)
+        Administrador GetAdmin(string nombre)
         {
             Administrador Admin = (listaAdmins.Find(n => n.GetNombre() == nombre));
             return Admin;
@@ -53,11 +53,11 @@ namespace MyNotes2._0
             }
             
         }//Retorna el Usuario del nombre del parametro
-        public List<Alumno> GetListaAlumnos()
+        List<Alumno> GetListaAlumnos()
         {
             return listaAlumnos;
         }
-        public List<Profesor> GetListaProfesores()
+        List<Profesor> GetListaProfesores()
         {
             return listaProfesores;
         }
@@ -101,11 +101,11 @@ namespace MyNotes2._0
                 listaProfesores.Add((Profesor)usuario);
             }
         }
-        public List<Semestre> GetListaSemestres()
+        List<Semestre> GetListaSemestres()
         {
             return listaSemestres;
         }
-        public bool AgregarSemestre(Semestre semestre)
+        bool AgregarSemestre(Semestre semestre)
         {
             foreach (Semestre sem in listaSemestres)
             {

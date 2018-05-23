@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class FechasRamo : Form
+    public partial class VerMaterial : Form
     {
-        public FechasRamo()
+        public VerMaterial()
         {
             InitializeComponent();
         }
@@ -20,11 +20,6 @@ namespace MyNotes2._0
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void verFechas_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

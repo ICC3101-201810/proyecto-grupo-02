@@ -12,19 +12,35 @@ namespace MyNotes2._0
 {
     public partial class CrearAlumno : Form
     {
-        public CrearAlumno()
+        private Ibd listener;
+        public CrearAlumno(object sender)
         {
             InitializeComponent();
-        }
+            if(sender is Ibd)
+            {
+                listener = (Ibd)sender;
+            }
+        }  
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//aceptar
         {
-            Close();
+            
+
+        }
+
+        private void newName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newPass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

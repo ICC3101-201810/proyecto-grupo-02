@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class Bienvenida : Form , ILoger, IUsuario
+    public partial class Bienvenida : Form , ILoger, IUsuario, Ibd
     {
         BaseDeDatos bd;
-        public Bienvenida()
+        public Bienvenida(object sender)
         {
             InitializeComponent();
+            
+
             bd = new BaseDeDatos();
             Administrador tester = new Administrador("admin", "123");
             bd.AgregarUsuario(tester);
@@ -59,7 +61,7 @@ namespace MyNotes2._0
                 Usuario usuario = bd.GetUser(name);
                 if (usuario is Administrador)
                 {
-                    AccionesAdmin accionesAdmin = new AccionesAdmin(this);
+                    AccionesAdmin accionesAdmin = new AccionesAdmin(this,name);
                     Login(usuario);
                     accionesAdmin.Show();
                 }
@@ -82,5 +84,11 @@ namespace MyNotes2._0
                 MessageBox.Show("Usuario o contrasena incorrectas.");
             }
         }
+
+        public BaseDeDatos GetBaseDeDatos()
+        {
+            return bd;
+        }
+        
     }
 }

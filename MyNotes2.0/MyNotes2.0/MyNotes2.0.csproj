@@ -120,6 +120,7 @@
     <Compile Include="FechasRamo.Designer.cs">
       <DependentUpon>FechasRamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ibd.cs" />
     <Compile Include="ILoger.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="ModificarAlumno.cs">
@@ -159,8 +160,20 @@
     </Compile>
     <Compile Include="Seccion.cs" />
     <Compile Include="Semestre.cs" />
+    <Compile Include="SemestreAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemestreAdmin.Designer.cs">
+      <DependentUpon>SemestreAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serial.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="VerMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerMaterial.Designer.cs">
+      <DependentUpon>VerMaterial.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccionesAdmin.resx">
       <DependentUpon>AccionesAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +233,12 @@
     </Compile>
     <EmbeddedResource Include="RamoAdmin.resx">
       <DependentUpon>RamoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemestreAdmin.resx">
+      <DependentUpon>SemestreAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerMaterial.resx">
+      <DependentUpon>VerMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

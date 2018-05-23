@@ -51,6 +51,7 @@
             this.newName.Name = "newName";
             this.newName.Size = new System.Drawing.Size(237, 26);
             this.newName.TabIndex = 1;
+            this.newName.TextChanged += new System.EventHandler(this.newName_TextChanged);
             // 
             // label2
             // 
@@ -67,6 +68,7 @@
             this.newPass.Name = "newPass";
             this.newPass.Size = new System.Drawing.Size(237, 26);
             this.newPass.TabIndex = 3;
+            this.newPass.TextChanged += new System.EventHandler(this.newPass_TextChanged);
             // 
             // button1
             // 

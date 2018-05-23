@@ -36,7 +36,14 @@ namespace MyNotes2._0
 
         private void datesRamo_Click(object sender, EventArgs e)
         {
+            FechasRamo fechasRamo = new FechasRamo();
+            fechasRamo.ShowDialog();
+        }
 
+        private void materialRamo_Click(object sender, EventArgs e)
+        {
+            VerMaterial verMaterial = new VerMaterial();
+            verMaterial.ShowDialog();
         }
     }
 }

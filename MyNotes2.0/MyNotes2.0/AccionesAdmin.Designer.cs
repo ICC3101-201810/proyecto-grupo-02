@@ -35,6 +35,7 @@
             this.adminRamo = new System.Windows.Forms.Button();
             this.adminSemestre = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.logOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +52,7 @@
             // 
             this.label_NombreAdm.AutoSize = true;
             this.label_NombreAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NombreAdm.Location = new System.Drawing.Point(175, 48);
+            this.label_NombreAdm.Location = new System.Drawing.Point(227, 48);
             this.label_NombreAdm.Name = "label_NombreAdm";
             this.label_NombreAdm.Size = new System.Drawing.Size(64, 25);
             this.label_NombreAdm.TabIndex = 1;
@@ -106,11 +107,22 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "¿Qué desea administrar?";
             // 
+            // logOut
+            // 
+            this.logOut.Location = new System.Drawing.Point(394, 334);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(169, 40);
+            this.logOut.TabIndex = 7;
+            this.logOut.Text = "Cerrar sesión";
+            this.logOut.UseVisualStyleBackColor = true;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
+            // 
             // AccionesAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 410);
+            this.Controls.Add(this.logOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.adminSemestre);
             this.Controls.Add(this.adminRamo);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button adminRamo;
         private System.Windows.Forms.Button adminSemestre;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button logOut;
     }
 }

@@ -94,6 +94,7 @@
             this.materialRamo.TabIndex = 13;
             this.materialRamo.Text = "Ver material de un ramo";
             this.materialRamo.UseVisualStyleBackColor = true;
+            this.materialRamo.Click += new System.EventHandler(this.materialRamo_Click);
             // 
             // RamoAdmin
             // 

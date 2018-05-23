@@ -12,16 +12,21 @@ namespace MyNotes2._0
 {
     public partial class AccionesAdmin : Form
     {
+        private Ibd listener;
         public AccionesAdmin(object sender, string nombre)
         {
             InitializeComponent();
             label_NombreAdm.Text = nombre;
+            if (sender is Ibd)
+            {
+                listener = (Ibd)sender;
+            }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AlumnoAdmin clickAlumno = new AlumnoAdmin();
+            AlumnoAdmin clickAlumno = new AlumnoAdmin(this);
             clickAlumno.Show();
 
         }

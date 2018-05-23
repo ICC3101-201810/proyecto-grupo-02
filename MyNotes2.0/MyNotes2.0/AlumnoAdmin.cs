@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class AlumnoAdmin : Form, Ibd
+    public partial class AlumnoAdmin : Form
     {
-        public AlumnoAdmin()
+        private Ibd listener;
+        public AlumnoAdmin(object sender)
         {
             InitializeComponent();
-            
+            if (sender is Ibd)
+            {
+                listener = (Ibd)sender;
+            }
         }
 
         private void newAlumno_Click(object sender, EventArgs e)

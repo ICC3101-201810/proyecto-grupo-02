@@ -29,8 +29,13 @@ namespace MyNotes2._0
 
         private void button1_Click(object sender, EventArgs e)//aceptar
         {
-            
-
+            string name = newName.Text;
+            string pass = newPass.Text;
+            Alumno newAlumno = new Alumno(name, pass);
+            if (listener.GetBaseDeDatos().ExisteUser(name))
+            {
+                listener.GetBaseDeDatos().AgregarUsuario(newAlumno);
+            }
         }
 
         private void newName_TextChanged(object sender, EventArgs e)

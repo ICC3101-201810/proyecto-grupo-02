@@ -13,7 +13,7 @@ namespace MyNotes2._0
     public partial class Bienvenida : Form , ILoger, IUsuario, Ibd
     {
         BaseDeDatos bd;
-        public Bienvenida(object sender)
+        public Bienvenida()
         {
             InitializeComponent();
             

@@ -21,11 +21,11 @@ namespace MyNotes2._0
             listaProfesores = new List<Profesor>();
             listaSemestres = new List<Semestre>();
         }
-        List<Administrador> GetListaAdmins()
+        internal List<Administrador> GetListaAdmins()
         {
             return listaAdmins;
         }
-        Administrador GetAdmin(string nombre)
+        internal Administrador GetAdmin(string nombre)
         {
             Administrador Admin = (listaAdmins.Find(n => n.GetNombre() == nombre));
             return Admin;
@@ -53,11 +53,11 @@ namespace MyNotes2._0
             }
             
         }//Retorna el Usuario del nombre del parametro
-        List<Alumno> GetListaAlumnos()
+        internal List<Alumno> GetListaAlumnos()
         {
             return listaAlumnos;
         }
-        List<Profesor> GetListaProfesores()
+        internal List<Profesor> GetListaProfesores()
         {
             return listaProfesores;
         }
@@ -86,6 +86,8 @@ namespace MyNotes2._0
             }
             return false;
         }
+        
+
         public void AgregarUsuario(Usuario usuario)
         {
             if (usuario is Administrador)
@@ -101,11 +103,11 @@ namespace MyNotes2._0
                 listaProfesores.Add((Profesor)usuario);
             }
         }
-        List<Semestre> GetListaSemestres()
+        internal List<Semestre> GetListaSemestres()
         {
             return listaSemestres;
         }
-        bool AgregarSemestre(Semestre semestre)
+        internal bool AgregarSemestre(Semestre semestre)
         {
             foreach (Semestre sem in listaSemestres)
             {

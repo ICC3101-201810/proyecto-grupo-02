@@ -14,10 +14,16 @@ namespace MyNotes2._0
     {
         private ILoger loger;
         private IUsuario usuarioActual;
+        object entrada;
         BaseDeDatos bd;
         public AccionesProfesor(object sender)
         {
             InitializeComponent();
+            if (sender is Bienvenida)
+            {
+                Console.WriteLine("SE");
+                entrada = sender;
+            }
             if (sender is ILoger)
             {
                 loger = (ILoger)sender;

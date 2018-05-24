@@ -16,8 +16,6 @@ namespace MyNotes2._0
         public Bienvenida()
         {
             InitializeComponent();
-            
-
             bd = new BaseDeDatos();
             Administrador tester = new Administrador("admin", "123");
             bd.AgregarUsuario(tester);
@@ -25,9 +23,14 @@ namespace MyNotes2._0
             Profesor profe = new Profesor("profe", "123");
             bd.AgregarUsuario(alumno);
             bd.AgregarUsuario(profe);
-            
-        }
+            Ramo poo = new Ramo("Programacion Orientada a Objetos");
+            Ramo cos = new Ramo("Cocina entretenida");
+            Ramo otr = new Ramo("Otro ramo que nadie necesita");
+            alumno.AgregarRamo(poo);
+            alumno.AgregarRamo(cos);
+            alumno.AgregarRamo(otr);
 
+        }
         public Usuario GetUsuario()
         {
             return bd.GetUsuarioActual();
@@ -67,7 +70,7 @@ namespace MyNotes2._0
                 }
                 else if (usuario is Alumno)
                 {
-                    AccionesAlumno accionesAlumno = new AccionesAlumno(this);
+                    AccionesAlumno accionesAlumno = new AccionesAlumno(this,name);
                     Login(usuario);
                     accionesAlumno.Show();
                 }
@@ -84,11 +87,15 @@ namespace MyNotes2._0
                 MessageBox.Show("Usuario o contrasena incorrectas.");
             }
         }
-
+        
         public BaseDeDatos GetBaseDeDatos()
         {
             return bd;
         }
-        
+
+        private void Bienvenida_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

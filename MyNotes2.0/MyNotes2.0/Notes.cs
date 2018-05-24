@@ -10,16 +10,20 @@ namespace MyNotes2._0
     class Notes
     {
         string Nombre;
-        string Ramo;
+        Ramo Ramo;
         DateTime Fecha;
         string Contenido;
 
-        public Notes(string nombre, string ramo, DateTime fecha, string contenido)
+        public Notes(string nombre, Ramo ramo, DateTime fecha, string contenido)
         {
             Nombre = nombre;
             Ramo = ramo;
             Fecha = fecha;
             Contenido = contenido;
+        }
+        public string GetNombre()
+        {
+            return Nombre;
         }
     }
 }

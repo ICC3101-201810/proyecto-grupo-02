@@ -10,28 +10,23 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class AccionesAlumno : Form , ILoger
+    public partial class AccionesAlumno : Form
     {
-        private ILoger loger;
-        public AccionesAlumno(object sender)
+        private Ibd BdD;
+        string NameAl;
+        public AccionesAlumno(object sender, string name)
         {
             InitializeComponent();
-            if (sender is ILoger)
+            if (sender is Ibd)
             {
-                loger = (ILoger)sender;
+                BdD = (Ibd)sender;
             }
-            
-            
+            label_NameAl.Text = name;
+            NameAl = name;
         }
-        public void Login(Usuario usuario)
-        {
-            usuario = (Alumno)usuario;
-            label_NameAl.Text = usuario.GetNombre();
-        }
-
         private void button_CrearAp_Click(object sender, EventArgs e)
         {
-            Apuntes apuntes = new Apuntes();
+            Apuntes apuntes = new Apuntes(BdD, NameAl);
             apuntes.Show();
         }
 
@@ -43,6 +38,12 @@ namespace MyNotes2._0
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_DispAp_Click(object sender, EventArgs e)
+        {
+            DisplayApuntes displayApuntes = new DisplayApuntes(BdD, NameAl);
+            displayApuntes.Show();
         }
     }
 }

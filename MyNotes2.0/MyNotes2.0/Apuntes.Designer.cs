@@ -33,10 +33,10 @@
             this.label_Ramo = new System.Windows.Forms.Label();
             this.label_Fecha = new System.Windows.Forms.Label();
             this.textBox_Nombre = new System.Windows.Forms.TextBox();
-            this.textBox_Ramo = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancelar = new System.Windows.Forms.Button();
+            this.comboBox_Ramos = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox_Content
@@ -86,14 +86,6 @@
             this.textBox_Nombre.Size = new System.Drawing.Size(200, 22);
             this.textBox_Nombre.TabIndex = 4;
             // 
-            // textBox_Ramo
-            // 
-            this.textBox_Ramo.Location = new System.Drawing.Point(172, 139);
-            this.textBox_Ramo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Ramo.Name = "textBox_Ramo";
-            this.textBox_Ramo.Size = new System.Drawing.Size(200, 22);
-            this.textBox_Ramo.TabIndex = 5;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(172, 197);
@@ -124,15 +116,24 @@
             this.button_Cancelar.UseVisualStyleBackColor = true;
             this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
+            // comboBox_Ramos
+            // 
+            this.comboBox_Ramos.FormattingEnabled = true;
+            this.comboBox_Ramos.Location = new System.Drawing.Point(172, 137);
+            this.comboBox_Ramos.Name = "comboBox_Ramos";
+            this.comboBox_Ramos.Size = new System.Drawing.Size(200, 24);
+            this.comboBox_Ramos.TabIndex = 9;
+            this.comboBox_Ramos.SelectedIndexChanged += new System.EventHandler(this.comboBox_Ramos_SelectedIndexChanged);
+            // 
             // Apuntes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 550);
+            this.Controls.Add(this.comboBox_Ramos);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox_Ramo);
             this.Controls.Add(this.textBox_Nombre);
             this.Controls.Add(this.label_Fecha);
             this.Controls.Add(this.label_Ramo);
@@ -153,9 +154,9 @@
         private System.Windows.Forms.Label label_Ramo;
         private System.Windows.Forms.Label label_Fecha;
         private System.Windows.Forms.TextBox textBox_Nombre;
-        private System.Windows.Forms.TextBox textBox_Ramo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Button button_Cancelar;
+        private System.Windows.Forms.ComboBox comboBox_Ramos;
     }
 }

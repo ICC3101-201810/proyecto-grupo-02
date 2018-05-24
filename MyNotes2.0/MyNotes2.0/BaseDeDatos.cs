@@ -86,8 +86,6 @@ namespace MyNotes2._0
             }
             return false;
         }
-        
-
         public void AgregarUsuario(Usuario usuario)
         {
             if (usuario is Administrador)

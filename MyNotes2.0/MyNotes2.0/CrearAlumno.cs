@@ -32,7 +32,7 @@ namespace MyNotes2._0
             string name = newName.Text;
             string pass = newPass.Text;
             Alumno newAlumno = new Alumno(name, pass);
-            if (listener.GetBaseDeDatos().ExisteUser(name))
+            if (!listener.GetBaseDeDatos().ExisteUser(name))
             {
                 listener.GetBaseDeDatos().AgregarUsuario(newAlumno);
             }

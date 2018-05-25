@@ -13,6 +13,7 @@ namespace MyNotes2._0
     public partial class Apuntes : Form
     {
         private Ibd BdD;
+        Alumno alumno;
         public Apuntes(object sender, string name)
         {
             InitializeComponent();
@@ -21,10 +22,10 @@ namespace MyNotes2._0
                 BdD = (Ibd)sender;
             }
             BaseDeDatos bdAux = BdD.GetBaseDeDatos();
-            Alumno alumno = (Alumno)bdAux.GetUser(name);
+            alumno = (Alumno)bdAux.GetUser(name);
             foreach (Ramo ramo in alumno.GetRamos())
             {
-                comboBox_Ramos.Items.Add(ramo.GetNombre());
+                comboBox_Ramos.Items.Add(ramo);
             }
         }
 
@@ -35,6 +36,7 @@ namespace MyNotes2._0
             DateTime dateTime = dateTimePicker1.Value;
             string contenido = textBox_Content.Text;
             Notes notes = new Notes(nombre, ramo, dateTime, contenido);
+            alumno.AgregarApuntes(notes);
             MessageBox.Show("Apunte guardado");
         }
 

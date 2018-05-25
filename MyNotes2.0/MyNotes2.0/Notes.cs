@@ -25,5 +25,23 @@ namespace MyNotes2._0
         {
             return Nombre;
         }
+        public Ramo GetRamo()
+        {
+            return Ramo;
+        }
+        public DateTime GetDate()
+        {
+            return Fecha;
+        }
+        public string GetContent()
+        {
+            return Contenido;
+        }
+
+        public override string ToString()
+        {
+            string display = Nombre +" -["+ Ramo.GetNombre()+"]";
+            return display;
+        }
     }
 }

@@ -26,6 +26,10 @@ namespace MyNotes2._0
             {
                 listBox_Apuntes.Items.Add(apunte);
             }
+        }
+
+        private void listBox_Apuntes_SelectedIndexChanged(object sender, EventArgs e)
+        {
             
         }
     }

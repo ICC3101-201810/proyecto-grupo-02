@@ -50,6 +50,10 @@ namespace MyNotes2._0
         {
             return nombreRamo;
         }
+        public override string ToString()
+        {
+            return nombreRamo;
+        }
 
     }
 }

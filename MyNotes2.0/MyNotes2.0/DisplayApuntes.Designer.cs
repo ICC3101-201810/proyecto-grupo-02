@@ -40,6 +40,7 @@
             this.listBox_Apuntes.Name = "listBox_Apuntes";
             this.listBox_Apuntes.Size = new System.Drawing.Size(803, 324);
             this.listBox_Apuntes.TabIndex = 0;
+            this.listBox_Apuntes.SelectedIndexChanged += new System.EventHandler(this.listBox_Apuntes_SelectedIndexChanged);
             // 
             // label1
             // 

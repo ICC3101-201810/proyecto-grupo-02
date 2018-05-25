@@ -17,18 +17,19 @@ namespace MyNotes2._0
         {
             InitializeComponent();
             bd = new BaseDeDatos();
-            Administrador tester = new Administrador("admin", "123");
-            bd.AgregarUsuario(tester);
-            Alumno alumno = new Alumno("pancho", "hola");
-            Profesor profe = new Profesor("profe", "123");
-            bd.AgregarUsuario(alumno);
-            bd.AgregarUsuario(profe);
-            Ramo poo = new Ramo("Programacion Orientada a Objetos");
-            Ramo cos = new Ramo("Cocina entretenida");
-            Ramo otr = new Ramo("Otro ramo que nadie necesita");
-            alumno.AgregarRamo(poo);
-            alumno.AgregarRamo(cos);
-            alumno.AgregarRamo(otr);
+            serial.Cargar(bd);
+            //Administrador tester = new Administrador("admin", "123");
+            //bd.AgregarUsuario(tester);
+            //Alumno alumno = new Alumno("pancho", "hola");
+            //Profesor profe = new Profesor("profe", "123");
+            //bd.AgregarUsuario(alumno);
+            //bd.AgregarUsuario(profe);
+            //Ramo poo = new Ramo("Programacion Orientada a Objetos");
+            //Ramo cos = new Ramo("Cocina entretenida");
+            //Ramo otr = new Ramo("Otro ramo que nadie necesita");
+            //alumno.AgregarRamo(poo);
+            //alumno.AgregarRamo(cos);
+            //alumno.AgregarRamo(otr);
 
         }
         public Usuario GetUsuario()

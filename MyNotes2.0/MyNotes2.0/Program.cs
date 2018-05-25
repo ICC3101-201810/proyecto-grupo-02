@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
+    [Serializable()]
     static class Program
     {
         /// <summary>

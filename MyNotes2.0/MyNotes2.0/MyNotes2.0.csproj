@@ -120,6 +120,12 @@
     <Compile Include="DisplayApuntes.Designer.cs">
       <DependentUpon>DisplayApuntes.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarApunte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarApunte.Designer.cs">
+      <DependentUpon>EditarApunte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FechasRamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DisplayApuntes.resx">
       <DependentUpon>DisplayApuntes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarApunte.resx">
+      <DependentUpon>EditarApunte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FechasRamo.resx">
       <DependentUpon>FechasRamo.cs</DependentUpon>

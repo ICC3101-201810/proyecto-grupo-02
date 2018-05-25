@@ -32,14 +32,16 @@
             this.label_NameAl = new System.Windows.Forms.Label();
             this.button_CrearAp = new System.Windows.Forms.Button();
             this.button_DispAp = new System.Windows.Forms.Button();
+            this.BotonInicioSesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 101);
+            this.label1.Location = new System.Drawing.Point(105, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 17);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Alumno";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -47,19 +49,20 @@
             // label_NameAl
             // 
             this.label_NameAl.AutoSize = true;
-            this.label_NameAl.Location = new System.Drawing.Point(243, 101);
+            this.label_NameAl.Location = new System.Drawing.Point(182, 82);
+            this.label_NameAl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NameAl.Name = "label_NameAl";
-            this.label_NameAl.Size = new System.Drawing.Size(46, 17);
+            this.label_NameAl.Size = new System.Drawing.Size(35, 13);
             this.label_NameAl.TabIndex = 1;
             this.label_NameAl.Text = "label2";
             this.label_NameAl.Click += new System.EventHandler(this.label_NameAl_Click);
             // 
             // button_CrearAp
             // 
-            this.button_CrearAp.Location = new System.Drawing.Point(179, 210);
-            this.button_CrearAp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_CrearAp.Location = new System.Drawing.Point(134, 171);
+            this.button_CrearAp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_CrearAp.Name = "button_CrearAp";
-            this.button_CrearAp.Size = new System.Drawing.Size(100, 54);
+            this.button_CrearAp.Size = new System.Drawing.Size(75, 44);
             this.button_CrearAp.TabIndex = 2;
             this.button_CrearAp.Text = "Crear Apuntes";
             this.button_CrearAp.UseVisualStyleBackColor = true;
@@ -67,25 +70,36 @@
             // 
             // button_DispAp
             // 
-            this.button_DispAp.Location = new System.Drawing.Point(337, 210);
-            this.button_DispAp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_DispAp.Location = new System.Drawing.Point(253, 171);
+            this.button_DispAp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_DispAp.Name = "button_DispAp";
-            this.button_DispAp.Size = new System.Drawing.Size(100, 54);
+            this.button_DispAp.Size = new System.Drawing.Size(75, 44);
             this.button_DispAp.TabIndex = 3;
             this.button_DispAp.Text = "Ver mis Apuntes";
             this.button_DispAp.UseVisualStyleBackColor = true;
             this.button_DispAp.Click += new System.EventHandler(this.button_DispAp_Click);
             // 
+            // BotonInicioSesion
+            // 
+            this.BotonInicioSesion.Location = new System.Drawing.Point(12, 265);
+            this.BotonInicioSesion.Name = "BotonInicioSesion";
+            this.BotonInicioSesion.Size = new System.Drawing.Size(75, 44);
+            this.BotonInicioSesion.TabIndex = 4;
+            this.BotonInicioSesion.Text = "Cerrar Sesion";
+            this.BotonInicioSesion.UseVisualStyleBackColor = true;
+            this.BotonInicioSesion.Click += new System.EventHandler(this.BotonInicioSesion_Click);
+            // 
             // AccionesAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 395);
+            this.ClientSize = new System.Drawing.Size(455, 321);
+            this.Controls.Add(this.BotonInicioSesion);
             this.Controls.Add(this.button_DispAp);
             this.Controls.Add(this.button_CrearAp);
             this.Controls.Add(this.label_NameAl);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AccionesAlumno";
             this.Text = "AccionesAlumno";
             this.ResumeLayout(false);
@@ -99,5 +113,6 @@
         private System.Windows.Forms.Label label_NameAl;
         private System.Windows.Forms.Button button_CrearAp;
         private System.Windows.Forms.Button button_DispAp;
+        private System.Windows.Forms.Button BotonInicioSesion;
     }
 }

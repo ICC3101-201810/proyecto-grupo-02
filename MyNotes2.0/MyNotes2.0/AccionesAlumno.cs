@@ -45,5 +45,11 @@ namespace MyNotes2._0
             DisplayApuntes displayApuntes = new DisplayApuntes(BdD, NameAl);
             displayApuntes.Show();
         }
+
+        private void BotonInicioSesion_Click(object sender, EventArgs e)
+        {
+            serial.Guardar(BdD.GetBaseDeDatos());
+            Close();
+        }
     }
 }

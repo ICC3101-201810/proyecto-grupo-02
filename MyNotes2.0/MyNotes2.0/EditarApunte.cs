@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class DisplayApuntes : Form
+    public partial class EditarApunte : Form
     {
         private Ibd BdD;
         Alumno alumno;
-        public DisplayApuntes(object sender, string name)
+        public EditarApunte(object sender, string name)
         {
             InitializeComponent();
             if (sender is Ibd)
@@ -22,22 +22,23 @@ namespace MyNotes2._0
                 BdD = (Ibd)sender;
             }
             BaseDeDatos bdAux = BdD.GetBaseDeDatos();
-            Alumno alumno = (Alumno)bdAux.GetUser(name);
-            foreach (Notes apunte in alumno.GetApuntes())
+            alumno = (Alumno)bdAux.GetUser(name);
+            foreach (Ramo ramo in alumno.GetRamos())
             {
-                listBox_Apuntes.Items.Add(apunte);
+                comboBox_Ramos.Items.Add(ramo);
             }
         }
 
-        private void listBox_Apuntes_SelectedIndexChanged(object sender, EventArgs e)
+        public BaseDeDatos GetBaseDeDatos()
         {
-            
+            throw new NotImplementedException();
         }
 
-        private void BotonEditarApunte_Click(object sender, EventArgs e)
+        private void button_Save_Click(object sender, EventArgs e)
         {
-            Apuntes apuntes = new Apuntes(BdD, alumno.GetNombre());
-            apuntes.Show();
+            //ver corroboracion
+            serial.Guardar(BdD.GetBaseDeDatos());
+            Close();
         }
     }
 }

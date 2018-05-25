@@ -7,6 +7,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 namespace MyNotes2._0
 {
+    [Serializable()]
     static class serial
     {
         public static void Cargar(BaseDeDatos MyNotes)

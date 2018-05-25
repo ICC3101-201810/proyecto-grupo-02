@@ -50,6 +50,7 @@ namespace MyNotes2._0
 
         private void logOut_Click(object sender, EventArgs e)
         {
+            
             Close();
         }
     }

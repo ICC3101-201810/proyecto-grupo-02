@@ -26,7 +26,7 @@ namespace MyNotes2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AlumnoAdmin clickAlumno = new AlumnoAdmin(this);
+            AlumnoAdmin clickAlumno = new AlumnoAdmin(listener);
             clickAlumno.Show();
 
         }

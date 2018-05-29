@@ -55,6 +55,7 @@
             this.nombreAlumno.Size = new System.Drawing.Size(193, 25);
             this.nombreAlumno.TabIndex = 1;
             this.nombreAlumno.Text = "[Nombre del alumno]";
+            this.nombreAlumno.Click += new System.EventHandler(this.nombreAlumno_Click);
             // 
             // label2
             // 
@@ -71,6 +72,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(251, 26);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 

@@ -12,9 +12,18 @@ namespace MyNotes2._0
 {
     public partial class ModificarAlumno : Form
     {
-        public ModificarAlumno()
+        private Ibd listener;
+        public ModificarAlumno(object sender)
         {
             InitializeComponent();
+            if(sender is Ibd)
+            {
+                listener = (Ibd)sender;
+            }
+            foreach (Alumno i in listener.GetBaseDeDatos().GetListaAlumnos())
+            {
+                listaAlumnos.Items.Add(i.GetNombre());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +38,7 @@ namespace MyNotes2._0
 
         private void editarAlumno_Click(object sender, EventArgs e)
         {
-            CambiarNombreAlumno cambiarNombreAlumno = new CambiarNombreAlumno();
+            CambiarNombreAlumno cambiarNombreAlumno = new CambiarNombreAlumno(listaAlumnos.Text);
             cambiarNombreAlumno.ShowDialog();
         }
 

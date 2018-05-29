@@ -32,6 +32,11 @@ namespace MyNotes2._0
         {
             return apuntes;
         }
+        public Notes GetNote(string NombreNote)
+        {
+            Notes notes = (apuntes.Find(n => n.GetNombre() == NombreNote));
+            return notes;
+        }
         public void AgregarApuntes(Notes notas)
         {
             apuntes.Add(notas);

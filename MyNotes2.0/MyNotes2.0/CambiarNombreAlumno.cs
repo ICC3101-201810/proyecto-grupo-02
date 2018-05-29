@@ -12,19 +12,37 @@ namespace MyNotes2._0
 {
     public partial class CambiarNombreAlumno : Form
     {
-        public CambiarNombreAlumno()
+        private Ibd listener;
+        public CambiarNombreAlumno(object sender, string nombre)
         {
             InitializeComponent();
+            nombreAlumno.Text = nombre;
+            if(sender is Ibd)
+            {
+                listener = (Ibd)sender;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            listener.GetBaseDeDatos().GetListaAlumnos();
+
             Close();
+        }
+
+        private void nombreAlumno_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

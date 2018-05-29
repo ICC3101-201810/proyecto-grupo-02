@@ -36,6 +36,7 @@ namespace MyNotes2._0
             {
                 listener.GetBaseDeDatos().AgregarUsuario(newAlumno);
             }
+            Close();
         }
 
         private void newName_TextChanged(object sender, EventArgs e)

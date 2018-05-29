@@ -24,16 +24,14 @@ namespace MyNotes2._0
 
         private void newAlumno_Click(object sender, EventArgs e)
         {
-            CrearAlumno crearAlumno = new CrearAlumno(this);
+            CrearAlumno crearAlumno = new CrearAlumno(listener);
             crearAlumno.ShowDialog();
-            Hide();
         }
 
         private void oldAlumno_Click(object sender, EventArgs e)
         {
-            ModificarAlumno modificarAlumno = new ModificarAlumno();
+            ModificarAlumno modificarAlumno = new ModificarAlumno(listener);
             modificarAlumno.ShowDialog();
-            Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

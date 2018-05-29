@@ -31,11 +31,13 @@
             this.button_CrearAp = new System.Windows.Forms.Button();
             this.label_NamePr = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.BotonInicioSesion = new System.Windows.Forms.Button();
+            this.BotonAdministrarRamos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_CrearAp
             // 
-            this.button_CrearAp.Location = new System.Drawing.Point(200, 183);
+            this.button_CrearAp.Location = new System.Drawing.Point(208, 183);
             this.button_CrearAp.Margin = new System.Windows.Forms.Padding(2);
             this.button_CrearAp.Name = "button_CrearAp";
             this.button_CrearAp.Size = new System.Drawing.Size(75, 44);
@@ -64,11 +66,34 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Profesor";
             // 
+            // BotonInicioSesion
+            // 
+            this.BotonInicioSesion.Location = new System.Drawing.Point(12, 265);
+            this.BotonInicioSesion.Name = "BotonInicioSesion";
+            this.BotonInicioSesion.Size = new System.Drawing.Size(75, 44);
+            this.BotonInicioSesion.TabIndex = 6;
+            this.BotonInicioSesion.Text = "Cerrar Sesion";
+            this.BotonInicioSesion.UseVisualStyleBackColor = true;
+            this.BotonInicioSesion.Click += new System.EventHandler(this.BotonCerrarSesion_Click);
+            // 
+            // BotonAdministrarRamos
+            // 
+            this.BotonAdministrarRamos.Location = new System.Drawing.Point(106, 183);
+            this.BotonAdministrarRamos.Margin = new System.Windows.Forms.Padding(2);
+            this.BotonAdministrarRamos.Name = "BotonAdministrarRamos";
+            this.BotonAdministrarRamos.Size = new System.Drawing.Size(75, 44);
+            this.BotonAdministrarRamos.TabIndex = 7;
+            this.BotonAdministrarRamos.Text = "Administrar Ramos";
+            this.BotonAdministrarRamos.UseVisualStyleBackColor = true;
+            this.BotonAdministrarRamos.Click += new System.EventHandler(this.BotonAdministrarRamos_Click);
+            // 
             // AccionesProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 321);
+            this.Controls.Add(this.BotonAdministrarRamos);
+            this.Controls.Add(this.BotonInicioSesion);
             this.Controls.Add(this.button_CrearAp);
             this.Controls.Add(this.label_NamePr);
             this.Controls.Add(this.label1);
@@ -84,5 +109,7 @@
         private System.Windows.Forms.Button button_CrearAp;
         private System.Windows.Forms.Label label_NamePr;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BotonInicioSesion;
+        private System.Windows.Forms.Button BotonAdministrarRamos;
     }
 }

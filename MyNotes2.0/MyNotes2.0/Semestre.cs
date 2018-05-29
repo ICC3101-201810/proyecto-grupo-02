@@ -25,7 +25,6 @@ namespace MyNotes2._0
         {
             return ramos;
         }
-
         public bool AgregarRamo(Ramo ramo)
         {
             if (ramos.IndexOf(ramo) == -1)

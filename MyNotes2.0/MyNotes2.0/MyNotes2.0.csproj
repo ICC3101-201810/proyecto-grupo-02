@@ -126,6 +126,12 @@
     <Compile Include="EditarApunte.Designer.cs">
       <DependentUpon>EditarApunte.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarAyudantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarAyudantes.Designer.cs">
+      <DependentUpon>EditarAyudantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FechasRamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,12 @@
     </Compile>
     <Compile Include="ProfeAdmin.Designer.cs">
       <DependentUpon>ProfeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfeRamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfeRamos.Designer.cs">
+      <DependentUpon>ProfeRamos.cs</DependentUpon>
     </Compile>
     <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
@@ -225,6 +237,9 @@
     <EmbeddedResource Include="EditarApunte.resx">
       <DependentUpon>EditarApunte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarAyudantes.resx">
+      <DependentUpon>EditarAyudantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FechasRamo.resx">
       <DependentUpon>FechasRamo.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProfeAdmin.resx">
       <DependentUpon>ProfeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfeRamos.resx">
+      <DependentUpon>ProfeRamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

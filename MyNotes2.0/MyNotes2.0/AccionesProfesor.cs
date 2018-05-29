@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class AccionesProfesor : Form, ILoger ,IUsuario
+    public partial class AccionesProfesor : Form
     {
         private ILoger loger;
         private IUsuario usuarioActual;
-        object entrada;
-        BaseDeDatos bd;
+        private Ibd BdD;
         public AccionesProfesor(object sender)
         {
             InitializeComponent();
-            if (sender is Bienvenida)
+            if (sender is Ibd)
             {
-                Console.WriteLine("SE");
-                entrada = sender;
+                BdD = (Ibd)sender;
             }
             if (sender is ILoger)
             {
@@ -32,23 +30,28 @@ namespace MyNotes2._0
             {
                 usuarioActual = (IUsuario)sender;
             }
-            //label_NamePr.Text = GetUsuario().GetNombre();
+            label_NamePr.Text = usuarioActual.GetUsuario().GetNombre();
         }
 
-        public Usuario GetUsuario()
-        {
-            return usuarioActual.GetUsuario();
-        }
 
-        public void Login(Usuario usuario)
-        {
-            usuario = (Profesor)usuario;
-            label_NamePr.Text = usuario.GetNombre();
-        }
 
         private void button_CrearAp_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BotonCerrarSesion_Click(object sender, EventArgs e)
+        {
+            serial.Guardar(BdD.GetBaseDeDatos());
+            Close();
+        }
+
+        private void BotonAdministrarRamos_Click(object sender, EventArgs e)
+        {
+            Hide();
+            ProfeRamos profeRamos = new ProfeRamos(sender);
+            profeRamos.Show();
+            Close();
         }
     }
 }

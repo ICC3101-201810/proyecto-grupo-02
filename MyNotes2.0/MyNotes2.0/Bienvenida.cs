@@ -39,7 +39,6 @@ namespace MyNotes2._0
 
         public void Login(Usuario usuario)
         {
-            
             if (usuario is Alumno)
             {
                 Alumno UsuarioActual = new Alumno(usuario.GetNombre(), usuario.GetContrasena());
@@ -63,6 +62,7 @@ namespace MyNotes2._0
             if (bd.ExisteUser(name)) //Verifica que existe Usuario
             {
                 Usuario usuario = bd.GetUser(name);
+                bd.SetUsuarioActual(usuario);
                 if (usuario is Administrador)
                 {
                     AccionesAdmin accionesAdmin = new AccionesAdmin(this,name);

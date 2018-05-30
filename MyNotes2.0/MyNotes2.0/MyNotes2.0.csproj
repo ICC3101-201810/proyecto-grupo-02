@@ -64,6 +64,12 @@
       <DependentUpon>AccionesProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador.cs" />
+    <Compile Include="AdminSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSemestre.Designer.cs">
+      <DependentUpon>AdminSemestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alumno.cs" />
     <Compile Include="AlumnoAdmin.cs">
       <SubType>Form</SubType>
@@ -96,6 +102,12 @@
     <Compile Include="CambiarNombreProfesor.Designer.cs">
       <DependentUpon>CambiarNombreProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambiarNombreSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarNombreSemestre.Designer.cs">
+      <DependentUpon>CambiarNombreSemestre.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </Compile>
     <Compile Include="CrearRamo.Designer.cs">
       <DependentUpon>CrearRamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearSemestreAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearSemestreAdmin.Designer.cs">
+      <DependentUpon>CrearSemestreAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="DisplayApuntes.cs">
       <SubType>Form</SubType>
@@ -219,6 +237,9 @@
     <EmbeddedResource Include="AccionesProfesor.resx">
       <DependentUpon>AccionesProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminSemestre.resx">
+      <DependentUpon>AdminSemestre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AlumnoAdmin.resx">
       <DependentUpon>AlumnoAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +255,9 @@
     <EmbeddedResource Include="CambiarNombreProfesor.resx">
       <DependentUpon>CambiarNombreProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambiarNombreSemestre.resx">
+      <DependentUpon>CambiarNombreSemestre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearAlumno.resx">
       <DependentUpon>CrearAlumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearRamo.resx">
       <DependentUpon>CrearRamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearSemestreAdmin.resx">
+      <DependentUpon>CrearSemestreAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisplayApuntes.resx">
       <DependentUpon>DisplayApuntes.cs</DependentUpon>

@@ -13,6 +13,7 @@ namespace MyNotes2._0
     public partial class AccionesAdmin : Form
     {
         private Ibd listener;
+        object salida;
         public AccionesAdmin(object sender, string nombre)
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace MyNotes2._0
             {
                 listener = (Ibd)sender;
             }
-
+            salida = sender;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,9 +32,12 @@ namespace MyNotes2._0
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void botonSemestre_Click(object sender, EventArgs e)
         {
-
+            AdminSemestre adminSemestre = new AdminSemestre(salida);
+            Hide();
+            adminSemestre.ShowDialog();
+            Show();
         }
 
         private void adminProfesor_Click(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace MyNotes2._0
 
         private void logOut_Click(object sender, EventArgs e)
         {
-            
+            serial.Guardar(listener.GetBaseDeDatos());
             Close();
         }
     }

@@ -51,7 +51,10 @@ namespace MyNotes2._0
 
         private void BotonCrearMaterial_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            ProfeApuntes apuntes = new ProfeApuntes(sender, ComboBoxRamos.SelectedText);
+            apuntes.Show();
+            Show();
         }
     }
 }

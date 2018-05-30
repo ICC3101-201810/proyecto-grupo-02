@@ -166,6 +166,12 @@
     <Compile Include="ProfeAdmin.Designer.cs">
       <DependentUpon>ProfeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfeApuntes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfeApuntes.Designer.cs">
+      <DependentUpon>ProfeApuntes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProfeRamos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProfeAdmin.resx">
       <DependentUpon>ProfeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfeApuntes.resx">
+      <DependentUpon>ProfeApuntes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfeRamos.resx">
       <DependentUpon>ProfeRamos.cs</DependentUpon>

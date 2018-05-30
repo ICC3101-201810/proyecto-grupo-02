@@ -48,7 +48,7 @@ namespace MyNotes2._0
 
         private void adminRamo_Click(object sender, EventArgs e)
         {
-            RamoAdmin ramoAdmin = new RamoAdmin();
+            RamoAdmin ramoAdmin = new RamoAdmin(listener);
             ramoAdmin.Show();
         }
 

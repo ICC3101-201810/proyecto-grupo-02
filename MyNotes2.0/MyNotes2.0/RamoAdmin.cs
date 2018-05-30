@@ -12,9 +12,14 @@ namespace MyNotes2._0
 {
     public partial class RamoAdmin : Form
     {
-        public RamoAdmin()
+        private Ibd ibd;
+        public RamoAdmin(object sender)
         {
             InitializeComponent();
+            if (sender is Ibd)
+            {
+                ibd = (Ibd)sender;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,13 +29,13 @@ namespace MyNotes2._0
 
         private void newRamo_Click(object sender, EventArgs e)
         {
-            CrearRamo crearRamo = new CrearRamo();
+            CrearRamo crearRamo = new CrearRamo(ibd);
             crearRamo.ShowDialog();
         }
 
         private void oldRamo_Click(object sender, EventArgs e)
         {
-            ModificarRamo modificarRamo = new ModificarRamo();
+            ModificarRamo modificarRamo = new ModificarRamo(ibd);
             modificarRamo.ShowDialog();
         }
 

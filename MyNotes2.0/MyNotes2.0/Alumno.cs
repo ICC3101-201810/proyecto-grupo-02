@@ -9,7 +9,7 @@ namespace MyNotes2._0
     [Serializable()]
     class Alumno : Usuario
     {
-        bool ayudante = false;
+        public bool ayudante = false;
         List<Notes> apuntes = new List<Notes>();
         List<Ramo> Ramos = new List<Ramo>();
         public Alumno(string nombre, string contrasena) : base(nombre, contrasena)
@@ -49,5 +49,6 @@ namespace MyNotes2._0
         {
             Ramos.Clear();
         }
+        
     }
 }

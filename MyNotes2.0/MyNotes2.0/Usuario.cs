@@ -25,5 +25,9 @@ namespace MyNotes2._0
         {
             return Contrasena;
         }
+        public void SetNombre(Usuario usuario, string nuevoNombre)
+        {
+            usuario.Nombre = nuevoNombre;
+        }
     }
 }

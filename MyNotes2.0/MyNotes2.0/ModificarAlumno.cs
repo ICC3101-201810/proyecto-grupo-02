@@ -50,6 +50,7 @@ namespace MyNotes2._0
 
         private void toAyudante_Click(object sender, EventArgs e)
         {
+            HacerAyudante hacerAyudante = new HacerAyudante(listener, listaAlumnos.Text);
             foreach (Alumno a in listener.GetBaseDeDatos().GetListaAlumnos())
             {
                 if (a.GetNombre() == listaAlumnos.Text)

@@ -13,9 +13,11 @@ namespace MyNotes2._0
     public partial class CambiarNombreAlumno : Form
     {
         private Ibd listener;
+        string nombre;
         public CambiarNombreAlumno(object sender, string nombre)
         {
             InitializeComponent();
+            this.nombre = nombre;
             nombreAlumno.Text = nombre;
             if(sender is Ibd)
             {
@@ -31,7 +33,13 @@ namespace MyNotes2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listener.GetBaseDeDatos().GetListaAlumnos();
+            foreach (Alumno a in listener.GetBaseDeDatos().GetListaAlumnos())
+            {
+                if (a.GetNombre() == nombre)
+                {
+                    a.SetNombre(a, textBox1.Text);
+                }
+            }
 
             Close();
         }

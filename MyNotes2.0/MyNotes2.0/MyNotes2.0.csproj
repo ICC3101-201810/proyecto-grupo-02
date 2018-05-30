@@ -138,6 +138,12 @@
     <Compile Include="FechasRamo.Designer.cs">
       <DependentUpon>FechasRamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="HacerAyudante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HacerAyudante.Designer.cs">
+      <DependentUpon>HacerAyudante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ibd.cs" />
     <Compile Include="ILoger.cs" />
     <Compile Include="IUsuario.cs" />
@@ -242,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FechasRamo.resx">
       <DependentUpon>FechasRamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HacerAyudante.resx">
+      <DependentUpon>HacerAyudante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarAlumno.resx">
       <DependentUpon>ModificarAlumno.cs</DependentUpon>

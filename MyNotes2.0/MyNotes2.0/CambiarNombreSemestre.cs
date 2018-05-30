@@ -36,29 +36,35 @@ namespace MyNotes2._0
         private void BotonCamiarNombre_Click(object sender, EventArgs e)
         {
             int cont = 0;
-            foreach (Semestre sem in ibd.GetBaseDeDatos().GetListaSemestres())
+            if ((textBoxNuevoNombre.Text == null) || (textBoxNuevoNombre.Text == ""))
             {
-                if (comboBoxSemestres.SelectedItem.ToString() == sem.GetID())
-                {
-                    cont++;
-                }
-            }
-            if (cont <= 1)
-            {
-                foreach (Semestre sem in ibd.GetBaseDeDatos().GetListaSemestres())
-                {
-                    if (comboBoxSemestres.SelectedItem.ToString() == sem.GetID())
-                    {
-                        sem.SetID(comboBoxSemestres.SelectedItem.ToString());
-                        Close();
-                    }
-                }
+                MessageBox.Show("ingrese nombre a colocar");
             }
             else
             {
-                MessageBox.Show("Ya se encuentra un semestre con ese nombre");
+                foreach (Semestre sem in ibd.GetBaseDeDatos().GetListaSemestres())
+                {
+                    if (textBoxNuevoNombre.Text == sem.GetID())
+                    {
+                        cont++;
+                    }
+                }
+                if (cont < 1)
+                {
+                    foreach (Semestre sem in ibd.GetBaseDeDatos().GetListaSemestres())
+                    {
+                        if (comboBoxSemestres.SelectedItem.ToString() == sem.GetID())
+                        {
+                            sem.SetID(textBoxNuevoNombre.Text);
+                            Close();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ya se encuentra un semestre con ese nombre");
+                }
             }
-            
         }
     }
 }

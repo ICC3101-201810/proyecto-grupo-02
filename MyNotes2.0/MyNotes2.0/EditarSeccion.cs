@@ -10,11 +10,10 @@ using System.Windows.Forms;
 
 namespace MyNotes2._0
 {
-    public partial class SeccionesAdmin : Form
+    public partial class EditarSeccion : Form
     {
         private Ibd ibd;
-
-        public SeccionesAdmin(object sender)
+        public EditarSeccion(object sender)
         {
             InitializeComponent();
             if (sender is Ibd)
@@ -23,22 +22,15 @@ namespace MyNotes2._0
             }
         }
 
-        private void botonCrearSeccion_Click(object sender, EventArgs e)
-        {
-            Hide();
-            (new CrearSeccion(ibd)).ShowDialog();
-            Show();
-        }
-
         private void botonAtras_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void botonEditarSeccion_Click(object sender, EventArgs e)
+        private void botonOpcionesSeccion_Click(object sender, EventArgs e)
         {
             Hide();
-            (new EditarSeccion(ibd)).ShowDialog();
+            (new OpcionesSeccion(ibd)).ShowDialog();
             Show();
         }
     }

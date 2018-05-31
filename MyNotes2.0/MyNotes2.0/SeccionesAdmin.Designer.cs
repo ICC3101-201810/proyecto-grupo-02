@@ -75,6 +75,7 @@
             this.botonEditarSeccion.TabIndex = 11;
             this.botonEditarSeccion.Text = "Editar Seccion";
             this.botonEditarSeccion.UseVisualStyleBackColor = true;
+            this.botonEditarSeccion.Click += new System.EventHandler(this.botonEditarSeccion_Click);
             // 
             // botonAtras
             // 

@@ -24,7 +24,7 @@ namespace MyNotes2._0
             {
                 ibd = (Ibd)sender;
             }
-            listaSemestres = ibd.GetBaseDeDatos().GetListaSemestres();//ver
+            listaSemestres = ibd.GetBaseDeDatos().GetListaSemestres();
             foreach (Semestre sem in listaSemestres)
             {
                 comboBoxSemestre.Items.Add(sem.GetID());
@@ -55,8 +55,8 @@ namespace MyNotes2._0
                     }
                 }
             }
-            
             ramo.AgregarSeccion(new Seccion(textBoxNuevoNombre.Text,Int32.Parse(textBoxVacantes.Text),(ramo.GetNombre())));
+            Close();
         }
 
         private void comboBoxSemestre_SelectedIndexChanged(object sender, EventArgs e)

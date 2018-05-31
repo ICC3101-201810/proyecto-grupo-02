@@ -93,6 +93,13 @@ namespace MyNotes2._0
             }
             return false;
         }
-
+        public int GetVacantes()
+        {
+            return vacantes;
+        }
+        public void SetVacantes(int nuevasVacantes)
+        {
+            vacantes = nuevasVacantes;
+        }
     }
 }

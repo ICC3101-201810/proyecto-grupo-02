@@ -156,6 +156,12 @@
     <Compile Include="EditarAyudantes.Designer.cs">
       <DependentUpon>EditarAyudantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarSeccion.Designer.cs">
+      <DependentUpon>EditarSeccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FechasRamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
       <DependentUpon>ModificarRamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Notes.cs" />
+    <Compile Include="OpcionesSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcionesSeccion.Designer.cs">
+      <DependentUpon>OpcionesSeccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProfeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +306,9 @@
     <EmbeddedResource Include="EditarAyudantes.resx">
       <DependentUpon>EditarAyudantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarSeccion.resx">
+      <DependentUpon>EditarSeccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FechasRamo.resx">
       <DependentUpon>FechasRamo.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarRamo.resx">
       <DependentUpon>ModificarRamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcionesSeccion.resx">
+      <DependentUpon>OpcionesSeccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfeAdmin.resx">
       <DependentUpon>ProfeAdmin.cs</DependentUpon>

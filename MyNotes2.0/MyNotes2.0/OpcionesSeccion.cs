@@ -133,6 +133,7 @@ namespace MyNotes2._0
             if (seccion.GetAlumnos().Count() == vacantes)
             {
                 MessageBox.Show("La seccion ya tiene esa cantidad de alumnos, para hacer menos vacantes, elimine a un alumno primero");
+                return;
             }
             vacantes--;
             textBoxVacantes.Text = vacantes.ToString();

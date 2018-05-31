@@ -101,5 +101,9 @@ namespace MyNotes2._0
         {
             vacantes = nuevasVacantes;
         }
+        public void SetID(string newID)
+        {
+            IDSeccion = newID;
+        }
     }
 }

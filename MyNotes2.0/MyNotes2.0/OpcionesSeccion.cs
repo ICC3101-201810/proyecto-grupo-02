@@ -141,7 +141,7 @@ namespace MyNotes2._0
 
         private void botonCambiarNombre_Click(object sender, EventArgs e)
         {
-            seccion.SetNombre(textBoxNuevoNombre.Text);
+            seccion.SetID(textBoxNuevoNombre.Text);
             Close();
         }
 

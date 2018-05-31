@@ -126,6 +126,12 @@
     <Compile Include="CrearRamo.Designer.cs">
       <DependentUpon>CrearRamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearSeccion.Designer.cs">
+      <DependentUpon>CrearSeccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearSemestreAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,12 @@
       <DependentUpon>RamoAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Seccion.cs" />
+    <Compile Include="SeccionesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeccionesAdmin.Designer.cs">
+      <DependentUpon>SeccionesAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Semestre.cs" />
     <Compile Include="SemestreAdmin.cs">
       <SubType>Form</SubType>
@@ -267,6 +279,9 @@
     <EmbeddedResource Include="CrearRamo.resx">
       <DependentUpon>CrearRamo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearSeccion.resx">
+      <DependentUpon>CrearSeccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearSemestreAdmin.resx">
       <DependentUpon>CrearSemestreAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +329,9 @@
     </Compile>
     <EmbeddedResource Include="RamoAdmin.resx">
       <DependentUpon>RamoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeccionesAdmin.resx">
+      <DependentUpon>SeccionesAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SemestreAdmin.resx">
       <DependentUpon>SemestreAdmin.cs</DependentUpon>

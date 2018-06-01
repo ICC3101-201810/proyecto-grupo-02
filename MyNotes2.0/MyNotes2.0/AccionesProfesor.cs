@@ -49,9 +49,14 @@ namespace MyNotes2._0
         private void BotonAdministrarRamos_Click(object sender, EventArgs e)
         {
             Hide();
-            ProfeRamos profeRamos = new ProfeRamos(sender);
+            ProfeRamos profeRamos = new ProfeRamos(BdD);
             profeRamos.Show();
             Close();
+        }
+
+        private void AccionesProfesor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

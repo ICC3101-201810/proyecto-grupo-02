@@ -37,7 +37,7 @@
             // 
             // button_CrearAp
             // 
-            this.button_CrearAp.Location = new System.Drawing.Point(208, 183);
+            this.button_CrearAp.Location = new System.Drawing.Point(208, 133);
             this.button_CrearAp.Margin = new System.Windows.Forms.Padding(2);
             this.button_CrearAp.Name = "button_CrearAp";
             this.button_CrearAp.Size = new System.Drawing.Size(75, 44);
@@ -49,26 +49,28 @@
             // label_NamePr
             // 
             this.label_NamePr.AutoSize = true;
-            this.label_NamePr.Location = new System.Drawing.Point(248, 94);
+            this.label_NamePr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NamePr.Location = new System.Drawing.Point(130, 32);
             this.label_NamePr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NamePr.Name = "label_NamePr";
-            this.label_NamePr.Size = new System.Drawing.Size(35, 13);
+            this.label_NamePr.Size = new System.Drawing.Size(46, 18);
             this.label_NamePr.TabIndex = 4;
             this.label_NamePr.Text = "label2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 94);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(74, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Profesor";
+            this.label1.Text = "Profesor :";
             // 
             // BotonInicioSesion
             // 
-            this.BotonInicioSesion.Location = new System.Drawing.Point(12, 265);
+            this.BotonInicioSesion.Location = new System.Drawing.Point(12, 210);
             this.BotonInicioSesion.Name = "BotonInicioSesion";
             this.BotonInicioSesion.Size = new System.Drawing.Size(75, 44);
             this.BotonInicioSesion.TabIndex = 6;
@@ -78,7 +80,7 @@
             // 
             // BotonAdministrarRamos
             // 
-            this.BotonAdministrarRamos.Location = new System.Drawing.Point(106, 183);
+            this.BotonAdministrarRamos.Location = new System.Drawing.Point(101, 133);
             this.BotonAdministrarRamos.Margin = new System.Windows.Forms.Padding(2);
             this.BotonAdministrarRamos.Name = "BotonAdministrarRamos";
             this.BotonAdministrarRamos.Size = new System.Drawing.Size(75, 44);
@@ -91,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 321);
+            this.ClientSize = new System.Drawing.Size(410, 266);
             this.Controls.Add(this.BotonAdministrarRamos);
             this.Controls.Add(this.BotonInicioSesion);
             this.Controls.Add(this.button_CrearAp);
@@ -99,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AccionesProfesor";
             this.Text = "AccionesProfesor";
+            this.Load += new System.EventHandler(this.AccionesProfesor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

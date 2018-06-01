@@ -34,6 +34,7 @@
             this.BotonCrearSemestre = new System.Windows.Forms.Button();
             this.BotonCambiarNombreSem = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.botonSecciones = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonAtras
@@ -69,7 +70,7 @@
             // 
             // BotonCrearSemestre
             // 
-            this.BotonCrearSemestre.Location = new System.Drawing.Point(147, 107);
+            this.BotonCrearSemestre.Location = new System.Drawing.Point(74, 148);
             this.BotonCrearSemestre.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCrearSemestre.Name = "BotonCrearSemestre";
             this.BotonCrearSemestre.Size = new System.Drawing.Size(103, 37);
@@ -80,7 +81,7 @@
             // 
             // BotonCambiarNombreSem
             // 
-            this.BotonCambiarNombreSem.Location = new System.Drawing.Point(29, 107);
+            this.BotonCambiarNombreSem.Location = new System.Drawing.Point(74, 107);
             this.BotonCambiarNombreSem.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCambiarNombreSem.Name = "BotonCambiarNombreSem";
             this.BotonCambiarNombreSem.Size = new System.Drawing.Size(103, 37);
@@ -91,7 +92,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(271, 107);
+            this.button3.Location = new System.Drawing.Point(209, 107);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 37);
@@ -99,11 +100,22 @@
             this.button3.Text = "Eliminar Semestre";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // botonSecciones
+            // 
+            this.botonSecciones.Location = new System.Drawing.Point(209, 148);
+            this.botonSecciones.Margin = new System.Windows.Forms.Padding(2);
+            this.botonSecciones.Name = "botonSecciones";
+            this.botonSecciones.Size = new System.Drawing.Size(103, 37);
+            this.botonSecciones.TabIndex = 15;
+            this.botonSecciones.Text = "Secciones";
+            this.botonSecciones.UseVisualStyleBackColor = true;
+            // 
             // AdminSemestre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 266);
+            this.Controls.Add(this.botonSecciones);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.BotonCambiarNombreSem);
             this.Controls.Add(this.BotonCrearSemestre);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Button BotonCrearSemestre;
         private System.Windows.Forms.Button BotonCambiarNombreSem;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button botonSecciones;
     }
 }

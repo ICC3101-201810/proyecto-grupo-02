@@ -55,5 +55,13 @@ namespace MyNotes2._0
         {
 
         }
+
+        private void BotonSecciones_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SeccionesAdmin seccionesAdmin = new SeccionesAdmin(ibd);
+            seccionesAdmin.ShowDialog();
+            Show();
+        }
     }
 }

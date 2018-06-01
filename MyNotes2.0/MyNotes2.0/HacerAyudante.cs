@@ -13,11 +13,10 @@ namespace MyNotes2._0
     public partial class HacerAyudante : Form
     {
         private Ibd listener;
-        Semestre semestre;
-        Ramo ramo;
         public HacerAyudante(object sender, string nombre)
         {
             InitializeComponent();
+            nombre = nombreAlumno.Text;
             if (sender is Ibd)
             {
                 listener = (Ibd)sender;
@@ -25,24 +24,29 @@ namespace MyNotes2._0
             foreach(Semestre s in listener.GetBaseDeDatos().GetListaSemestres())
             {
                 listaSemestre.Items.Add(s.GetID());
-            }
-            semestre.SetID(listaSemestre.SelectedItem.ToString());
-            foreach (Semestre s in listener.GetBaseDeDatos().GetListaSemestres())
-            {
-                if(s.GetID() == semestre.GetID())
+                foreach(Ramo r in s.GetListaRamos())
                 {
-                    foreach(Ramo r in s.GetListaRamos())
+                    listaRamos.Items.Add(r.GetNombre());
+                    foreach(Seccion i in r.GetSecciones())
                     {
-                        listaRamos.Items.Add(r);
+                        listaSecciones.Items.Add(i.GetIDSeccion() + " " + i.GetNombre());
                     }
                 }
             }
+            
 
         }
 
         private void Aceptar_Click(object sender, EventArgs e)
         {
 
+            foreach (Alumno a in listener.GetBaseDeDatos().GetListaAlumnos())
+            {
+                if (a.GetNombre() == nombreAlumno.Text)
+                {
+                   if(listener.GetBaseDeDatos().ge)
+                }
+            }
             Close();
         }
 

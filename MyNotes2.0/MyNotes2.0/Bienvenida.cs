@@ -65,22 +65,28 @@ namespace MyNotes2._0
                 bd.SetUsuarioActual(usuario);
                 if (usuario is Administrador)
                 {
+                    Hide();
                     AccionesAdmin accionesAdmin = new AccionesAdmin(this,name);
                     Login(usuario);
-                    accionesAdmin.Show();
+                    accionesAdmin.ShowDialog();
+                    Show();
                 }
                 else if (usuario is Alumno)
                 {
+                    Hide();
                     AccionesAlumno accionesAlumno = new AccionesAlumno(this,name);
                     Login(usuario);
-                    accionesAlumno.Show();
+                    accionesAlumno.ShowDialog();
+                    Show();
                 }
                 else 
                 {
+                    Hide();
                     AccionesProfesor accionesProfesor = new AccionesProfesor(this);
                     Login(usuario);
                     //MessageBox.Show(GetUsuario().GetNombre());
-                    accionesProfesor.Show();
+                    accionesProfesor.ShowDialog();
+                    Show();
                 }
             }
             else

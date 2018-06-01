@@ -71,7 +71,7 @@ namespace MyNotes2._0
         private void noAyudante_Click(object sender, EventArgs e)
         {
             HacerAyudante ayudante = new HacerAyudante(sender, listaAlumnos.Text);
-            if (String.IsNullOrEmpty(listaAlumnos.Text))
+            if (string.IsNullOrEmpty(listaAlumnos.Text))
             {
                 MessageBox.Show("Debe seleccionar un alumno");
             }

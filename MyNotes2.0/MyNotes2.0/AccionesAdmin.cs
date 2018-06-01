@@ -28,28 +28,33 @@ namespace MyNotes2._0
         private void button1_Click(object sender, EventArgs e)
         {
             AlumnoAdmin clickAlumno = new AlumnoAdmin(listener);
-            clickAlumno.Show();
-
+            //Hide();
+            clickAlumno.ShowDialog();
+            //Show();           
         }
 
         private void botonSemestre_Click(object sender, EventArgs e)
         {
             AdminSemestre adminSemestre = new AdminSemestre(salida);
-            Hide();
+            //Hide();
             adminSemestre.ShowDialog();
-            Show();
+            //Show();
         }
 
         private void adminProfesor_Click(object sender, EventArgs e)
         {
             ProfeAdmin profeAdmin = new ProfeAdmin();
-            profeAdmin.Show();
+            //Hide();
+            profeAdmin.ShowDialog();
+            //Show();
         }
 
         private void adminRamo_Click(object sender, EventArgs e)
         {
+           // Hide();
             RamoAdmin ramoAdmin = new RamoAdmin(listener);
-            ramoAdmin.Show();
+            ramoAdmin.ShowDialog();
+            //Show();
         }
 
         private void logOut_Click(object sender, EventArgs e)
@@ -60,10 +65,10 @@ namespace MyNotes2._0
 
         private void botonSecciones_Click(object sender, EventArgs e)
         {
-            Hide();
+           // Hide();
             SeccionesAdmin seccionesAdmin = new SeccionesAdmin(listener);
             seccionesAdmin.ShowDialog();
-            Show();
+            //Show();
         }
     }
 }

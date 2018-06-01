@@ -36,7 +36,6 @@
             this.adminSemestre = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.logOut = new System.Windows.Forms.Button();
-            this.botonSecciones = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -126,23 +125,11 @@
             this.logOut.UseVisualStyleBackColor = true;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
-            // botonSecciones
-            // 
-            this.botonSecciones.Location = new System.Drawing.Point(207, 167);
-            this.botonSecciones.Margin = new System.Windows.Forms.Padding(2);
-            this.botonSecciones.Name = "botonSecciones";
-            this.botonSecciones.Size = new System.Drawing.Size(103, 21);
-            this.botonSecciones.TabIndex = 9;
-            this.botonSecciones.Text = "Secciones";
-            this.botonSecciones.UseVisualStyleBackColor = true;
-            this.botonSecciones.Click += new System.EventHandler(this.botonSecciones_Click);
-            // 
             // AccionesAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 266);
-            this.Controls.Add(this.botonSecciones);
             this.Controls.Add(this.logOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.adminSemestre);
@@ -169,6 +156,5 @@
         private System.Windows.Forms.Button adminSemestre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button logOut;
-        private System.Windows.Forms.Button botonSecciones;
     }
 }

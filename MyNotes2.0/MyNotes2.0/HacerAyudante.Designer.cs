@@ -38,7 +38,6 @@
             this.Cancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.listaSemestre = new System.Windows.Forms.ComboBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -169,6 +168,5 @@
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox listaSemestre;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

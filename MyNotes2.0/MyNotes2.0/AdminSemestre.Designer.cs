@@ -109,7 +109,6 @@
             this.botonSecciones.TabIndex = 15;
             this.botonSecciones.Text = "Secciones";
             this.botonSecciones.UseVisualStyleBackColor = true;
-            this.botonSecciones.Click += new System.EventHandler(this.botonSecciones_Click);
             // 
             // AdminSemestre
             // 

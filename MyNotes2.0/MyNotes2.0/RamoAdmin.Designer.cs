@@ -109,6 +109,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RamoAdmin";
             this.Text = "RamoAdmin";
+            this.Load += new System.EventHandler(this.RamoAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

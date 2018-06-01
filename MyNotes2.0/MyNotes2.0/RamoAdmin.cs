@@ -50,5 +50,10 @@ namespace MyNotes2._0
             VerMaterial verMaterial = new VerMaterial();
             verMaterial.ShowDialog();
         }
+
+        private void RamoAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -65,36 +65,24 @@ namespace MyNotes2._0
         private void toAyudante_Click(object sender, EventArgs e)
         {
             HacerAyudante hacerAyudante = new HacerAyudante(listener, listaAlumnos.Text);
-            if (listaAlumnos.Text == null)
-            {
-                MessageBox.Show("Debe seleccionar alumno");
-            }
-            else
-            {
-                hacerAyudante.ShowDialog();
-            }
-                        
+            hacerAyudante.ShowDialog();                       
         }
 
         private void noAyudante_Click(object sender, EventArgs e)
         {
             HacerAyudante ayudante = new HacerAyudante(sender, listaAlumnos.Text);
-            if (listaAlumnos.Text == null)
+            if (String.IsNullOrEmpty(listaAlumnos.Text))
             {
-                MessageBox.Show("Debe seleccionar alumno");
+                MessageBox.Show("Debe seleccionar un alumno");
             }
             else
             {
                 ayudante.ShowDialog();
-            }
+            }            
         }
 
         private void ModificarAlumno_Load(object sender, EventArgs e)
         {
-            if (listaAlumnos.Text == null)
-            {
-                MessageBox.Show("Debe seleccionar alumno");
-            }
         }
     }
 }

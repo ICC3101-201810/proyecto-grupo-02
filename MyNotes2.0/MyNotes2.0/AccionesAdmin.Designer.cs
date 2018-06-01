@@ -43,10 +43,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(44, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.Size = new System.Drawing.Size(138, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Administrador:";
             // 
@@ -54,19 +53,17 @@
             // 
             this.label_NombreAdm.AutoSize = true;
             this.label_NombreAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NombreAdm.Location = new System.Drawing.Point(151, 31);
-            this.label_NombreAdm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_NombreAdm.Location = new System.Drawing.Point(226, 48);
             this.label_NombreAdm.Name = "label_NombreAdm";
-            this.label_NombreAdm.Size = new System.Drawing.Size(46, 17);
+            this.label_NombreAdm.Size = new System.Drawing.Size(64, 25);
             this.label_NombreAdm.TabIndex = 1;
             this.label_NombreAdm.Text = "label2";
             // 
             // adminAlumno
             // 
-            this.adminAlumno.Location = new System.Drawing.Point(40, 97);
-            this.adminAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.adminAlumno.Location = new System.Drawing.Point(60, 149);
             this.adminAlumno.Name = "adminAlumno";
-            this.adminAlumno.Size = new System.Drawing.Size(103, 21);
+            this.adminAlumno.Size = new System.Drawing.Size(154, 32);
             this.adminAlumno.TabIndex = 2;
             this.adminAlumno.Text = "Alumnos";
             this.adminAlumno.UseVisualStyleBackColor = true;
@@ -74,10 +71,9 @@
             // 
             // adminProfesor
             // 
-            this.adminProfesor.Location = new System.Drawing.Point(40, 133);
-            this.adminProfesor.Margin = new System.Windows.Forms.Padding(2);
+            this.adminProfesor.Location = new System.Drawing.Point(60, 205);
             this.adminProfesor.Name = "adminProfesor";
-            this.adminProfesor.Size = new System.Drawing.Size(103, 21);
+            this.adminProfesor.Size = new System.Drawing.Size(154, 32);
             this.adminProfesor.TabIndex = 3;
             this.adminProfesor.Text = "Profesores";
             this.adminProfesor.UseVisualStyleBackColor = true;
@@ -85,10 +81,9 @@
             // 
             // adminRamo
             // 
-            this.adminRamo.Location = new System.Drawing.Point(207, 97);
-            this.adminRamo.Margin = new System.Windows.Forms.Padding(2);
+            this.adminRamo.Location = new System.Drawing.Point(310, 149);
             this.adminRamo.Name = "adminRamo";
-            this.adminRamo.Size = new System.Drawing.Size(103, 21);
+            this.adminRamo.Size = new System.Drawing.Size(154, 32);
             this.adminRamo.TabIndex = 4;
             this.adminRamo.Text = "Ramos";
             this.adminRamo.UseVisualStyleBackColor = true;
@@ -96,10 +91,9 @@
             // 
             // adminSemestre
             // 
-            this.adminSemestre.Location = new System.Drawing.Point(207, 133);
-            this.adminSemestre.Margin = new System.Windows.Forms.Padding(2);
+            this.adminSemestre.Location = new System.Drawing.Point(310, 205);
             this.adminSemestre.Name = "adminSemestre";
-            this.adminSemestre.Size = new System.Drawing.Size(103, 21);
+            this.adminSemestre.Size = new System.Drawing.Size(154, 32);
             this.adminSemestre.TabIndex = 5;
             this.adminSemestre.Text = "Semestres";
             this.adminSemestre.UseVisualStyleBackColor = true;
@@ -108,19 +102,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(44, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.Size = new System.Drawing.Size(187, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "¿Qué desea administrar?";
             // 
             // logOut
             // 
-            this.logOut.Location = new System.Drawing.Point(263, 217);
-            this.logOut.Margin = new System.Windows.Forms.Padding(2);
+            this.logOut.Location = new System.Drawing.Point(394, 334);
             this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(113, 26);
+            this.logOut.Size = new System.Drawing.Size(170, 40);
             this.logOut.TabIndex = 7;
             this.logOut.Text = "Cerrar sesión";
             this.logOut.UseVisualStyleBackColor = true;
@@ -128,10 +120,9 @@
             // 
             // botonSecciones
             // 
-            this.botonSecciones.Location = new System.Drawing.Point(207, 167);
-            this.botonSecciones.Margin = new System.Windows.Forms.Padding(2);
+            this.botonSecciones.Location = new System.Drawing.Point(310, 257);
             this.botonSecciones.Name = "botonSecciones";
-            this.botonSecciones.Size = new System.Drawing.Size(103, 21);
+            this.botonSecciones.Size = new System.Drawing.Size(154, 32);
             this.botonSecciones.TabIndex = 9;
             this.botonSecciones.Text = "Secciones";
             this.botonSecciones.UseVisualStyleBackColor = true;
@@ -139,9 +130,9 @@
             // 
             // AccionesAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 266);
+            this.ClientSize = new System.Drawing.Size(615, 409);
             this.Controls.Add(this.botonSecciones);
             this.Controls.Add(this.logOut);
             this.Controls.Add(this.label2);
@@ -151,7 +142,7 @@
             this.Controls.Add(this.adminAlumno);
             this.Controls.Add(this.label_NombreAdm);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "AccionesAdmin";
             this.Text = "AccionesAdmin";
             this.ResumeLayout(false);

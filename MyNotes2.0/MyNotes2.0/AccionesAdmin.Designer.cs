@@ -36,7 +36,6 @@
             this.adminSemestre = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.logOut = new System.Windows.Forms.Button();
-            this.botonSecciones = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +63,7 @@
             // adminAlumno
             // 
             this.adminAlumno.Location = new System.Drawing.Point(40, 97);
-            this.adminAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.adminAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adminAlumno.Name = "adminAlumno";
             this.adminAlumno.Size = new System.Drawing.Size(103, 21);
             this.adminAlumno.TabIndex = 2;
@@ -75,7 +74,7 @@
             // adminProfesor
             // 
             this.adminProfesor.Location = new System.Drawing.Point(40, 133);
-            this.adminProfesor.Margin = new System.Windows.Forms.Padding(2);
+            this.adminProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adminProfesor.Name = "adminProfesor";
             this.adminProfesor.Size = new System.Drawing.Size(103, 21);
             this.adminProfesor.TabIndex = 3;
@@ -86,7 +85,7 @@
             // adminRamo
             // 
             this.adminRamo.Location = new System.Drawing.Point(207, 97);
-            this.adminRamo.Margin = new System.Windows.Forms.Padding(2);
+            this.adminRamo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adminRamo.Name = "adminRamo";
             this.adminRamo.Size = new System.Drawing.Size(103, 21);
             this.adminRamo.TabIndex = 4;
@@ -97,7 +96,7 @@
             // adminSemestre
             // 
             this.adminSemestre.Location = new System.Drawing.Point(207, 133);
-            this.adminSemestre.Margin = new System.Windows.Forms.Padding(2);
+            this.adminSemestre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adminSemestre.Name = "adminSemestre";
             this.adminSemestre.Size = new System.Drawing.Size(103, 21);
             this.adminSemestre.TabIndex = 5;
@@ -118,7 +117,7 @@
             // logOut
             // 
             this.logOut.Location = new System.Drawing.Point(263, 217);
-            this.logOut.Margin = new System.Windows.Forms.Padding(2);
+            this.logOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logOut.Name = "logOut";
             this.logOut.Size = new System.Drawing.Size(113, 26);
             this.logOut.TabIndex = 7;
@@ -126,23 +125,11 @@
             this.logOut.UseVisualStyleBackColor = true;
             this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
-            // botonSecciones
-            // 
-            this.botonSecciones.Location = new System.Drawing.Point(207, 167);
-            this.botonSecciones.Margin = new System.Windows.Forms.Padding(2);
-            this.botonSecciones.Name = "botonSecciones";
-            this.botonSecciones.Size = new System.Drawing.Size(103, 21);
-            this.botonSecciones.TabIndex = 9;
-            this.botonSecciones.Text = "Secciones";
-            this.botonSecciones.UseVisualStyleBackColor = true;
-            this.botonSecciones.Click += new System.EventHandler(this.botonSecciones_Click);
-            // 
             // AccionesAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 266);
-            this.Controls.Add(this.botonSecciones);
+            this.ClientSize = new System.Drawing.Size(392, 253);
             this.Controls.Add(this.logOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.adminSemestre);
@@ -169,6 +156,5 @@
         private System.Windows.Forms.Button adminSemestre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button logOut;
-        private System.Windows.Forms.Button botonSecciones;
     }
 }

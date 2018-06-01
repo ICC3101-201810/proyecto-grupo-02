@@ -12,9 +12,26 @@ namespace MyNotes2._0
 {
     public partial class EditarAyudantes : Form
     {
+        private ISeccion iSeccion;
+        private Ibd ibd;
+        Seccion seccion;
+        Profesor profesor;
         public EditarAyudantes(object sender)
         {
             InitializeComponent();
+            if (sender is ISeccion)
+            {
+                iSeccion = (ISeccion)sender;
+            }
+            if (sender is Ibd)
+            {
+                ibd = (Ibd)sender;
+            }
+            foreach (Seccion sec in iSeccion.GetListaSecciones())
+            {
+                comboBoxRamo.Items.Add(sec.GetNombre());
+            }
+
         }
 
         private void BotonAtras_Click(object sender, EventArgs e)
@@ -25,6 +42,11 @@ namespace MyNotes2._0
         private void BotonEliminarAyudante_Click(object sender, EventArgs e)
         {
             // = ListaAyudante.SelectedItem;
+        }
+
+        private void comboBoxRamo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

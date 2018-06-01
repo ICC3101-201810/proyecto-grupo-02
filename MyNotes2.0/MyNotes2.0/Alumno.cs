@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyNotes2._0
 {
     [Serializable()]
-    class Alumno : Usuario
+    public class Alumno : Usuario
     {
         public bool ayudante = false;
         List<Notes> apuntes = new List<Notes>();

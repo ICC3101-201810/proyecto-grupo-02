@@ -39,61 +39,50 @@ namespace MyNotes2._0
         private void editarAlumno_Click(object sender, EventArgs e)
         {
             CambiarNombreAlumno cambiarNombreAlumno = new CambiarNombreAlumno(listener,listaAlumnos.Text);
-            cambiarNombreAlumno.ShowDialog();
+            if (listaAlumnos.Text == null)
+            {
+                MessageBox.Show("Debe seleccionar alumno");
+            }
+            else
+            {
+                cambiarNombreAlumno.ShowDialog();
+            }
             
         }
 
         private void eliminarAlumno_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Alumno eliminado");
+            if (listaAlumnos.Text == null)
+            {
+                MessageBox.Show("Debe seleccionar alumno");
+            }
+            else
+            {
+                MessageBox.Show("Alumno eliminado");//no lo hace
+            }
         }
 
         private void toAyudante_Click(object sender, EventArgs e)
         {
             HacerAyudante hacerAyudante = new HacerAyudante(listener, listaAlumnos.Text);
-            foreach (Alumno a in listener.GetBaseDeDatos().GetListaAlumnos())
-            {
-                if (a.GetNombre() == listaAlumnos.Text)
-                {
-                    if (a.ayudante)
-                    {
-                        MessageBox.Show("Ups! Este alumno ya es ayudante");
-                    }
-                    else
-                    {
-                        a.ayudante = true;
-                        MessageBox.Show("Ayudante creado exitosamente!");
-                    }
-                }
-            }
-            
+            hacerAyudante.ShowDialog();                       
         }
 
         private void noAyudante_Click(object sender, EventArgs e)
         {
             HacerAyudante ayudante = new HacerAyudante(sender, listaAlumnos.Text);
-            ayudante.ShowDialog();
-            foreach (Alumno a in listener.GetBaseDeDatos().GetListaAlumnos())
+            if (string.IsNullOrEmpty(listaAlumnos.Text))
             {
-                if (a.GetNombre() == listaAlumnos.Text)
-                {
-                    if (a.ayudante)
-                    {
-                        a.ayudante = false;
-                        MessageBox.Show("Ayudante eliminado exitosamente");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Este alumno no es ayudante");
-                    }
-                }
+                MessageBox.Show("Debe seleccionar un alumno");
             }
-
+            else
+            {
+                ayudante.ShowDialog();
+            }            
         }
 
         private void ModificarAlumno_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

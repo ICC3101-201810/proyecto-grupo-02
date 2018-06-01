@@ -39,5 +39,6 @@ namespace MyNotes2._0
             cambiarNombre.ShowDialog();
             Show();
         }
+
     }
 }

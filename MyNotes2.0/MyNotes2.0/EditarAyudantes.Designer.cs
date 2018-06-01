@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextRamo = new System.Windows.Forms.TextBox();
             this.LabelRamo = new System.Windows.Forms.Label();
             this.BotonAtras = new System.Windows.Forms.Button();
             this.ListaAyudante = new System.Windows.Forms.ListBox();
             this.BotonEliminarAyudante = new System.Windows.Forms.Button();
             this.BotonAgregarAyudante = new System.Windows.Forms.Button();
+            this.comboBoxRamo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // TextRamo
-            // 
-            this.TextRamo.BackColor = System.Drawing.SystemColors.Window;
-            this.TextRamo.Location = new System.Drawing.Point(105, 33);
-            this.TextRamo.Name = "TextRamo";
-            this.TextRamo.ReadOnly = true;
-            this.TextRamo.Size = new System.Drawing.Size(181, 20);
-            this.TextRamo.TabIndex = 0;
             // 
             // LabelRamo
             // 
@@ -92,17 +83,26 @@
             this.BotonAgregarAyudante.Text = "Agregar Ayudante";
             this.BotonAgregarAyudante.UseVisualStyleBackColor = true;
             // 
+            // comboBoxRamo
+            // 
+            this.comboBoxRamo.FormattingEnabled = true;
+            this.comboBoxRamo.Location = new System.Drawing.Point(153, 31);
+            this.comboBoxRamo.Name = "comboBoxRamo";
+            this.comboBoxRamo.Size = new System.Drawing.Size(187, 21);
+            this.comboBoxRamo.TabIndex = 7;
+            this.comboBoxRamo.SelectedIndexChanged += new System.EventHandler(this.comboBoxRamo_SelectedIndexChanged);
+            // 
             // EditarAyudantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 292);
+            this.Controls.Add(this.comboBoxRamo);
             this.Controls.Add(this.BotonAgregarAyudante);
             this.Controls.Add(this.BotonEliminarAyudante);
             this.Controls.Add(this.ListaAyudante);
             this.Controls.Add(this.BotonAtras);
             this.Controls.Add(this.LabelRamo);
-            this.Controls.Add(this.TextRamo);
             this.Name = "EditarAyudantes";
             this.Text = "EditarAyudantes";
             this.ResumeLayout(false);
@@ -111,12 +111,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TextRamo;
         private System.Windows.Forms.Label LabelRamo;
         private System.Windows.Forms.Button BotonAtras;
         private System.Windows.Forms.ListBox ListaAyudante;
         private System.Windows.Forms.Button BotonEliminarAyudante;
         private System.Windows.Forms.Button BotonAgregarAyudante;
+        private System.Windows.Forms.ComboBox comboBoxRamo;
     }
 }

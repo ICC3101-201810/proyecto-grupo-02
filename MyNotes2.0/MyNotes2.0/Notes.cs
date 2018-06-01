@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyNotes2._0
 {
     [Serializable()]
-    internal class Notes
+    public class Notes
     {
         string Nombre;
         Ramo Ramo;

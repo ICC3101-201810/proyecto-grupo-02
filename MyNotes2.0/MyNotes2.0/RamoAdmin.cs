@@ -50,5 +50,18 @@ namespace MyNotes2._0
             VerMaterial verMaterial = new VerMaterial();
             verMaterial.ShowDialog();
         }
+
+        private void RamoAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonSecciones_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SeccionesAdmin seccionesAdmin = new SeccionesAdmin(ibd);
+            seccionesAdmin.ShowDialog();
+            Show();
+        }
     }
 }

@@ -69,7 +69,7 @@
             // 
             // BotonCrearSemestre
             // 
-            this.BotonCrearSemestre.Location = new System.Drawing.Point(147, 107);
+            this.BotonCrearSemestre.Location = new System.Drawing.Point(74, 148);
             this.BotonCrearSemestre.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCrearSemestre.Name = "BotonCrearSemestre";
             this.BotonCrearSemestre.Size = new System.Drawing.Size(103, 37);
@@ -80,7 +80,7 @@
             // 
             // BotonCambiarNombreSem
             // 
-            this.BotonCambiarNombreSem.Location = new System.Drawing.Point(29, 107);
+            this.BotonCambiarNombreSem.Location = new System.Drawing.Point(74, 107);
             this.BotonCambiarNombreSem.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCambiarNombreSem.Name = "BotonCambiarNombreSem";
             this.BotonCambiarNombreSem.Size = new System.Drawing.Size(103, 37);
@@ -91,7 +91,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(271, 107);
+            this.button3.Location = new System.Drawing.Point(209, 107);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 37);

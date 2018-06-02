@@ -47,7 +47,11 @@ namespace MyNotes2._0
                 {
                     comboBoxRamo.Items.RemoveAt(0);
                 }
+                comboBoxSeccion.Text = null;
                 comboBoxRamo.Text = null;
+                botonMas.Visible = false;
+                botonMenos.Visible = false;
+                textBoxVacantes = null;
 
             }
             catch (System.NullReferenceException)
@@ -85,6 +89,7 @@ namespace MyNotes2._0
                 comboBoxSeccion.Text = null;
                 botonMas.Visible = false;
                 botonMenos.Visible = false;
+                textBoxVacantes = null;
             }
             catch (System.NullReferenceException)
             {
@@ -116,8 +121,8 @@ namespace MyNotes2._0
                     seccion = sec;
                     vacantes = seccion.GetVacantes();
                 }
-            
-            textBoxVacantes.Text = vacantes.ToString();
+
+            textBoxVacantes.Text = null;
             botonMas.Visible = true;
             botonMenos.Visible = true;
         }
@@ -141,14 +146,31 @@ namespace MyNotes2._0
 
         private void botonCambiarNombre_Click(object sender, EventArgs e)
         {
+            if (textBoxNuevoNombre.Text == "")
+            {
+                MessageBox.Show("Ingrese Nombre");
+                return;
+            }
+            if (seccion == null)
+            {
+                MessageBox.Show("Ingrese Seccion");
+                return;
+            }
             seccion.SetID(textBoxNuevoNombre.Text);
             Close();
         }
 
         private void botonCambiarVacantes_Click(object sender, EventArgs e)
         {
-            seccion.SetVacantes(Int32.Parse(textBoxVacantes.Text));
-            Close();
+            try
+            {
+                seccion.SetVacantes(Int32.Parse(textBoxVacantes.Text));
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Ingrese Vacantes");
+            }
         }
     }
 }

@@ -176,6 +176,7 @@
     </Compile>
     <Compile Include="Ibd.cs" />
     <Compile Include="ILoger.cs" />
+    <Compile Include="ISeccion.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="ModificarAlumno.cs">
       <SubType>Form</SubType>

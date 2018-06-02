@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyNotes2._0
 {
     [Serializable()]
-    class Profesor : Usuario
+    public class Profesor : Usuario
     {
         List<string> informacion;
         List<Apuntes> material;

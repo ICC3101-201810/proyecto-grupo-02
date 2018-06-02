@@ -52,35 +52,39 @@ namespace MyNotes2._0
         }
         private void button_Save_Click(object sender, EventArgs e)
         {
-            if (alumno.GetApuntes().Count == 0)
+            bool bandera = true;
+            foreach (Notes n in alumno.GetApuntes())
             {
-                foreach (Notes n in alumno.GetApuntes())
+                if (n.GetNombre() == textBox_Nombre.Text)
                 {
-                    if (n.GetNombre() == textBox_Nombre.Text)
+                    var resultado = MessageBox.Show("Ya existe un apunte con ese nombre.\nDesea sobreescribir el apuente?", "Sobreescribiendo",
+                        MessageBoxButtons.YesNo);
+                    if (resultado == DialogResult.Yes)
                     {
-                        MessageBox.Show("Ya existe un apunte con ese nombre.");
+                        n.SetNombre(textBox_Nombre.Text);
+                        n.SetRamo((Ramo)comboBox_Ramos.SelectedItem);
+                        n.SetFecha(dateTimePicker1.Value);
+                        n.SetContenido(textBox_Content.Text);
+                        MessageBox.Show("Apunte Guardado.");
+                        bandera = false;
+                        break;
                     }
                     else
                     {
-                        string nombre = textBox_Nombre.Text;
-                        Ramo ramo = (Ramo)comboBox_Ramos.SelectedItem;
-                        DateTime dateTime = dateTimePicker1.Value;
-                        string contenido = textBox_Content.Text;
-                        Notes notes = new Notes(nombre, ramo, dateTime, contenido);
-                        alumno.AgregarApuntes(notes);
-                        MessageBox.Show("Apunte guardado");
+                        bandera = false;
+                        break;
                     }
                 }
             }
-            else
+            if (bandera == true)
             {
                 string nombre = textBox_Nombre.Text;
                 Ramo ramo = (Ramo)comboBox_Ramos.SelectedItem;
                 DateTime dateTime = dateTimePicker1.Value;
-                string contenido = textBox_Content.Text;
-                Notes notes = new Notes(nombre, ramo, dateTime, contenido);
-                alumno.AgregarApuntes(notes);
-                MessageBox.Show("Apunte guardado");
+                string content = textBox_Content.Text;
+                Notes note = new Notes(nombre, ramo, dateTime, content);
+                alumno.AgregarApuntes(note);
+                MessageBox.Show("Apunte Creado.");
             }
         }
 

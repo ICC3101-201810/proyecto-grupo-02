@@ -42,6 +42,7 @@
             this.ComboBoxRamos.Name = "ComboBoxRamos";
             this.ComboBoxRamos.Size = new System.Drawing.Size(127, 21);
             this.ComboBoxRamos.TabIndex = 0;
+            this.ComboBoxRamos.SelectedIndexChanged += new System.EventHandler(this.ComboBoxRamos_SelectedIndexChanged);
             // 
             // LabelRamo
             // 
@@ -75,7 +76,7 @@
             // 
             // BotonCrearMaterial
             // 
-            this.BotonCrearMaterial.Location = new System.Drawing.Point(182, 130);
+            this.BotonCrearMaterial.Location = new System.Drawing.Point(240, 130);
             this.BotonCrearMaterial.Name = "BotonCrearMaterial";
             this.BotonCrearMaterial.Size = new System.Drawing.Size(81, 56);
             this.BotonCrearMaterial.TabIndex = 4;

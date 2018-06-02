@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyNotes2._0
 {
     [Serializable()]
-    internal class Notes
+    public class Notes
     {
         string Nombre;
         Ramo Ramo;
@@ -20,6 +20,22 @@ namespace MyNotes2._0
             Ramo = ramo;
             Fecha = fecha;
             Contenido = contenido;
+        }
+        public void SetNombre(string newname)
+        {
+            Nombre = newname;
+        }
+        public void SetRamo(Ramo newRamo)
+        {
+            Ramo = newRamo;
+        }
+        public void SetFecha(DateTime newdate)
+        {
+            Fecha = newdate;
+        }
+        public void SetContenido(string newcontent)
+        {
+            Contenido = newcontent;
         }
         public string GetNombre()
         {

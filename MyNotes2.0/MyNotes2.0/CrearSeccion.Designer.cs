@@ -45,60 +45,65 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 29);
+            this.label1.Location = new System.Drawing.Point(30, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.Size = new System.Drawing.Size(160, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccione Semestre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 79);
+            this.label2.Location = new System.Drawing.Point(30, 88);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.Size = new System.Drawing.Size(134, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Seleccione Ramo";
             // 
             // comboBoxSemestre
             // 
             this.comboBoxSemestre.FormattingEnabled = true;
-            this.comboBoxSemestre.Location = new System.Drawing.Point(163, 26);
+            this.comboBoxSemestre.Location = new System.Drawing.Point(244, 40);
+            this.comboBoxSemestre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxSemestre.Name = "comboBoxSemestre";
-            this.comboBoxSemestre.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxSemestre.Size = new System.Drawing.Size(216, 28);
             this.comboBoxSemestre.TabIndex = 2;
             this.comboBoxSemestre.SelectedIndexChanged += new System.EventHandler(this.comboBoxSemestre_SelectedIndexChanged);
             // 
             // comboBoxRamo
             // 
             this.comboBoxRamo.FormattingEnabled = true;
-            this.comboBoxRamo.Location = new System.Drawing.Point(163, 76);
+            this.comboBoxRamo.Location = new System.Drawing.Point(245, 85);
+            this.comboBoxRamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxRamo.Name = "comboBoxRamo";
-            this.comboBoxRamo.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxRamo.Size = new System.Drawing.Size(216, 28);
             this.comboBoxRamo.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 115);
+            this.label3.Location = new System.Drawing.Point(30, 135);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.Size = new System.Drawing.Size(184, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ingrese Nombre Seccion";
             // 
             // textBoxNuevoNombre
             // 
-            this.textBoxNuevoNombre.Location = new System.Drawing.Point(163, 112);
+            this.textBoxNuevoNombre.Location = new System.Drawing.Point(244, 132);
+            this.textBoxNuevoNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNuevoNombre.Name = "textBoxNuevoNombre";
-            this.textBoxNuevoNombre.Size = new System.Drawing.Size(145, 20);
+            this.textBoxNuevoNombre.Size = new System.Drawing.Size(216, 26);
             this.textBoxNuevoNombre.TabIndex = 5;
             // 
             // botonAtras
             // 
-            this.botonAtras.Location = new System.Drawing.Point(286, 229);
-            this.botonAtras.Margin = new System.Windows.Forms.Padding(2);
+            this.botonAtras.Location = new System.Drawing.Point(429, 352);
             this.botonAtras.Name = "botonAtras";
-            this.botonAtras.Size = new System.Drawing.Size(113, 26);
+            this.botonAtras.Size = new System.Drawing.Size(170, 40);
             this.botonAtras.TabIndex = 13;
             this.botonAtras.Text = "Atras";
             this.botonAtras.UseVisualStyleBackColor = true;
@@ -106,10 +111,9 @@
             // 
             // botonCrearSeccion
             // 
-            this.botonCrearSeccion.Location = new System.Drawing.Point(65, 186);
-            this.botonCrearSeccion.Margin = new System.Windows.Forms.Padding(2);
+            this.botonCrearSeccion.Location = new System.Drawing.Point(98, 286);
             this.botonCrearSeccion.Name = "botonCrearSeccion";
-            this.botonCrearSeccion.Size = new System.Drawing.Size(113, 26);
+            this.botonCrearSeccion.Size = new System.Drawing.Size(170, 40);
             this.botonCrearSeccion.TabIndex = 14;
             this.botonCrearSeccion.Text = "Crear Seccion";
             this.botonCrearSeccion.UseVisualStyleBackColor = true;
@@ -118,27 +122,28 @@
             // labelVacantes
             // 
             this.labelVacantes.AutoSize = true;
-            this.labelVacantes.Location = new System.Drawing.Point(20, 147);
+            this.labelVacantes.Location = new System.Drawing.Point(30, 187);
+            this.labelVacantes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVacantes.Name = "labelVacantes";
-            this.labelVacantes.Size = new System.Drawing.Size(90, 13);
+            this.labelVacantes.Size = new System.Drawing.Size(135, 20);
             this.labelVacantes.TabIndex = 15;
             this.labelVacantes.Text = "Ingrese Vacantes";
             // 
             // textBoxVacantes
             // 
             this.textBoxVacantes.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxVacantes.Location = new System.Drawing.Point(163, 144);
+            this.textBoxVacantes.Location = new System.Drawing.Point(243, 182);
+            this.textBoxVacantes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxVacantes.Name = "textBoxVacantes";
             this.textBoxVacantes.ReadOnly = true;
-            this.textBoxVacantes.Size = new System.Drawing.Size(57, 20);
+            this.textBoxVacantes.Size = new System.Drawing.Size(84, 26);
             this.textBoxVacantes.TabIndex = 16;
             // 
             // botonMas
             // 
-            this.botonMas.Location = new System.Drawing.Point(254, 144);
-            this.botonMas.Margin = new System.Windows.Forms.Padding(2);
+            this.botonMas.Location = new System.Drawing.Point(380, 182);
             this.botonMas.Name = "botonMas";
-            this.botonMas.Size = new System.Drawing.Size(19, 20);
+            this.botonMas.Size = new System.Drawing.Size(28, 31);
             this.botonMas.TabIndex = 17;
             this.botonMas.Text = "+";
             this.botonMas.UseVisualStyleBackColor = true;
@@ -146,10 +151,9 @@
             // 
             // botonMenos
             // 
-            this.botonMenos.Location = new System.Drawing.Point(230, 144);
-            this.botonMenos.Margin = new System.Windows.Forms.Padding(2);
+            this.botonMenos.Location = new System.Drawing.Point(344, 182);
             this.botonMenos.Name = "botonMenos";
-            this.botonMenos.Size = new System.Drawing.Size(19, 20);
+            this.botonMenos.Size = new System.Drawing.Size(28, 31);
             this.botonMenos.TabIndex = 18;
             this.botonMenos.Text = "-";
             this.botonMenos.UseVisualStyleBackColor = true;
@@ -157,9 +161,9 @@
             // 
             // CrearSeccion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 266);
+            this.ClientSize = new System.Drawing.Size(615, 409);
             this.Controls.Add(this.botonMenos);
             this.Controls.Add(this.botonMas);
             this.Controls.Add(this.textBoxVacantes);
@@ -172,6 +176,7 @@
             this.Controls.Add(this.comboBoxSemestre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CrearSeccion";
             this.Text = "Crear Seccion";
             this.ResumeLayout(false);

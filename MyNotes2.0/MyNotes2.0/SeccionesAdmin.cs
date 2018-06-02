@@ -41,5 +41,16 @@ namespace MyNotes2._0
             (new EditarSeccion(ibd)).ShowDialog();
             Show();
         }
+
+        private void SeccionesAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_verSecciones_Click(object sender, EventArgs e)
+        {
+            VerSecciones verSecciones = new VerSecciones(ibd);
+            verSecciones.ShowDialog();
+        }
     }
 }

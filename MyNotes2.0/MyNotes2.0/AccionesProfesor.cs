@@ -15,7 +15,8 @@ namespace MyNotes2._0
         private ILoger loger;
         private IUsuario usuarioActual;
         private Ibd BdD;
-        public AccionesProfesor(object sender)
+        string NamePr;
+        public AccionesProfesor(object sender,string name)
         {
             InitializeComponent();
             if (sender is Ibd)
@@ -30,16 +31,13 @@ namespace MyNotes2._0
             {
                 usuarioActual = (IUsuario)sender;
             }
-            label_NamePr.Text = usuarioActual.GetUsuario().GetNombre();
+            NamePr = name;
+            label_NamePr.Text = name;
         }
-
-
-
         private void button_CrearAp_Click(object sender, EventArgs e)
         {
 
         }
-
         private void BotonCerrarSesion_Click(object sender, EventArgs e)
         {
             serial.Guardar(BdD.GetBaseDeDatos());
@@ -49,7 +47,7 @@ namespace MyNotes2._0
         private void BotonAdministrarRamos_Click(object sender, EventArgs e)
         {
             Hide();
-            ProfeRamos profeRamos = new ProfeRamos(BdD);
+            ProfeRamos profeRamos = new ProfeRamos(BdD, NamePr);
             profeRamos.Show();
             Close();
         }

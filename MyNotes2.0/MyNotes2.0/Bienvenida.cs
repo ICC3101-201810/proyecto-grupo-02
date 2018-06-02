@@ -20,17 +20,6 @@ namespace MyNotes2._0
             serial.Cargar(bd);
             //Administrador tester = new Administrador("admin", "123");
             //bd.AgregarUsuario(tester);
-            //Alumno alumno = new Alumno("pancho", "hola");
-            //Profesor profe = new Profesor("profe", "123");
-            //bd.AgregarUsuario(alumno);
-            //bd.AgregarUsuario(profe);
-            //Ramo poo = new Ramo("Programacion Orientada a Objetos");
-            //Ramo cos = new Ramo("Cocina entretenida");
-            //Ramo otr = new Ramo("Otro ramo que nadie necesita");
-            //alumno.AgregarRamo(poo);
-            //alumno.AgregarRamo(cos);
-            //alumno.AgregarRamo(otr);
-
         }
         public Usuario GetUsuario()
         {
@@ -82,9 +71,8 @@ namespace MyNotes2._0
                 else 
                 {
                     Hide();
-                    AccionesProfesor accionesProfesor = new AccionesProfesor(this);
+                    AccionesProfesor accionesProfesor = new AccionesProfesor(this,name);
                     Login(usuario);
-                    //MessageBox.Show(GetUsuario().GetNombre());
                     accionesProfesor.ShowDialog();
                     Show();
                 }

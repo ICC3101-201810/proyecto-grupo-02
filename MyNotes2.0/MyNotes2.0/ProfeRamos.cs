@@ -17,7 +17,8 @@ namespace MyNotes2._0
         Seccion seccion;
         List<Seccion> secciones;
         object listener;
-        public ProfeRamos(object sender)
+        Profesor profesor;
+        public ProfeRamos(object sender, string name)
         {
             InitializeComponent();
             listener = sender;
@@ -25,23 +26,23 @@ namespace MyNotes2._0
             {
                 ibd = (Ibd)sender;
             }
-            iseccion = (ISeccion)this;
-            foreach (Semestre sem in ibd.GetBaseDeDatos().GetListaSemestres())
+            BaseDeDatos BdAux = ibd.GetBaseDeDatos();
+            profesor = (Profesor)BdAux.GetUser(name);
+            foreach (Semestre s in BdAux.GetListaSemestres())
             {
-                foreach (Ramo ra in sem.GetListaRamos())
+                foreach (Ramo r in s.GetListaRamos())
                 {
-                    foreach (Seccion sec in ra.GetSecciones())
+                    foreach (Profesor p in r.GetProfes())
                     {
-                        foreach (Profesor prof in  sec.GetProfesores())
+                        if (p.GetNombre() == profesor.GetNombre())
                         {
-                            if (ibd.GetBaseDeDatos().GetUsuarioActual() == prof)
-                            {
-                                ComboBoxRamos.Items.Add(ra);
-                            }
+                            ComboBoxRamos.Items.Add(r);
                         }
                     }
+
                 }
             }
+            
         }
 
         private void BotonAtras_Click(object sender, EventArgs e)

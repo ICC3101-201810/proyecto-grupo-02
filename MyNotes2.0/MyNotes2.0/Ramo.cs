@@ -19,7 +19,18 @@ namespace MyNotes2._0
             this.nombreRamo = Nombre;
             //no contriene profesor, ya que el profesor, es profesor de la seccion
         }
-
+        public List<Profesor> GetProfes()
+        {
+            List<Profesor> profs = new List<Profesor>();
+            foreach (Seccion s in secciones)
+            {
+                foreach (Profesor p in s.GetProfesores())
+                {
+                    profs.Add(p);
+                }
+            }
+            return profs;
+        }
         public bool AgregarSeccion(Seccion seccion)
         {
             if (secciones.IndexOf(seccion) == -1)

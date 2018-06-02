@@ -14,6 +14,9 @@ namespace MyNotes2._0
     {
         private Ibd listener;
         Seccion seccion;
+        Semestre semestre;
+        List<Semestre> listaSemestres = new List<Semestre>();
+        Ramo ramo;
         public VerSecciones(object sender)
         {
             InitializeComponent();
@@ -23,29 +26,8 @@ namespace MyNotes2._0
             }
             foreach(Semestre s in listener.GetBaseDeDatos().GetListaSemestres())
             {
-                foreach(Ramo r in s.GetListaRamos())
-                {
-                    comboBox_ramos.Items.Add(r);
-                }
-            }
-        }
-
-        private void comboBox_ramos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            textBox1.Text = null;
-            foreach (Semestre s in listener.GetBaseDeDatos().GetListaSemestres())
-            {
-                foreach (Ramo r in s.GetListaRamos())
-                {
-                    foreach (Seccion sec in r.GetSecciones())
-                    {
-                        seccion = sec;
-                    }
-                }
-            }
-            foreach (Seccion s in seccion.GetSecciones())
-            {
-                textBox1.AppendText(s.GetIDSeccion() + "\n");
+                listaSemestres.Add(s);
+                comboBoxSemestre.Items.Add(s.GetID());
             }
         }
 
@@ -59,5 +41,76 @@ namespace MyNotes2._0
         {
 
         }
+
+        private void comboBoxSemestre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (Ramo ra in semestre.GetListaRamos())
+                {
+                    comboBoxRamo.Items.RemoveAt(0);
+                }
+                comboBoxRamo.Text = null;
+                foreach (Seccion sec in ramo.GetSecciones())
+                {
+                    listBox1.Items.RemoveAt(0);
+                }
+                listBox1.Text = null;
+
+            }
+            catch (System.NullReferenceException)
+            {
+
+            }
+            try
+            {
+                foreach (Semestre sem in listaSemestres)
+                {
+                    if (comboBoxSemestre.Text == sem.GetID())
+                    {
+                        semestre = sem;
+                    }
+                }
+                foreach (Ramo ra in semestre.GetListaRamos())
+                {
+                    comboBoxRamo.Items.Add(ra.GetNombre());
+                }
+            }
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("Cree un ramo para el semestre primero");
+            }
+        }
+
+        private void comboBoxRamo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (Seccion sec in ramo.GetSecciones())
+                {
+                    listBox1.Items.RemoveAt(0);
+                }
+                listBox1.Text = null;
+            }
+            catch (System.NullReferenceException)
+            {
+
+            }
+            try
+            {
+                foreach (Ramo ra in semestre.GetListaRamos())
+                    if (ra.GetNombre() == comboBoxRamo.Text)
+                        ramo = ra;
+                foreach (Seccion sec in ramo.GetSecciones())
+                    listBox1.Items.Add(sec.GetIDSeccion());
+            }
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("Cree una seccion para el ramo primero");
+            }
+        }
+
+
     }
+    
 }

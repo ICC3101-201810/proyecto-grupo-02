@@ -125,6 +125,7 @@
             // 
             // comboBoxRamo
             // 
+            this.comboBoxRamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxRamo.FormattingEnabled = true;
             this.comboBoxRamo.Location = new System.Drawing.Point(170, 53);
             this.comboBoxRamo.Name = "comboBoxRamo";
@@ -134,6 +135,8 @@
             // 
             // comboBoxSemestre
             // 
+            this.comboBoxSemestre.AllowDrop = true;
+            this.comboBoxSemestre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSemestre.FormattingEnabled = true;
             this.comboBoxSemestre.Location = new System.Drawing.Point(170, 26);
             this.comboBoxSemestre.Name = "comboBoxSemestre";
@@ -170,6 +173,7 @@
             // 
             // comboBoxSeccion
             // 
+            this.comboBoxSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSeccion.FormattingEnabled = true;
             this.comboBoxSeccion.Location = new System.Drawing.Point(170, 80);
             this.comboBoxSeccion.Name = "comboBoxSeccion";

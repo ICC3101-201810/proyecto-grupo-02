@@ -65,11 +65,12 @@ namespace MyNotes2._0
 
         private void botonSecciones_Click(object sender, EventArgs e)
         {
-           // Hide();
+            Hide();
             SeccionesAdmin seccionesAdmin = new SeccionesAdmin(listener);
             seccionesAdmin.ShowDialog();
-            //Show();
+            Show();
         }
+
 
 
     }

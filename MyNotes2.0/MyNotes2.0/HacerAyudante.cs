@@ -13,6 +13,8 @@ namespace MyNotes2._0
     public partial class HacerAyudante : Form
     {
         private Ibd listener;
+        Semestre semestre;
+        Ramo ramo;
         public HacerAyudante(object sender, string nombre)
         {
             InitializeComponent();
@@ -65,6 +67,7 @@ namespace MyNotes2._0
                     }
                 }
             }
+            serial.Cargar(listener.GetBaseDeDatos());
             Close();
         }
 
@@ -80,12 +83,37 @@ namespace MyNotes2._0
 
         private void listaRamos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            listaSecciones.Items.Clear();
+            listaSecciones.Text = null;
+            foreach(Ramo r in semestre.GetListaRamos())
+            {
+                if(listaRamos.Text == r.GetNombre())
+                {
+                    ramo = r;
+                }
+            }
+            foreach(Seccion seccion in ramo.GetSecciones())
+            {
+                listaSecciones.Items.Add(seccion.GetIDSeccion());
+            }
         }
 
         private void listaSemestre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            listaRamos.Items.Clear();
+            listaRamos.Text = null;
+            foreach (Semestre sem in listener.GetBaseDeDatos().GetListaSemestres())
+            {
+                if (listaSemestre.Text == sem.GetID())
+                {
+                    semestre = sem;
+                }
+            }
+            foreach (Ramo ra in semestre.GetListaRamos())
+            {
+                listaRamos.Items.Add(ra.GetNombre());
+            }
+
         }
     }
 }

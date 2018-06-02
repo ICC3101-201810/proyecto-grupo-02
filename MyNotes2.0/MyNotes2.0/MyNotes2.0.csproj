@@ -252,6 +252,12 @@
     <Compile Include="VerMaterial.Designer.cs">
       <DependentUpon>VerMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerSecciones.Designer.cs">
+      <DependentUpon>VerSecciones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccionesAdmin.resx">
       <DependentUpon>AccionesAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerMaterial.resx">
       <DependentUpon>VerMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerSecciones.resx">
+      <DependentUpon>VerSecciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

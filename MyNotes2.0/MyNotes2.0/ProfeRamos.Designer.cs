@@ -38,27 +38,30 @@
             // ComboBoxRamos
             // 
             this.ComboBoxRamos.FormattingEnabled = true;
-            this.ComboBoxRamos.Location = new System.Drawing.Point(81, 28);
+            this.ComboBoxRamos.Location = new System.Drawing.Point(268, 49);
+            this.ComboBoxRamos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ComboBoxRamos.Name = "ComboBoxRamos";
-            this.ComboBoxRamos.Size = new System.Drawing.Size(127, 21);
+            this.ComboBoxRamos.Size = new System.Drawing.Size(293, 28);
             this.ComboBoxRamos.TabIndex = 0;
             this.ComboBoxRamos.SelectedIndexChanged += new System.EventHandler(this.ComboBoxRamos_SelectedIndexChanged);
             // 
             // LabelRamo
             // 
             this.LabelRamo.AutoSize = true;
-            this.LabelRamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRamo.Location = new System.Drawing.Point(19, 29);
+            this.LabelRamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelRamo.Location = new System.Drawing.Point(45, 48);
+            this.LabelRamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelRamo.Name = "LabelRamo";
-            this.LabelRamo.Size = new System.Drawing.Size(56, 20);
+            this.LabelRamo.Size = new System.Drawing.Size(170, 25);
             this.LabelRamo.TabIndex = 1;
-            this.LabelRamo.Text = "Ramo";
+            this.LabelRamo.Text = "Seleccionar ramo:";
             // 
             // BotonAtras
             // 
-            this.BotonAtras.Location = new System.Drawing.Point(12, 253);
+            this.BotonAtras.Location = new System.Drawing.Point(453, 349);
+            this.BotonAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonAtras.Name = "BotonAtras";
-            this.BotonAtras.Size = new System.Drawing.Size(81, 56);
+            this.BotonAtras.Size = new System.Drawing.Size(122, 41);
             this.BotonAtras.TabIndex = 2;
             this.BotonAtras.Text = "Atras";
             this.BotonAtras.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@
             // 
             // BotonEditarAyudantes
             // 
-            this.BotonEditarAyudantes.Location = new System.Drawing.Point(95, 130);
+            this.BotonEditarAyudantes.Location = new System.Drawing.Point(50, 147);
+            this.BotonEditarAyudantes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonEditarAyudantes.Name = "BotonEditarAyudantes";
-            this.BotonEditarAyudantes.Size = new System.Drawing.Size(81, 56);
+            this.BotonEditarAyudantes.Size = new System.Drawing.Size(201, 35);
             this.BotonEditarAyudantes.TabIndex = 3;
             this.BotonEditarAyudantes.Text = "Editar Ayudantes";
             this.BotonEditarAyudantes.UseVisualStyleBackColor = true;
@@ -76,9 +80,10 @@
             // 
             // BotonCrearMaterial
             // 
-            this.BotonCrearMaterial.Location = new System.Drawing.Point(240, 130);
+            this.BotonCrearMaterial.Location = new System.Drawing.Point(294, 147);
+            this.BotonCrearMaterial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonCrearMaterial.Name = "BotonCrearMaterial";
-            this.BotonCrearMaterial.Size = new System.Drawing.Size(81, 56);
+            this.BotonCrearMaterial.Size = new System.Drawing.Size(201, 35);
             this.BotonCrearMaterial.TabIndex = 4;
             this.BotonCrearMaterial.Text = "Crear Material";
             this.BotonCrearMaterial.UseVisualStyleBackColor = true;
@@ -86,14 +91,15 @@
             // 
             // ProfeRamos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 321);
+            this.ClientSize = new System.Drawing.Size(682, 494);
             this.Controls.Add(this.BotonCrearMaterial);
             this.Controls.Add(this.BotonEditarAyudantes);
             this.Controls.Add(this.BotonAtras);
             this.Controls.Add(this.LabelRamo);
             this.Controls.Add(this.ComboBoxRamos);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProfeRamos";
             this.Text = "Editar Ramos";
             this.ResumeLayout(false);

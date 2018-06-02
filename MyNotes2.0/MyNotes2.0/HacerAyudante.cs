@@ -39,6 +39,7 @@ namespace MyNotes2._0
 
         private void Aceptar_Click(object sender, EventArgs e)
         {
+            bool bandera = true;
             if (String.IsNullOrEmpty(listaRamos.Text) || String.IsNullOrEmpty(listaSecciones.Text) || String.IsNullOrEmpty(listaSemestre.Text))
             {
                 MessageBox.Show("Debe seleccionar un alumno");
@@ -55,13 +56,13 @@ namespace MyNotes2._0
                             {
                                 if (i.GetAyudantes().Contains(a))
                                 {
-                                    MessageBox.Show("Oops, este alumno ya es ayudante");
+                                     MessageBox.Show("Oops, este alumno ya es ayudante");
                                 }
                                 else
                                 {
-                                    i.GetAyudantes().Add(a);
-                                    MessageBox.Show("Ayudante creado exitosamente");
-                                }
+                                        i.GetAyudantes().Add(a);
+                                        MessageBox.Show("Ayudante creado exitosamente");                                       
+                                }                               
                             }
                         }
                     }

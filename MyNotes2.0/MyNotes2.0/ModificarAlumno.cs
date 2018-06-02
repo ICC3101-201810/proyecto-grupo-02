@@ -39,7 +39,7 @@ namespace MyNotes2._0
         private void editarAlumno_Click(object sender, EventArgs e)
         {
             CambiarNombreAlumno cambiarNombreAlumno = new CambiarNombreAlumno(listener,listaAlumnos.Text);
-            if (listaAlumnos.Text == null)
+            if (string.IsNullOrEmpty(listaAlumnos.Text))
             {
                 MessageBox.Show("Debe seleccionar alumno");
             }
@@ -52,7 +52,7 @@ namespace MyNotes2._0
 
         private void eliminarAlumno_Click(object sender, EventArgs e)
         {
-            if (listaAlumnos.Text == null)
+            if (string.IsNullOrEmpty(listaAlumnos.Text))
             {
                 MessageBox.Show("Debe seleccionar alumno");
             }
@@ -65,19 +65,35 @@ namespace MyNotes2._0
         private void toAyudante_Click(object sender, EventArgs e)
         {
             HacerAyudante hacerAyudante = new HacerAyudante(listener, listaAlumnos.Text);
-            hacerAyudante.ShowDialog();                       
-        }
-
-        private void noAyudante_Click(object sender, EventArgs e)
-        {
-            HacerAyudante ayudante = new HacerAyudante(sender, listaAlumnos.Text);
             if (string.IsNullOrEmpty(listaAlumnos.Text))
             {
                 MessageBox.Show("Debe seleccionar un alumno");
             }
             else
             {
-                ayudante.ShowDialog();
+                hacerAyudante.ShowDialog();
+            }
+        }
+
+        private void noAyudante_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(listaAlumnos.Text))
+            {
+                MessageBox.Show("Debe seleccionar un alumno");
+            }
+            else
+            {
+                foreach(Semestre s in listener.GetBaseDeDatos().GetListaSemestres())
+                {
+                    foreach(Ramo r in s.GetListaRamos())
+                    {
+                        foreach(Seccion i in r.GetSecciones())
+                        {
+                            i.GetAyudantes().Remove((Alumno)listener.GetBaseDeDatos().GetUser(listaAlumnos.Text));
+                        }
+                    }
+                }
+                MessageBox.Show("Ayudante eliminado correctamente");
             }            
         }
 

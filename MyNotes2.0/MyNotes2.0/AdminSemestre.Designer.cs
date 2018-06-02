@@ -38,9 +38,10 @@
             // 
             // BotonAtras
             // 
-            this.BotonAtras.Location = new System.Drawing.Point(12, 228);
+            this.BotonAtras.Location = new System.Drawing.Point(412, 336);
+            this.BotonAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonAtras.Name = "BotonAtras";
-            this.BotonAtras.Size = new System.Drawing.Size(113, 26);
+            this.BotonAtras.Size = new System.Drawing.Size(170, 40);
             this.BotonAtras.TabIndex = 9;
             this.BotonAtras.Text = "Atras";
             this.BotonAtras.UseVisualStyleBackColor = true;
@@ -49,10 +50,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 55);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(65, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "¿Qué desea hacer?";
             // 
@@ -60,19 +60,17 @@
             // 
             this.labelSemestre.AutoSize = true;
             this.labelSemestre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSemestre.Location = new System.Drawing.Point(26, 39);
-            this.labelSemestre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSemestre.Location = new System.Drawing.Point(40, 47);
             this.labelSemestre.Name = "labelSemestre";
-            this.labelSemestre.Size = new System.Drawing.Size(75, 17);
+            this.labelSemestre.Size = new System.Drawing.Size(106, 25);
             this.labelSemestre.TabIndex = 11;
             this.labelSemestre.Text = "Semestres";
             // 
             // BotonCrearSemestre
             // 
-            this.BotonCrearSemestre.Location = new System.Drawing.Point(74, 148);
-            this.BotonCrearSemestre.Margin = new System.Windows.Forms.Padding(2);
+            this.BotonCrearSemestre.Location = new System.Drawing.Point(55, 211);
             this.BotonCrearSemestre.Name = "BotonCrearSemestre";
-            this.BotonCrearSemestre.Size = new System.Drawing.Size(103, 37);
+            this.BotonCrearSemestre.Size = new System.Drawing.Size(245, 46);
             this.BotonCrearSemestre.TabIndex = 12;
             this.BotonCrearSemestre.Text = "Crear Semestre";
             this.BotonCrearSemestre.UseVisualStyleBackColor = true;
@@ -80,10 +78,9 @@
             // 
             // BotonCambiarNombreSem
             // 
-            this.BotonCambiarNombreSem.Location = new System.Drawing.Point(74, 107);
-            this.BotonCambiarNombreSem.Margin = new System.Windows.Forms.Padding(2);
+            this.BotonCambiarNombreSem.Location = new System.Drawing.Point(317, 141);
             this.BotonCambiarNombreSem.Name = "BotonCambiarNombreSem";
-            this.BotonCambiarNombreSem.Size = new System.Drawing.Size(103, 37);
+            this.BotonCambiarNombreSem.Size = new System.Drawing.Size(245, 46);
             this.BotonCambiarNombreSem.TabIndex = 13;
             this.BotonCambiarNombreSem.Text = "Cambiar Nombre Semestre";
             this.BotonCambiarNombreSem.UseVisualStyleBackColor = true;
@@ -91,25 +88,25 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(209, 107);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(55, 141);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 37);
+            this.button3.Size = new System.Drawing.Size(245, 46);
             this.button3.TabIndex = 14;
             this.button3.Text = "Eliminar Semestre";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // AdminSemestre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 266);
+            this.ClientSize = new System.Drawing.Size(615, 409);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.BotonCambiarNombreSem);
             this.Controls.Add(this.BotonCrearSemestre);
             this.Controls.Add(this.labelSemestre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BotonAtras);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdminSemestre";
             this.Text = "Semestres ";
             this.ResumeLayout(false);

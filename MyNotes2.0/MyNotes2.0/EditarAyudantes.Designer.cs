@@ -39,18 +39,20 @@
             // LabelRamo
             // 
             this.LabelRamo.AutoSize = true;
-            this.LabelRamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRamo.Location = new System.Drawing.Point(12, 33);
+            this.LabelRamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelRamo.Location = new System.Drawing.Point(19, 44);
+            this.LabelRamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelRamo.Name = "LabelRamo";
-            this.LabelRamo.Size = new System.Drawing.Size(56, 20);
+            this.LabelRamo.Size = new System.Drawing.Size(208, 29);
             this.LabelRamo.TabIndex = 2;
-            this.LabelRamo.Text = "Ramo";
+            this.LabelRamo.Text = "Seleccionar ramo:";
             // 
             // BotonAtras
             // 
-            this.BotonAtras.Location = new System.Drawing.Point(16, 224);
+            this.BotonAtras.Location = new System.Drawing.Point(24, 371);
+            this.BotonAtras.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonAtras.Name = "BotonAtras";
-            this.BotonAtras.Size = new System.Drawing.Size(81, 56);
+            this.BotonAtras.Size = new System.Drawing.Size(154, 34);
             this.BotonAtras.TabIndex = 3;
             this.BotonAtras.Text = "Atras";
             this.BotonAtras.UseVisualStyleBackColor = true;
@@ -59,16 +61,19 @@
             // ListaAyudante
             // 
             this.ListaAyudante.FormattingEnabled = true;
-            this.ListaAyudante.Location = new System.Drawing.Point(16, 82);
+            this.ListaAyudante.ItemHeight = 20;
+            this.ListaAyudante.Location = new System.Drawing.Point(24, 126);
+            this.ListaAyudante.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ListaAyudante.Name = "ListaAyudante";
-            this.ListaAyudante.Size = new System.Drawing.Size(368, 134);
+            this.ListaAyudante.Size = new System.Drawing.Size(550, 204);
             this.ListaAyudante.TabIndex = 4;
             // 
             // BotonEliminarAyudante
             // 
-            this.BotonEliminarAyudante.Location = new System.Drawing.Point(259, 224);
+            this.BotonEliminarAyudante.Location = new System.Drawing.Point(397, 371);
+            this.BotonEliminarAyudante.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonEliminarAyudante.Name = "BotonEliminarAyudante";
-            this.BotonEliminarAyudante.Size = new System.Drawing.Size(81, 56);
+            this.BotonEliminarAyudante.Size = new System.Drawing.Size(154, 34);
             this.BotonEliminarAyudante.TabIndex = 5;
             this.BotonEliminarAyudante.Text = "Eliminar Ayudante";
             this.BotonEliminarAyudante.UseVisualStyleBackColor = true;
@@ -76,9 +81,10 @@
             // 
             // BotonAgregarAyudante
             // 
-            this.BotonAgregarAyudante.Location = new System.Drawing.Point(153, 224);
+            this.BotonAgregarAyudante.Location = new System.Drawing.Point(217, 371);
+            this.BotonAgregarAyudante.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonAgregarAyudante.Name = "BotonAgregarAyudante";
-            this.BotonAgregarAyudante.Size = new System.Drawing.Size(81, 56);
+            this.BotonAgregarAyudante.Size = new System.Drawing.Size(154, 34);
             this.BotonAgregarAyudante.TabIndex = 6;
             this.BotonAgregarAyudante.Text = "Agregar Ayudante";
             this.BotonAgregarAyudante.UseVisualStyleBackColor = true;
@@ -86,23 +92,25 @@
             // comboBoxRamo
             // 
             this.comboBoxRamo.FormattingEnabled = true;
-            this.comboBoxRamo.Location = new System.Drawing.Point(153, 31);
+            this.comboBoxRamo.Location = new System.Drawing.Point(230, 48);
+            this.comboBoxRamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxRamo.Name = "comboBoxRamo";
-            this.comboBoxRamo.Size = new System.Drawing.Size(187, 21);
+            this.comboBoxRamo.Size = new System.Drawing.Size(278, 28);
             this.comboBoxRamo.TabIndex = 7;
             this.comboBoxRamo.SelectedIndexChanged += new System.EventHandler(this.comboBoxRamo_SelectedIndexChanged);
             // 
             // EditarAyudantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 292);
+            this.ClientSize = new System.Drawing.Size(597, 449);
             this.Controls.Add(this.comboBoxRamo);
             this.Controls.Add(this.BotonAgregarAyudante);
             this.Controls.Add(this.BotonEliminarAyudante);
             this.Controls.Add(this.ListaAyudante);
             this.Controls.Add(this.BotonAtras);
             this.Controls.Add(this.LabelRamo);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarAyudantes";
             this.Text = "EditarAyudantes";
             this.ResumeLayout(false);

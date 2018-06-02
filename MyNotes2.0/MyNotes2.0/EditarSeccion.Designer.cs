@@ -38,18 +38,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 33);
+            this.label1.Location = new System.Drawing.Point(38, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "¿Que Desea Hacer?";
+            this.label1.Text = "¿Qué desea hacer?";
             // 
             // botonAtras
             // 
-            this.botonAtras.Location = new System.Drawing.Point(286, 229);
-            this.botonAtras.Margin = new System.Windows.Forms.Padding(2);
+            this.botonAtras.Location = new System.Drawing.Point(405, 292);
             this.botonAtras.Name = "botonAtras";
-            this.botonAtras.Size = new System.Drawing.Size(113, 26);
+            this.botonAtras.Size = new System.Drawing.Size(170, 40);
             this.botonAtras.TabIndex = 14;
             this.botonAtras.Text = "Atras";
             this.botonAtras.UseVisualStyleBackColor = true;
@@ -57,30 +57,27 @@
             // 
             // botonEliminarProfesor
             // 
-            this.botonEliminarProfesor.Location = new System.Drawing.Point(60, 139);
-            this.botonEliminarProfesor.Margin = new System.Windows.Forms.Padding(2);
+            this.botonEliminarProfesor.Location = new System.Drawing.Point(74, 149);
             this.botonEliminarProfesor.Name = "botonEliminarProfesor";
-            this.botonEliminarProfesor.Size = new System.Drawing.Size(113, 26);
+            this.botonEliminarProfesor.Size = new System.Drawing.Size(170, 31);
             this.botonEliminarProfesor.TabIndex = 15;
             this.botonEliminarProfesor.Text = "Eliminar Profesor";
             this.botonEliminarProfesor.UseVisualStyleBackColor = true;
             // 
             // botonEliminarAlumno
             // 
-            this.botonEliminarAlumno.Location = new System.Drawing.Point(60, 90);
-            this.botonEliminarAlumno.Margin = new System.Windows.Forms.Padding(2);
+            this.botonEliminarAlumno.Location = new System.Drawing.Point(74, 112);
             this.botonEliminarAlumno.Name = "botonEliminarAlumno";
-            this.botonEliminarAlumno.Size = new System.Drawing.Size(113, 26);
+            this.botonEliminarAlumno.Size = new System.Drawing.Size(170, 31);
             this.botonEliminarAlumno.TabIndex = 16;
             this.botonEliminarAlumno.Text = "Eliminar Alumno";
             this.botonEliminarAlumno.UseVisualStyleBackColor = true;
             // 
             // botonOpcionesSeccion
             // 
-            this.botonOpcionesSeccion.Location = new System.Drawing.Point(216, 90);
-            this.botonOpcionesSeccion.Margin = new System.Windows.Forms.Padding(2);
+            this.botonOpcionesSeccion.Location = new System.Drawing.Point(288, 112);
             this.botonOpcionesSeccion.Name = "botonOpcionesSeccion";
-            this.botonOpcionesSeccion.Size = new System.Drawing.Size(113, 26);
+            this.botonOpcionesSeccion.Size = new System.Drawing.Size(170, 31);
             this.botonOpcionesSeccion.TabIndex = 17;
             this.botonOpcionesSeccion.Text = "Opciones Seccion";
             this.botonOpcionesSeccion.UseVisualStyleBackColor = true;
@@ -88,14 +85,15 @@
             // 
             // EditarSeccion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 266);
+            this.ClientSize = new System.Drawing.Size(615, 409);
             this.Controls.Add(this.botonOpcionesSeccion);
             this.Controls.Add(this.botonEliminarAlumno);
             this.Controls.Add(this.botonEliminarProfesor);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarSeccion";
             this.Text = "Editar Seccion";
             this.ResumeLayout(false);

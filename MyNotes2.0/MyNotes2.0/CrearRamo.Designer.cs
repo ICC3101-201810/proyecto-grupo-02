@@ -38,10 +38,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(318, 209);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(477, 322);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 21);
+            this.button2.Size = new System.Drawing.Size(94, 32);
             this.button2.TabIndex = 11;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -49,10 +48,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(423, 209);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(634, 322);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 21);
+            this.button1.Size = new System.Drawing.Size(94, 32);
             this.button1.TabIndex = 10;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
@@ -61,51 +59,48 @@
             // labelSemestre
             // 
             this.labelSemestre.AutoSize = true;
-            this.labelSemestre.Location = new System.Drawing.Point(48, 29);
-            this.labelSemestre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSemestre.Location = new System.Drawing.Point(72, 43);
             this.labelSemestre.Name = "labelSemestre";
-            this.labelSemestre.Size = new System.Drawing.Size(51, 13);
+            this.labelSemestre.Size = new System.Drawing.Size(161, 20);
             this.labelSemestre.TabIndex = 12;
-            this.labelSemestre.Text = "Semestre";
+            this.labelSemestre.Text = "Seleccione semestre:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 81);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(72, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.Size = new System.Drawing.Size(156, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Nombre nuevo ramo:";
             // 
             // textBoxNombreNuevoRamo
             // 
-            this.textBoxNombreNuevoRamo.Location = new System.Drawing.Point(191, 74);
-            this.textBoxNombreNuevoRamo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxNombreNuevoRamo.Location = new System.Drawing.Point(286, 122);
             this.textBoxNombreNuevoRamo.Name = "textBoxNombreNuevoRamo";
-            this.textBoxNombreNuevoRamo.Size = new System.Drawing.Size(159, 20);
+            this.textBoxNombreNuevoRamo.Size = new System.Drawing.Size(236, 26);
             this.textBoxNombreNuevoRamo.TabIndex = 7;
             // 
             // comboBoxSemestre
             // 
             this.comboBoxSemestre.FormattingEnabled = true;
-            this.comboBoxSemestre.Location = new System.Drawing.Point(191, 26);
+            this.comboBoxSemestre.Location = new System.Drawing.Point(286, 40);
+            this.comboBoxSemestre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxSemestre.Name = "comboBoxSemestre";
-            this.comboBoxSemestre.Size = new System.Drawing.Size(159, 21);
+            this.comboBoxSemestre.Size = new System.Drawing.Size(236, 28);
             this.comboBoxSemestre.TabIndex = 13;
             // 
             // CrearRamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.comboBoxSemestre);
             this.Controls.Add(this.labelSemestre);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxNombreNuevoRamo);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearRamo";
             this.Text = "CrearRamo";
             this.ResumeLayout(false);

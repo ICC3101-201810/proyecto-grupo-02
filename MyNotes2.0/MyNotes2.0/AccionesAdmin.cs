@@ -63,7 +63,6 @@ namespace MyNotes2._0
             Close();
         }
 
-<<<<<<< HEAD
         private void botonSecciones_Click(object sender, EventArgs e)
         {
            // Hide();
@@ -71,8 +70,7 @@ namespace MyNotes2._0
             seccionesAdmin.ShowDialog();
             //Show();
         }
-=======
->>>>>>> 49494253540699934a140124ee150a7737c5a386
+
 
     }
 }

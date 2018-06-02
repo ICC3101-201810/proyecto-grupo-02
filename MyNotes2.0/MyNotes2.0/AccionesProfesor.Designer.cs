@@ -37,10 +37,9 @@
             // 
             // button_CrearAp
             // 
-            this.button_CrearAp.Location = new System.Drawing.Point(208, 133);
-            this.button_CrearAp.Margin = new System.Windows.Forms.Padding(2);
+            this.button_CrearAp.Location = new System.Drawing.Point(324, 118);
             this.button_CrearAp.Name = "button_CrearAp";
-            this.button_CrearAp.Size = new System.Drawing.Size(75, 44);
+            this.button_CrearAp.Size = new System.Drawing.Size(207, 41);
             this.button_CrearAp.TabIndex = 5;
             this.button_CrearAp.Text = "Crear Apuntes";
             this.button_CrearAp.UseVisualStyleBackColor = true;
@@ -50,10 +49,9 @@
             // 
             this.label_NamePr.AutoSize = true;
             this.label_NamePr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NamePr.Location = new System.Drawing.Point(130, 32);
-            this.label_NamePr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_NamePr.Location = new System.Drawing.Point(195, 49);
             this.label_NamePr.Name = "label_NamePr";
-            this.label_NamePr.Size = new System.Drawing.Size(46, 18);
+            this.label_NamePr.Size = new System.Drawing.Size(79, 29);
             this.label_NamePr.TabIndex = 4;
             this.label_NamePr.Text = "label2";
             // 
@@ -61,18 +59,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(62, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 18);
+            this.label1.Size = new System.Drawing.Size(117, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Profesor :";
             // 
             // BotonInicioSesion
             // 
-            this.BotonInicioSesion.Location = new System.Drawing.Point(12, 210);
+            this.BotonInicioSesion.Location = new System.Drawing.Point(359, 294);
+            this.BotonInicioSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonInicioSesion.Name = "BotonInicioSesion";
-            this.BotonInicioSesion.Size = new System.Drawing.Size(75, 44);
+            this.BotonInicioSesion.Size = new System.Drawing.Size(161, 53);
             this.BotonInicioSesion.TabIndex = 6;
             this.BotonInicioSesion.Text = "Cerrar Sesion";
             this.BotonInicioSesion.UseVisualStyleBackColor = true;
@@ -80,10 +78,9 @@
             // 
             // BotonAdministrarRamos
             // 
-            this.BotonAdministrarRamos.Location = new System.Drawing.Point(101, 133);
-            this.BotonAdministrarRamos.Margin = new System.Windows.Forms.Padding(2);
+            this.BotonAdministrarRamos.Location = new System.Drawing.Point(67, 118);
             this.BotonAdministrarRamos.Name = "BotonAdministrarRamos";
-            this.BotonAdministrarRamos.Size = new System.Drawing.Size(75, 44);
+            this.BotonAdministrarRamos.Size = new System.Drawing.Size(207, 41);
             this.BotonAdministrarRamos.TabIndex = 7;
             this.BotonAdministrarRamos.Text = "Administrar Ramos";
             this.BotonAdministrarRamos.UseVisualStyleBackColor = true;
@@ -91,14 +88,15 @@
             // 
             // AccionesProfesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 266);
+            this.ClientSize = new System.Drawing.Size(615, 409);
             this.Controls.Add(this.BotonAdministrarRamos);
             this.Controls.Add(this.BotonInicioSesion);
             this.Controls.Add(this.button_CrearAp);
             this.Controls.Add(this.label_NamePr);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AccionesProfesor";
             this.Text = "AccionesProfesor";
             this.Load += new System.EventHandler(this.AccionesProfesor_Load);

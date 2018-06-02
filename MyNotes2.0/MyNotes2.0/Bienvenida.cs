@@ -52,30 +52,47 @@ namespace MyNotes2._0
             {
                 Usuario usuario = bd.GetUser(name);
                 bd.SetUsuarioActual(usuario);
-                if (usuario is Administrador)
+                bool bnd = false;
+                while (bnd == false)
                 {
-                    Hide();
-                    AccionesAdmin accionesAdmin = new AccionesAdmin(this,name);
-                    Login(usuario);
-                    accionesAdmin.ShowDialog();
-                    Show();
+                    if (usuario.GetContrasena() != pwd)
+                    {
+                        MessageBox.Show("Contrasena incorrecta.");
+                        break;
+                    }
+                    else
+                    {
+                        bnd = true;
+                    }
                 }
-                else if (usuario is Alumno)
+                if (bnd != false)
                 {
-                    Hide();
-                    AccionesAlumno accionesAlumno = new AccionesAlumno(this,name);
-                    Login(usuario);
-                    accionesAlumno.ShowDialog();
-                    Show();
+                    if (usuario is Administrador)
+                    {
+                        Hide();
+                        AccionesAdmin accionesAdmin = new AccionesAdmin(this, name);
+                        Login(usuario);
+                        accionesAdmin.ShowDialog();
+                        Show();
+                    }
+                    else if (usuario is Alumno)
+                    {
+                        Hide();
+                        AccionesAlumno accionesAlumno = new AccionesAlumno(this, name);
+                        Login(usuario);
+                        accionesAlumno.ShowDialog();
+                        Show();
+                    }
+                    else
+                    {
+                        Hide();
+                        AccionesProfesor accionesProfesor = new AccionesProfesor(this, name);
+                        Login(usuario);
+                        accionesProfesor.ShowDialog();
+                        Show();
+                    }
                 }
-                else 
-                {
-                    Hide();
-                    AccionesProfesor accionesProfesor = new AccionesProfesor(this,name);
-                    Login(usuario);
-                    accionesProfesor.ShowDialog();
-                    Show();
-                }
+                else { }
             }
             else
             {
